@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import FilledButton from "./FilledButton";
 import HashLink from "./HashLink";
+import logo from "@/assets/bizex4u-logo.png.asset.json";
 
 
 interface NavItem {
@@ -34,25 +35,38 @@ const Navbar = ({
   ctaHref = "/#contact-section",
 }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <nav className="fixed top-[20px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-48px)] tablet:w-fit tablet:min-w-[616px] bg-neutral-00 rounded-[16px] py-[10px] px-[16px] items-center justify-between gap-8 border shadow-md border-neutral-03 flex flex-row">
+      <nav
+        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[680px] rounded-[18px] py-[10px] pl-[14px] pr-[10px] items-center justify-between gap-6 border flex flex-row transition-all duration-300 ${
+          scrolled
+            ? "bg-neutral-00/85 backdrop-blur-md border-neutral-03 shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
+            : "bg-neutral-00 border-neutral-03 shadow-md"
+        }`}
+      >
         {/* Logo */}
-        <Link to={logoHref} className="flex-shrink-0">
-          <span className="text-[18px] font-semibold tracking-tight text-neutral-12" style={{ fontFamily: "'Manrope', sans-serif" }}>
-            BIZEX<span style={{ color: "hsl(var(--theme-main-02))" }}>4</span>U
-          </span>
+        <Link to={logoHref} className="flex-shrink-0 flex items-center gap-2">
+          <img src={logo.url} alt="BIZEX4U" className="h-8 w-auto" />
         </Link>
 
 
+
         {/* Navigation Links - hidden on mobile */}
-        <div className="hidden tablet:flex items-center gap-[16px]">
+        <div className="hidden tablet:flex items-center gap-[4px]">
         {navItems.map((item) => (
             <HashLink
               key={item.label}
               to={item.href}
-              className="text-nav text-neutral-11 hover:text-neutral-12 transition-colors"
+              className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors"
             >
               {item.label}
             </HashLink>

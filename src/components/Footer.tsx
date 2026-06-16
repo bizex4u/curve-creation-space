@@ -3,6 +3,7 @@ import LinkedinLogo from "@/assets/Linkedin_Logo.png";
 import ThreadsLogo from "@/assets/Threads_Logo.png";
 import SocialLink from "./footer/SocialLink";
 import FooterNavList from "./footer/FooterNavList";
+import logo from "@/assets/bizex4u-logo.png.asset.json";
 
 const productLinks = [
   { label: "Home", href: "/" },
@@ -32,9 +33,7 @@ const Footer = ({ showDivider = true }: FooterProps) => {
         <div className="flex flex-col gap-16 tablet:gap-10 desktop:flex-row desktop:justify-between desktop:h-full">
           <div className="flex flex-col gap-8 tablet:flex-row tablet:justify-between tablet:items-end desktop:flex-col desktop:justify-between desktop:items-start desktop:h-full">
             <div className="flex flex-col">
-              <span className="text-h4 text-neutral-12 font-semibold tracking-tight" style={{ fontFamily: "'Manrope', sans-serif" }}>
-                BIZEX<span style={{ color: "hsl(var(--theme-main-02))" }}>4</span>U
-              </span>
+              <img src={logo.url} alt="BIZEX4U" className="h-10 w-auto" />
               <p className="text-body text-neutral-10 mt-2 max-w-[280px]">
                 Full-service ad agency for India. Cash. Barter. Or both.
               </p>
