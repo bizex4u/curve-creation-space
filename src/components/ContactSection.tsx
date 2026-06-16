@@ -33,9 +33,6 @@ const ContactSection = () => {
             />
           </div>
 
-          <div className="mt-16">
-            <LazyVideo src={talkingOnPhoneVideo} className="h-[220px] w-[220px]" />
-          </div>
 
           <div className="w-full max-w-[720px] mt-10 bg-neutral-00 border border-neutral-03 rounded-[20px] p-6 tablet:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
             <LeadFormMount />
