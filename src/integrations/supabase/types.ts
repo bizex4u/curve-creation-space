@@ -76,6 +76,45 @@ export type Database = {
           },
         ]
       }
+      leads: {
+        Row: {
+          budget: string | null
+          company: string | null
+          created_at: string
+          email: string
+          funding_model: string | null
+          id: string
+          message: string | null
+          name: string
+          phone: string | null
+          source: string
+        }
+        Insert: {
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          email: string
+          funding_model?: string | null
+          id?: string
+          message?: string | null
+          name: string
+          phone?: string | null
+          source?: string
+        }
+        Update: {
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          email?: string
+          funding_model?: string | null
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string | null
+          source?: string
+        }
+        Relationships: []
+      }
       team_members: {
         Row: {
           created_at: string

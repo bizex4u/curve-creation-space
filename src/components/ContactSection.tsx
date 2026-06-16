@@ -2,9 +2,10 @@ import { Phone, Mail, Building2, Clock } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import ContactInfoCard from "./ContactInfoCard";
 import BrushHighlight from "./BrushHighlight";
-import LazyVideo from "./ui/LazyVideo";
-import talkingOnPhoneVideo from "@/assets/Talking_on_the_phone.mp4";
+import LeadForm from "./LeadForm";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const LeadFormMount = () => <LeadForm source="contact_section" />;
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -32,11 +33,12 @@ const ContactSection = () => {
             />
           </div>
 
-          <div className="mt-16">
-            <LazyVideo src={talkingOnPhoneVideo} className="h-[220px] w-[220px]" />
+
+          <div className="w-full max-w-[720px] mt-10 bg-neutral-00 border border-neutral-03 rounded-[20px] p-6 tablet:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+            <LeadFormMount />
           </div>
 
-          <div className="w-full grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-3 mt-6">
+          <div className="w-full grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-3 mt-10">
             <ContactInfoCard icon={<Phone strokeWidth={1.5} />}>
               +91 80905 00009
             </ContactInfoCard>
