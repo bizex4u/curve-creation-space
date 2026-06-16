@@ -1,4 +1,4 @@
-import companyLogo from "@/assets/Fakebrand_4.png";
+
 import quoteIcon from "@/assets/Quotes_On_Light.svg";
 import testimonialPhoto from "@/assets/Urban_Portrait_Outdoors.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
