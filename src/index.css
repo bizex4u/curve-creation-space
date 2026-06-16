@@ -12,10 +12,11 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Theme Colors */
-    --theme-main-00: 212 74% 95%;
-    --theme-main-01: 213 85% 90%;
-    --theme-main-02: 218 100% 63%;
+    /* Theme Colors - Warm light agency palette (cream → peach → amber) */
+    --theme-main-00: 36 100% 96%;
+    --theme-main-01: 28 100% 86%;
+    --theme-main-02: 22 92% 62%;
+
 
     /* Neutral Colors */
     --neutral-00: 0 0% 100%;
@@ -48,21 +49,22 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 218 100% 63%;
+    --primary: 22 92% 62%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 212 74% 95%;
+    --secondary: 36 100% 96%;
     --secondary-foreground: 0 0% 10%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 37%;
 
-    --accent: 213 85% 90%;
+    --accent: 28 100% 86%;
     --accent-foreground: 0 0% 10%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 218 100% 63%;
+    --ring: 22 92% 62%;
+
 
     --radius: 0.5rem;
   }

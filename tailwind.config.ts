@@ -19,10 +19,11 @@ export default {
     colors: {
       /* Theme Colors - Main */
       main: {
-        '00': "#E8F1FC",
-        '01': "#CFE2FC",
-        '02': "#4096FF",
+        '00': "#FFF4E6",
+        '01': "#FFD9B8",
+        '02': "#F26A28",
       },
+
       /* Neutral Colors - Edit these hex values to customize */
       neutral: {
         '00': "#FFFFFF",  // White

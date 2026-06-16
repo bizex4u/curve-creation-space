@@ -20,13 +20,16 @@ const About = () => {
       <PageHeader
         heading={
           <>
-            Zova unites teams around smarter{" "}
-            <BrushHighlight delay={400}>financial</BrushHighlight>{" "}
-            <BrushHighlight delay={600}>decisions</BrushHighlight>
+            BIZEX4U is the agency built for{" "}
+            <BrushHighlight delay={400}>cash</BrushHighlight>{" "}
+            <em>and</em>{" "}
+            <BrushHighlight delay={600}>barter</BrushHighlight>{" "}
+            campaigns
           </>
         }
         media={<AboutVideo />}
         aspectRatio="16:9"
+
       >
         {/* Photo Ticker - Full width, 40px below illustration on mobile/tablet, 64px on desktop */}
         <div className="mt-10 desktop:mt-16">

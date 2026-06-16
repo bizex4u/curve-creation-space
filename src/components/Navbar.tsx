@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import FilledButton from "./FilledButton";
 import HashLink from "./HashLink";
-import Logo from "@/assets/Logo_64.png";
+
 
 interface NavItem {
   label: string;
@@ -20,9 +20,9 @@ interface NavbarProps {
 
 const defaultNavItems: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Channels", href: "/#features-section" },
+  { label: "How it works", href: "/#pricing-section" },
   { label: "About", href: "/about" },
-  { label: "Pricing", href: "/#pricing-section" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/#contact-section" },
 ];
 
@@ -30,18 +30,21 @@ const Navbar = ({
   logoHref = "/",
   logoSrc,
   navItems = defaultNavItems,
-  ctaText = "Get free trial",
-  ctaHref = "https://lunisdesign.com",
+  ctaText = "Plan my campaign",
+  ctaHref = "/#contact-section",
 }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <nav className="fixed top-[20px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-48px)] tablet:w-fit tablet:min-w-[616px] bg-neutral-00 rounded-[16px] py-[10px] px-[12px] items-center justify-between gap-8 border shadow-md border-neutral-03 flex flex-row">
+      <nav className="fixed top-[20px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-48px)] tablet:w-fit tablet:min-w-[616px] bg-neutral-00 rounded-[16px] py-[10px] px-[16px] items-center justify-between gap-8 border shadow-md border-neutral-03 flex flex-row">
         {/* Logo */}
         <Link to={logoHref} className="flex-shrink-0">
-          <img src={Logo} alt="Logo" className="h-[24px] w-auto" />
+          <span className="text-[18px] font-semibold tracking-tight text-neutral-12" style={{ fontFamily: "'Manrope', sans-serif" }}>
+            BIZEX<span style={{ color: "hsl(var(--theme-main-02))" }}>4</span>U
+          </span>
         </Link>
+
 
         {/* Navigation Links - hidden on mobile */}
         <div className="hidden tablet:flex items-center gap-[16px]">

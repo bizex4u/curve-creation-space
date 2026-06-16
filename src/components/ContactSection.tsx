@@ -25,40 +25,36 @@ const ContactSection = () => {
           {/* Header - center aligned, 50% width, max-width 550px */}
           <div className="w-full tablet:w-2/3 desktop:w-1/2">
             <SectionHeader
-              title={<>Get in <BrushHighlight>touch</BrushHighlight></>}
-              subtitle="Reach out to our team for support or questions and we'll get back to you within 2 business days."
+              title={<>Plan your <BrushHighlight>campaign</BrushHighlight></>}
+              subtitle="Tell us your market, channels and what you'd like to fund in cash versus barter. We'll come back with a plan within 2 business days."
               align="center"
-              maxWidth="550px"
+              maxWidth="600px"
             />
           </div>
 
-          {/* Illustration - 64px gap from header */}
           <div className="mt-16">
-            <LazyVideo
-              src={talkingOnPhoneVideo}
-              className="h-[220px] w-[220px]"
-            />
+            <LazyVideo src={talkingOnPhoneVideo} className="h-[220px] w-[220px]" />
           </div>
 
-          {/* Contact cards - 24px gap from illustration */}
           <div className="w-full grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-3 mt-6">
-          <ContactInfoCard icon={<Phone strokeWidth={1.5} />}>
-            412-483-8261
-          </ContactInfoCard>
-          <ContactInfoCard icon={<Mail strokeWidth={1.5} />}>
-            support@zovasaas.com
-          </ContactInfoCard>
-          <ContactInfoCard icon={<Building2 strokeWidth={1.5} />}>
-            210 Market St. Suite 402
-            <br />
-            San Francisco, CA
-          </ContactInfoCard>
-          <ContactInfoCard icon={<Clock strokeWidth={1.5} />}>
-            9am-5pm EST
-            <br />
-            Monday - Friday
-          </ContactInfoCard>
+            <ContactInfoCard icon={<Phone strokeWidth={1.5} />}>
+              +91 80905 00009
+            </ContactInfoCard>
+            <ContactInfoCard icon={<Mail strokeWidth={1.5} />}>
+              yash@bizex4u.com
+            </ContactInfoCard>
+            <ContactInfoCard icon={<Building2 strokeWidth={1.5} />}>
+              Pan-India campaigns
+              <br />
+              HQ: Delhi NCR
+            </ContactInfoCard>
+            <ContactInfoCard icon={<Clock strokeWidth={1.5} />}>
+              10am – 7pm IST
+              <br />
+              Monday – Saturday
+            </ContactInfoCard>
           </div>
+
         </div>
       </div>
     </section>

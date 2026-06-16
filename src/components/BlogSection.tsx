@@ -74,10 +74,11 @@ const BlogSection = () => {
       <div className="container">
         {/* Header - same layout as PricingSection */}
         <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:items-start mb-10 desktop:mb-16">
-          <h2 className="text-h2 text-neutral-12">Insights and <BrushHighlight>resources</BrushHighlight></h2>
+          <h2 className="text-h2 text-neutral-12">Campaign <BrushHighlight>notes</BrushHighlight></h2>
           <p className="text-body-large text-neutral-10 mt-4 tablet:mt-0 tablet:w-[33%] tablet:text-right">
-            Explore our latest articles and guides to help you manage your finances better.
+            Field notes from real campaigns we've run for Indian brands — what worked, what we'd change, and what it cost.
           </p>
+
         </div>
 
         {/* Blog posts content */}
