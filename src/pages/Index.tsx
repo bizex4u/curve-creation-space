@@ -14,6 +14,7 @@ import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingInstructionsButton from "@/components/FloatingInstructionsButton";
+import FloatingLeadPopup from "@/components/FloatingLeadPopup";
 
 const Index = () => {
   const heroFeaturesRef = useRef<HTMLDivElement>(null);
@@ -77,6 +78,7 @@ const Index = () => {
         <CTASection />
         <Footer showDivider={false} />
         <FloatingInstructionsButton />
+        <FloatingLeadPopup />
       </div>
     </div>
   );
