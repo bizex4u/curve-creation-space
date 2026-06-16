@@ -23,12 +23,13 @@ const TeamSection = () => {
         <SectionHeader
           title={
             <>
-              Our leadership and <BrushHighlight>experts</BrushHighlight>
+              The strategists behind your <BrushHighlight>campaigns</BrushHighlight>
             </>
           }
-          subtitle="A dedicated team of analysts, strategists, and innovators working together to simplify your financial decisions."
+          subtitle="Media planners, negotiators and execution leads who've placed brands across every Indian metro."
           align="center"
         />
+
       </div>
 
       {/* Team Grid */}
@@ -74,10 +75,11 @@ const TeamSection = () => {
           
           {/* Content */}
           <div className="max-w-[500px]">
-            <h5>Grow your career at Zova</h5>
+            <h5>Work at BIZEX4U</h5>
             <p className="text-body font-medium mt-3 text-neutral-10">
-              Work with a team that simplifies financial workflows and brings clarity to every business we support.
+              Join a team that builds real campaigns across India — billboards, metro pillars, mall LEDs, cinema, print, digital. Cash budgets and barter deals alike.
             </p>
+
             <div className="mt-6">
               <OutlineButton href="https://linkedin.com">
                 See openings on LinkedIn

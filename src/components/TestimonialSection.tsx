@@ -35,19 +35,20 @@ const TestimonialSection = () => {
             <div>
               <img src={quoteIcon} alt="Quote" className="h-6 mb-4" />
               <h3 className="max-w-[600px]">
-                This platform gives us instant clarity. Our forecasts are more
-                accurate and our team makes decisions faster than ever.
+                Managing seasonal inventory was always a challenge. With BIZEX4U's barter
+                model we turned excess stock into advertising and doubled our brand
+                visibility across U.P., Bihar and M.P. — without extra cash spend.
               </h3>
             </div>
 
-            {/* Lower: Details */}
             <div className="flex flex-col tablet:flex-row tablet:justify-between gap-5 tablet:gap-0 tablet:items-center">
               <div>
-                <p className="text-body-large text-neutral-10">Operations Lead</p>
-                <p className="text-body-large">Nova Metrics</p>
+                <p className="text-body-large text-neutral-10">Chandra Kiran Dubey · Director</p>
+                <p className="text-body-large">Mishrambu</p>
               </div>
-              <img src={companyLogo} alt="Company logo" className="w-auto h-8 self-start tablet:self-auto" />
+              <span className="text-neutral-10 text-[14px] tracking-[0.2em] font-semibold self-start tablet:self-auto" style={{ fontFamily: "'Manrope', sans-serif" }}>MISHRAMBU</span>
             </div>
+
           </div>
         </div>
       </div>

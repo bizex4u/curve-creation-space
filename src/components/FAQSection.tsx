@@ -8,30 +8,31 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const faqData = [
   {
-    question: "How do I connect my financial data sources?",
-    answer: "You can connect your financial data sources through our secure integration portal. We support major banks, accounting software, and payment processors. Simply navigate to the Integrations section in your dashboard and follow the step-by-step connection wizard."
+    question: "What exactly is barter advertising?",
+    answer: "You pay for your media campaign using surplus inventory, unsold stock or unused service capacity instead of (or alongside) cash. BIZEX4U values the inventory, agrees a barter ratio with you and the media owner, and exchanges it for premium ad placements via a clean PO and contract.",
   },
   {
-    question: "Can I change or cancel my plan at any time?",
-    answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle. If you cancel, you'll retain access to your current plan features until the end of your billing period."
+    question: "Can I mix cash and barter in one campaign?",
+    answer: "Yes — this is what most BIZEX4U clients do. A typical hybrid campaign funds OOH, print and radio largely through barter, and tops up channels barter can't reach (like some digital and OTT inventory) in cash.",
   },
   {
-    question: "How secure is my data?",
-    answer: "We take security seriously. All data is encrypted at rest and in transit using industry-standard AES-256 encryption. We're SOC 2 Type II certified and undergo regular third-party security audits. Your financial data is never shared with third parties."
+    question: "Which media channels do you buy across?",
+    answer: "Outdoor (billboards, unipoles, highway, city branding), transit (metro, bus, cab, rail, airport), mall and retail, cinema (PVR INOX premium and standard), radio, print (mainline + lifestyle titles), digital and OTT (Hotstar, Prime, Netflix DSP, Spotify, Gaana, JioSaavn).",
   },
   {
-    question: "Does the platform support multiple team members?",
-    answer: "Absolutely! Our Team and Enterprise plans support unlimited team members with role-based access controls. You can assign different permission levels to team members, ensuring everyone has access to the features they need while maintaining data security."
+    question: "What kind of inventory can be used for barter?",
+    answer: "FMCG and consumer goods, electronics, accessories, eyewear, jewellery, beverages, services with measurable retail value — anything we and the media owner can value cleanly. We'll evaluate your inventory on a call and propose a barter ratio per channel.",
   },
   {
-    question: "What integrations are included?",
-    answer: "We offer 50+ integrations including major banks, accounting software (QuickBooks, Xero), payment processors (Stripe, PayPal), and CRM systems. Premium integrations like ERP systems are available on our Enterprise plan."
+    question: "Can you run a single-city campaign, or only national?",
+    answer: "Both. We routinely run single-city pushes (e.g. a Delhi-NCR OOH burst or Bangalore mall + cinema activation) as well as full national multi-channel launches.",
   },
   {
-    question: "Do you offer onboarding support?",
-    answer: "Yes! All plans include access to our comprehensive knowledge base and email support. Pro plans include priority support with faster response times, and Enterprise plans include dedicated onboarding specialists and custom training sessions."
-  }
+    question: "How is the agency commission charged?",
+    answer: "10% of the campaign budget — whether the budget is funded in cash, barter or a blend. That covers strategy, channel planning, negotiation, execution oversight, monitoring proofs and post-campaign reporting.",
+  },
 ];
+
 
 const FAQSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });

@@ -1,39 +1,29 @@
-import Fakebrand1 from "@/assets/Fakebrand_1.png";
-import Fakebrand2 from "@/assets/Fakebrand_2.png";
-import Fakebrand3 from "@/assets/Fakebrand_3.png";
-import Fakebrand4 from "@/assets/Fakebrand_4.png";
-
-const logos = [
-  { src: Fakebrand1, name: "Brand 1" },
-  { src: Fakebrand2, name: "Brand 2" },
-  { src: Fakebrand3, name: "Brand 3" },
-  { src: Fakebrand4, name: "Brand 4" },
+const clients = [
+  "MISHRAMBU", "GIVA", "AVP", "NISARA", "RAW PRESSERY",
+  "PORTRONICS", "ZEBRONICS", "BIKANO", "SHARP",
+  "CARRERA", "SAFILO", "DECO WINDOW", "LUX",
 ];
 
 const LogoTicker = () => {
   return (
-    <div 
+    <div
       className="relative overflow-hidden w-[90%]"
       style={{
         maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-        WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+        WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
       }}
     >
-      <div className="flex w-max animate-ticker [animation-duration:28s]">
-        {/* Render 3 identical sets - each includes trailing spacing for seamless loop */}
+      <div className="flex w-max animate-ticker [animation-duration:40s]">
         {[1, 2, 3].map((setIndex) => (
-          <div key={setIndex} className="flex shrink-0 gap-6 pr-6">
-            {logos.map((logo, index) => (
-              <div key={index} className="flex items-center shrink-0">
-                <img 
-                  src={logo.src} 
-                  alt={logo.name} 
-                  className="h-6 w-auto" 
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false} 
-                />
-              </div>
+          <div key={setIndex} className="flex shrink-0 gap-8 pr-8 items-center">
+            {clients.map((name, i) => (
+              <span
+                key={i}
+                className="text-neutral-10 text-[14px] tracking-[0.18em] font-semibold whitespace-nowrap"
+                style={{ fontFamily: "'Manrope', sans-serif" }}
+              >
+                {name}
+              </span>
             ))}
           </div>
         ))}

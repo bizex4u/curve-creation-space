@@ -47,22 +47,22 @@ const CTASection = () => {
               <SectionHeader
                 title={
                   <>
-                    Bring{" "}
-                    <BrushHighlight delay={400}>financial</BrushHighlight>{" "}
-                    <BrushHighlight delay={600}>clarity</BrushHighlight>{" "}
-                    to your numbers today
+                    Get your brand{" "}
+                    <BrushHighlight delay={400}>seen</BrushHighlight>{" "}
+                    <BrushHighlight delay={600}>everywhere</BrushHighlight>{" "}
+                    that matters
                   </>
                 }
-                subtitle="Start your free trial and bring clarity to your financial workflow in minutes."
+                subtitle="Tell us the market and the budget — cash, barter or both. We'll build the plan."
                 align="center"
               />
             </div>
-            
-            {/* Buttons - gap 12px, margin-top 24px */}
+
             <div className="flex items-center gap-3 mt-6">
-              <FilledButton href="https://lunisdesign.com">Get free trial</FilledButton>
-              <OutlineButton href="/#pricing-section">See our plans</OutlineButton>
+              <FilledButton href="/#contact-section">Plan my campaign</FilledButton>
+              <OutlineButton href="/#pricing-section">See cash &amp; barter plans</OutlineButton>
             </div>
+
             
             {/* Dashboard Frame - 83% width, max 1079px, margin-top 80px */}
             <DashboardFrame 

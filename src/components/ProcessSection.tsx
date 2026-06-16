@@ -11,28 +11,28 @@ const processData = [
   {
     stepNumber: "01",
     imageSrc: Process1,
-    title: "Connect your data",
-    description: "Import financial sources with quick and secure integrations."
+    title: "Plan & price",
+    description: "Your strategist scopes channels, markets and dates, then quotes you the campaign in cash, barter, or a blend.",
   },
   {
     stepNumber: "02",
     imageSrc: Process2,
-    title: "Let AI analyze",
-    description: "Your data is processed instantly to reveal trends and patterns."
+    title: "Negotiate & buy",
+    description: "We negotiate direct with media owners — OOH, transit, mall, cinema, print, radio, digital — and lock placements.",
   },
   {
     stepNumber: "03",
     imageSrc: Process3,
-    title: "View clear insights",
-    description: "See forecasts, reports, and metrics in one intuitive workspace."
-  }
+    title: "Execute & report",
+    description: "Creative goes live, we share mounting and monitoring proofs, and a clean post-campaign report you can show your board.",
+  },
 ];
 
 const ProcessSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section 
+    <section
       ref={ref}
       className="relative section"
       style={{
@@ -44,22 +44,21 @@ const ProcessSection = () => {
       <DotPatternBackground variant="neutral" hideOnMobile />
       <div className="relative z-10 container flex flex-col items-center">
         <SectionHeader
-          title={<>Get started in <BrushHighlight>3</BrushHighlight> <BrushHighlight>steps</BrushHighlight></>}
-          subtitle="A simple flow that brings clarity to your financial data in minutes."
+          title={<>How a BIZEX4U <BrushHighlight>campaign</BrushHighlight> <BrushHighlight>runs</BrushHighlight></>}
+          subtitle="One agency. One strategist. End-to-end planning, buying and execution across every channel that matters."
           align="center"
           className="w-full tablet:w-[66%] desktop:w-[50%]"
           maxWidth="550px"
         />
-        
-        {/* Process Cards */}
+
         <div className="flex flex-col tablet:flex-row gap-10 tablet:gap-3 section-header w-full desktop:w-[83%]">
-          {processData.map((process) => (
+          {processData.map((p) => (
             <ProcessCard
-              key={process.stepNumber}
-              stepNumber={process.stepNumber}
-              imageSrc={process.imageSrc}
-              title={process.title}
-              description={process.description}
+              key={p.stepNumber}
+              stepNumber={p.stepNumber}
+              imageSrc={p.imageSrc}
+              title={p.title}
+              description={p.description}
             />
           ))}
         </div>

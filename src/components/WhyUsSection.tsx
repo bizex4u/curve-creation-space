@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { RefreshCw, Wand2, ShieldCheck } from "lucide-react";
+import { Banknote, ArrowLeftRight, Layers } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import BenefitCard from "./BenefitCard";
 import BrushHighlight from "./BrushHighlight";
@@ -10,27 +10,28 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const benefitData = [
   {
-    id: "real-time",
-    icon: RefreshCw,
-    title: "Real-time intelligence",
-    description: "Get instant insights and forecasts powered by advanced AI so your team can make decisions with clarity.",
+    id: "cash",
+    icon: Banknote,
+    title: "Cash campaigns, run sharper",
+    description: "Same media owners, better negotiation. Your strategist plans the mix, books direct, and reports back — so cash budgets stretch further across OOH, transit, cinema, print, radio and digital.",
     image: WhyUsUI1,
   },
   {
-    id: "workflow",
-    icon: Wand2,
-    title: "Effortless workflow",
-    description: "A simple and intuitive interface that removes friction and keeps your financial operations moving smoothly.",
+    id: "barter",
+    icon: ArrowLeftRight,
+    title: "Barter — turn idle inventory into reach",
+    description: "Sitting on surplus stock, unsold goods or unused service capacity? Convert that value into premium media placements at agreed barter ratios, with a clean PO and contract for every exchange.",
     image: WhyUsUI2,
   },
   {
-    id: "accuracy",
-    icon: ShieldCheck,
-    title: "Reliable accuracy",
-    description: "Consistent, data driven analysis that helps teams reduce risk and stay ahead with confidence.",
+    id: "hybrid",
+    icon: Layers,
+    title: "Hybrid — pay part cash, part trade",
+    description: "Most brands land here. Cover the channels barter can't reach with a slice of cash, and fund the rest with inventory — so the same budget buys meaningfully more reach.",
     image: WhyUsUI3,
   },
 ];
+
 
 const WhyUsSection = () => {
   const [activeId, setActiveId] = useState<string>(benefitData[0].id);
@@ -116,9 +117,10 @@ const WhyUsSection = () => {
       {/* Left Side - Header */}
       <div className="w-full max-w-[550px] tablet:w-[33%] tablet:min-w-[350px] desktop:min-w-0 desktop:sticky desktop:top-[160px] desktop:self-start">
         <SectionHeader
-          title={<>Why teams <BrushHighlight>choose</BrushHighlight> <BrushHighlight>us</BrushHighlight></>}
-          subtitle="Built for teams who demand clarity, speed, and confidence in every decision."
+          title={<>Three ways to <BrushHighlight>fund</BrushHighlight> a <BrushHighlight>campaign</BrushHighlight></>}
+          subtitle="Cash, barter, or a blend — built for cash-conscious brands and businesses sitting on idle inventory."
         />
+
         
         {/* Navigation Buttons - Desktop only */}
         <div className="hidden desktop:flex flex-col gap-2 mt-8">

@@ -4,35 +4,36 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Easily updatable metrics data
 const metrics = [
-  { 
-    endValue: 300, 
-    suffix: "M+", 
-    details1: "Tracked Annually", 
-    details2: "Supporting annual financial activity with accuracy.",
+  {
+    endValue: 40,
+    suffix: "+",
+    details1: "Brands served",
+    details2: "From challenger D2C to listed consumer names across India.",
     decimals: 0,
   },
-  { 
-    endValue: 98, 
-    suffix: "%", 
-    details1: "Less Manual Work", 
-    details2: "Automating repetitive tasks for faster workflows.",
+  {
+    endValue: 25,
+    suffix: "+",
+    details1: "Cities covered",
+    details2: "Pan-India OOH, transit, mall, cinema and print buying.",
     decimals: 0,
   },
-  { 
-    endValue: 5, 
-    suffix: "K+", 
-    details1: "Monthly Audits", 
-    details2: "Ensuring accurate books at scale for every team.",
+  {
+    endValue: 8,
+    suffix: " channels",
+    details1: "Media mix",
+    details2: "OOH, transit, mall, cinema, radio, print, digital, OTT.",
     decimals: 0,
   },
-  { 
-    endValue: 99.9, 
-    suffix: "%", 
-    details1: "Uptime", 
-    details2: "Reliable performance for uninterrupted operations.",
-    decimals: 1,
+  {
+    endValue: 100,
+    suffix: "%",
+    details1: "Inventory utilised",
+    details2: "For barter clients — surplus stock converted into reach.",
+    decimals: 0,
   },
 ];
+
 
 const MetricsSection = () => {
   const isDesktop = useIsDesktop();
