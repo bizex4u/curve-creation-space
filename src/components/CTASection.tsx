@@ -59,8 +59,8 @@ const CTASection = () => {
             </div>
 
             <div className="flex items-center gap-3 mt-6">
-              <FilledButton href="/#contact-section">Plan my campaign</FilledButton>
-              <OutlineButton href="/#pricing-section">See cash &amp; barter plans</OutlineButton>
+              <FilledButton href="/contact">Plan my campaign</FilledButton>
+              <OutlineButton href="/how-it-works">See cash &amp; barter plans</OutlineButton>
             </div>
 
             

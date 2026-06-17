@@ -1,7 +1,5 @@
-import { useRef } from "react";
 import { Building2, TrainFront, ShoppingBag, Film, Radio, Newspaper, Globe, Plane, Megaphone, Users } from "lucide-react";
 import FeatureCard from "./FeatureCard";
-import DashboardFrame from "./DashboardFrame";
 
 const features = [
   { icon: <Megaphone size={24} />, title: "ATL activities", description: "Mass-reach above-the-line: TV, print, radio, OOH and cinema — built for awareness and brand recall at national scale." },
@@ -17,16 +15,8 @@ const features = [
 ];
 
 const FeaturesSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
   return (
-    <section id="features-section" ref={sectionRef} className="section flex flex-col items-center gap-10">
-      <DashboardFrame
-        className="w-full tablet:w-[83%] max-w-[1079px]"
-        sectionRef={sectionRef}
-        animateOnLoad
-      />
-
+    <section id="features-section" className="section flex flex-col items-center gap-10">
       <div className="w-full grid grid-cols-1 gap-3 tablet:grid-cols-2 desktop:grid-cols-4 desktop:gap-[20px]">
         {features.map((f, i) => (
           <FeatureCard key={i} icon={f.icon} title={f.title} description={f.description} />

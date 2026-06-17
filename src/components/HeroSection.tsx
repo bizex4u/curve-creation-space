@@ -45,8 +45,8 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mb-[32px] tablet:mb-[64px]">
-          <FilledButton href="/#contact-section">Plan my campaign</FilledButton>
-          <OutlineButton href="/#pricing-section">See cash &amp; barter plans</OutlineButton>
+          <FilledButton href="/contact">Plan my campaign</FilledButton>
+          <OutlineButton href="/how-it-works">See cash &amp; barter plans</OutlineButton>
         </div>
 
         <div>
