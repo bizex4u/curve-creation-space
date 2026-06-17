@@ -43,10 +43,10 @@ const Navbar = ({
   return (
     <>
       <nav
-        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[680px] rounded-[18px] py-[10px] pl-[14px] pr-[10px] items-center justify-between gap-6 border flex flex-row transition-all duration-300 ${
+        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[680px] rounded-full py-[8px] pl-[14px] pr-[8px] items-center justify-between gap-6 border flex flex-row transition-all duration-300 ${
           scrolled
-            ? "bg-neutral-00/85 backdrop-blur-md border-neutral-03 shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
-            : "bg-neutral-00 border-neutral-03 shadow-md"
+            ? "bg-neutral-00/80 backdrop-blur-md border-main-01 shadow-[0_10px_30px_-12px_hsl(var(--theme-main-02)/0.18)]"
+            : "bg-neutral-00 border-main-01 shadow-[0_4px_18px_-8px_hsl(var(--theme-main-02)/0.14)]"
         }`}
       >
         {/* Logo */}
