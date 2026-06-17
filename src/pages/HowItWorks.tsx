@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { ClipboardList, Map, Scale, Rocket, FileBarChart, ArrowRight, Clock, MapPin, Award } from "lucide-react";
+import { ClipboardList, Map, Scale, Rocket, FileBarChart, Clock, MapPin, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BrushHighlight from "@/components/BrushHighlight";
