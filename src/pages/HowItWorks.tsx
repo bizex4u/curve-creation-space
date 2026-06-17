@@ -212,10 +212,8 @@ const HowItWorks = () => {
               <p className="text-body-large text-neutral-10 mt-4 max-w-[520px]">
                 Tell us your market and goal. A strategist will reply within 24 hours with a plan and a price.
               </p>
-              <div className="mt-7 flex items-center gap-3">
-                <FilledButton href="/contact">
-                  Plan my campaign <ArrowRight size={16} className="ml-1 inline" />
-                </FilledButton>
+              <div className="mt-7">
+                <FilledButton href="/contact">Plan my campaign</FilledButton>
               </div>
             </div>
           </div>
