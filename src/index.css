@@ -212,9 +212,28 @@ All colors MUST be HSL.
   }
 
   .btn-filled {
-    background: linear-gradient(to bottom right, hsl(var(--neutral-10)), hsl(var(--neutral-12)));
-    border: 1px solid hsl(var(--neutral-11));
-    box-shadow: 0 2px 8px hsl(var(--neutral-12) / 0.25);
+    background: hsl(var(--theme-main-02));
+    border: 1px solid hsl(var(--theme-main-02));
+    box-shadow: 0 6px 20px hsl(var(--theme-main-02) / 0.18);
+    color: hsl(var(--neutral-00));
+  }
+  .btn-filled:hover {
+    background: hsl(var(--neutral-12));
+    border-color: hsl(var(--neutral-12));
+  }
+
+  /* Editorial masthead bar — magazine volume info */
+  .masthead-rule {
+    border-top: 2px solid hsl(var(--neutral-12));
+    border-bottom: 1px solid hsl(var(--neutral-03));
+  }
+
+  /* Italic serif numeral for editorial section numbering */
+  .editorial-numeral {
+    font-family: 'Syne', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: hsl(var(--theme-main-01));
   }
 
   .container {
