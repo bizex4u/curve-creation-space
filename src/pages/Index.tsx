@@ -74,7 +74,7 @@ const Index = () => {
           <WhyUsSection />
         </div>
         <IntegrationSection />
-        <CampaignShowcase />
+        
         <BlogSection />
         <CTASection />
         <Footer showDivider={false} />
