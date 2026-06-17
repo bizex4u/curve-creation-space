@@ -50,8 +50,12 @@ const Navbar = ({
         }`}
       >
         {/* Logo */}
-        <Link to={logoHref} className="flex-shrink-0 flex items-center gap-2">
-          <img src={logo.url} alt="BIZEX4U" className="h-8 w-auto" />
+        <Link to={logoHref} className="flex-shrink-0 flex items-center gap-2 pl-1">
+          <img
+            src={logo.url}
+            alt="BIZEX4U"
+            className="h-10 tablet:h-11 w-auto object-contain block"
+          />
         </Link>
 
 
