@@ -54,8 +54,8 @@ const IntegrationSection = () => {
     >
       <div className="container">
         <SectionHeader
-          title={<>Media partners we <BrushHighlight>buy across</BrushHighlight></>}
-          subtitle="Direct relationships with the media owners that matter — so your campaign gets prime placements at negotiated rates."
+          title={<>Traditional advertising partners we <BrushHighlight>work with</BrushHighlight></>}
+          subtitle="Direct relationships with the traditional media owners that matter — so your campaign gets prime placements at negotiated rates."
           align="center"
           className="w-full tablet:w-[66%] desktop:w-[50%]"
           maxWidth="600px"
