@@ -1,9 +1,11 @@
 import { useRef } from "react";
-import { Building2, TrainFront, ShoppingBag, Film, Radio, Newspaper, Globe, Plane } from "lucide-react";
+import { Building2, TrainFront, ShoppingBag, Film, Radio, Newspaper, Globe, Plane, Megaphone, Users } from "lucide-react";
 import FeatureCard from "./FeatureCard";
 import DashboardFrame from "./DashboardFrame";
 
 const features = [
+  { icon: <Megaphone size={24} />, title: "ATL activities", description: "Mass-reach above-the-line: TV, print, radio, OOH and cinema — built for awareness and brand recall at national scale." },
+  { icon: <Users size={24} />, title: "BTL activities", description: "Below-the-line activations: mall promos, road shows, society sampling, retail branding and experiential events." },
   { icon: <Building2 size={24} />, title: "Outdoor (OOH)", description: "Billboards, unipoles, highway media and city branding across every major Indian metro and tier-2 market." },
   { icon: <TrainFront size={24} />, title: "Transit media", description: "Metro stations and panels, bus wraps, cab branding, rail and airport — high-frequency commuter reach." },
   { icon: <ShoppingBag size={24} />, title: "Mall & retail", description: "Premium mall atriums, pillar wraps and in-store activations in high-footfall retail destinations." },
