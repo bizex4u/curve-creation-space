@@ -61,7 +61,7 @@ const IntegrationSection = () => {
           maxWidth="600px"
         />
 
-        <div className="flex justify-center section-header">
+        <div className="flex justify-center section-header" style={{ mixBlendMode: 'multiply' }}>
           <LazyVideo src={joyfulGirlVideo} className="w-[210px] h-[210px]" />
         </div>
 
