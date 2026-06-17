@@ -12,61 +12,61 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Theme Colors - Purple agency palette (lavender → violet) */
-    --theme-main-00: 260 100% 97%;
-    --theme-main-01: 260 90% 90%;
-    --theme-main-02: 260 67% 55%;
+    /* Theme Colors - Editorial lavender + aubergine */
+    --theme-main-00: 280 88% 95%;
+    --theme-main-01: 271 86% 92%;
+    --theme-main-02: 277 58% 26%;
+    --theme-accent: 12 100% 61%;   /* coral #FF5C39 */
 
-
-    /* Neutral Colors */
-    --neutral-00: 0 0% 100%;
-    --neutral-01: 0 0% 98%;
-    --neutral-02: 0 0% 96%;
-    --neutral-03: 0 0% 93%;
-    --neutral-04: 0 0% 90%;
-    --neutral-05: 0 0% 85%;
-    --neutral-06: 0 0% 80%;
-    --neutral-07: 0 0% 74%;
-    --neutral-08: 0 0% 68%;
-    --neutral-09: 0 0% 60%;
-    --neutral-10: 0 0% 37%;
-    --neutral-11: 0 0% 10%;
-    --neutral-12: 0 0% 0%;
+    /* Neutral Colors - paper to ink */
+    --neutral-00: 280 88% 98%;   /* #FBF7FE paper */
+    --neutral-01: 282 67% 96%;
+    --neutral-02: 277 33% 94%;
+    --neutral-03: 275 25% 90%;
+    --neutral-04: 274 22% 84%;
+    --neutral-05: 271 14% 75%;
+    --neutral-06: 273 11% 64%;
+    --neutral-07: 273 9% 54%;
+    --neutral-08: 273 9% 43%;
+    --neutral-09: 273 9% 33%;
+    --neutral-10: 273 12% 24%;
+    --neutral-11: 273 17% 12%;
+    --neutral-12: 251 24% 9%;    /* #13111C ink */
 
     /* Success Color */
     --success: 142 76% 36%;
 
     /* Star/Rating Color */
-    --star: 45 93% 47%;
+    --star: 12 100% 61%;
 
     /* Semantic mappings */
-    --background: 260 100% 99%;
-    --foreground: 0 0% 10%;
+    --background: 280 88% 98%;
+    --foreground: 251 24% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 251 24% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 251 24% 9%;
 
-    --primary: 260 67% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 277 58% 26%;
+    --primary-foreground: 280 88% 98%;
 
-    --secondary: 260 100% 97%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 271 86% 92%;
+    --secondary-foreground: 251 24% 9%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 37%;
+    --muted: 277 33% 94%;
+    --muted-foreground: 273 12% 24%;
 
-    --accent: 260 90% 90%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 271 86% 92%;
+    --accent-foreground: 277 58% 26%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 260 67% 55%;
+    --border: 275 25% 90%;
+    --input: 275 25% 90%;
+    --ring: 277 58% 26%;
 
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 }
 
@@ -77,42 +77,44 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
-    letter-spacing: -0.04em;
-    line-height: 1.4em;
+    letter-spacing: -0.01em;
+    line-height: 1.5em;
     font-weight: 400;
     overflow-x: hidden;
   }
 
-  /* Heading Typography System */
+  /* Heading Typography System - Syne editorial display */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Manrope', sans-serif;
-    letter-spacing: -0.05em;
-    font-weight: 600;
+    font-family: 'Syne', sans-serif;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    color: hsl(var(--neutral-12));
   }
 
   h1, h2 {
-    line-height: 1.2;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
   }
 
   h3, h4, h5, h6 {
-    line-height: 1.3;
+    line-height: 1.15;
   }
 
   /* Mobile (default - 809px and below) */
-  h1 { font-size: 40px; }
-  h2 { font-size: 32px; }
-  h3 { font-size: 24px; }
-  h4 { font-size: 20px; }
+  h1 { font-size: 44px; }
+  h2 { font-size: 34px; }
+  h3 { font-size: 26px; }
+  h4 { font-size: 22px; }
   h5 { font-size: 20px; }
   h6 { font-size: 18px; }
 
   /* Tablet (810px - 1199px) */
   @media (min-width: 810px) {
-    h1 { font-size: 44px; }
-    h2 { font-size: 36px; }
-    h3 { font-size: 26px; }
+    h1 { font-size: 64px; }
+    h2 { font-size: 44px; }
+    h3 { font-size: 30px; }
     h4 { font-size: 24px; }
     h5 { font-size: 22px; }
     h6 { font-size: 18px; }
@@ -120,9 +122,9 @@ All colors MUST be HSL.
 
   /* Desktop (1200px and above) */
   @media (min-width: 1200px) {
-    h1 { font-size: 56px; }
-    h2 { font-size: 44px; }
-    h3 { font-size: 32px; }
+    h1 { font-size: 88px; }
+    h2 { font-size: 56px; }
+    h3 { font-size: 36px; }
     h4 { font-size: 28px; }
     h5 { font-size: 22px; }
     h6 { font-size: 20px; }
@@ -133,7 +135,7 @@ All colors MUST be HSL.
 @layer components {
   .text-h4,
   h1.text-h4, h2.text-h4, h3.text-h4, h4.text-h4, h5.text-h4, h6.text-h4 {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Syne', sans-serif;
     font-size: 20px !important;
     letter-spacing: -0.05em;
     line-height: 1.3;
@@ -156,7 +158,7 @@ All colors MUST be HSL.
 
   /* Body Text Typography Utility Classes */
   .text-body {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     letter-spacing: -0.04em;
     line-height: 1.4em;
@@ -164,7 +166,7 @@ All colors MUST be HSL.
   }
 
   .text-body-small {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     letter-spacing: -0.04em;
     line-height: 1.4em;
@@ -172,7 +174,7 @@ All colors MUST be HSL.
   }
 
   .text-body-large {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     letter-spacing: -0.04em;
     line-height: 1.4em;
@@ -186,7 +188,7 @@ All colors MUST be HSL.
   }
 
   .text-button {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     letter-spacing: -0.04em;
     line-height: 1.2;
@@ -194,7 +196,7 @@ All colors MUST be HSL.
   }
 
   .text-label {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     letter-spacing: -0.04em;
     line-height: 1.2;
@@ -202,7 +204,7 @@ All colors MUST be HSL.
   }
 
   .text-nav {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     letter-spacing: -0.04em;
     line-height: 1.2;
@@ -210,9 +212,28 @@ All colors MUST be HSL.
   }
 
   .btn-filled {
-    background: linear-gradient(to bottom right, hsl(var(--neutral-10)), hsl(var(--neutral-12)));
-    border: 1px solid hsl(var(--neutral-11));
-    box-shadow: 0 2px 8px hsl(var(--neutral-12) / 0.25);
+    background: hsl(var(--theme-main-02));
+    border: 1px solid hsl(var(--theme-main-02));
+    box-shadow: 0 6px 20px hsl(var(--theme-main-02) / 0.18);
+    color: hsl(var(--neutral-00));
+  }
+  .btn-filled:hover {
+    background: hsl(var(--neutral-12));
+    border-color: hsl(var(--neutral-12));
+  }
+
+  /* Editorial masthead bar — magazine volume info */
+  .masthead-rule {
+    border-top: 2px solid hsl(var(--neutral-12));
+    border-bottom: 1px solid hsl(var(--neutral-03));
+  }
+
+  /* Italic serif numeral for editorial section numbering */
+  .editorial-numeral {
+    font-family: 'Syne', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: hsl(var(--theme-main-01));
   }
 
   .container {
@@ -329,7 +350,7 @@ All colors MUST be HSL.
 
 /* ===== Engaging blog article typography ===== */
 .blog-prose {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: hsl(var(--neutral-11));
   font-size: 18px;
   line-height: 1.75;
@@ -337,7 +358,7 @@ All colors MUST be HSL.
 .blog-prose > * + * { margin-top: 1.25em; }
 .blog-prose p { font-size: 18px; line-height: 1.75; color: hsl(var(--neutral-11)); }
 .blog-prose p:first-of-type::first-letter {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 4.2em;
   float: left;
@@ -346,7 +367,7 @@ All colors MUST be HSL.
   color: hsl(var(--theme-main-02));
 }
 .blog-prose h2 {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
@@ -365,7 +386,7 @@ All colors MUST be HSL.
   margin-bottom: 16px;
 }
 .blog-prose h3 {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.3;
@@ -375,7 +396,7 @@ All colors MUST be HSL.
   letter-spacing: -0.01em;
 }
 .blog-prose h4 {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 600;
   font-size: 20px;
   margin-top: 1.4em;
@@ -410,7 +431,7 @@ All colors MUST be HSL.
   background: hsl(var(--theme-main-00));
   padding: 20px 24px;
   border-radius: 0 12px 12px 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Syne', sans-serif;
   font-size: 22px;
   line-height: 1.4;
   font-weight: 500;

@@ -1,26 +1,125 @@
-import { Building2, TrainFront, ShoppingBag, Film, Radio, Newspaper, Globe, Plane, Megaphone, Users } from "lucide-react";
-import FeatureCard from "./FeatureCard";
+import {
+  Megaphone,
+  Users,
+  ArrowUpRight,
+  Building2,
+  TrainFront,
+  Film,
+  Radio,
+  Newspaper,
+} from "lucide-react";
 
-const features = [
-  { icon: <Megaphone size={24} />, title: "ATL activities", description: "Mass-reach above-the-line: TV, print, radio, OOH and cinema — built for awareness and brand recall at national scale." },
-  { icon: <Users size={24} />, title: "BTL activities", description: "Below-the-line activations: mall promos, road shows, society sampling, retail branding and experiential events." },
-  { icon: <Building2 size={24} />, title: "Outdoor (OOH)", description: "Billboards, unipoles, highway media and city branding across every major Indian metro and tier-2 market." },
-  { icon: <TrainFront size={24} />, title: "Transit media", description: "Metro stations and panels, bus wraps, cab branding, rail and airport — high-frequency commuter reach." },
-  { icon: <ShoppingBag size={24} />, title: "Mall & retail", description: "Premium mall atriums, pillar wraps and in-store activations in high-footfall retail destinations." },
-  { icon: <Film size={24} />, title: "Cinema", description: "On-screen and lobby placements across PVR INOX premium and standard screens, including IMAX." },
-  { icon: <Radio size={24} />, title: "Radio & audio", description: "FM peak-hour spots, podcast mid-rolls, Spotify, Gaana and JioSaavn audio campaigns." },
-  { icon: <Newspaper size={24} />, title: "Print", description: "Mainline dailies, HT City, Bombay Times and lifestyle titles like Femina, Vogue and Cosmopolitan." },
-  { icon: <Globe size={24} />, title: "Digital & OTT", description: "Programmatic, social, Hotstar, Prime Video and Netflix companion — measured, optimised, reported." },
-  { icon: <Plane size={24} />, title: "Airport & travel", description: "Airport baggage belts, gate lounges and inflight — premium audience, captive attention." },
+const channels = [
+  { icon: <Building2 className="w-4 h-4" />, label: "Billboards & OOH" },
+  { icon: <TrainFront className="w-4 h-4" />, label: "Metro & airport" },
+  { icon: <Film className="w-4 h-4" />, label: "Cinema & malls" },
+  { icon: <Radio className="w-4 h-4" />, label: "Radio & audio" },
+  { icon: <Newspaper className="w-4 h-4" />, label: "Print & dailies" },
+];
+
+const btl = [
+  "Mall activations",
+  "Society sampling",
+  "Road shows",
+  "Retail branding",
+  "Influencer barter campaigns",
 ];
 
 const FeaturesSection = () => {
   return (
-    <section id="features-section" className="section flex flex-col items-center gap-10">
-      <div className="w-full grid grid-cols-1 gap-3 tablet:grid-cols-2 desktop:grid-cols-4 desktop:gap-[20px]">
-        {features.map((f, i) => (
-          <FeatureCard key={i} icon={f.icon} title={f.title} description={f.description} />
-        ))}
+    <section id="features-section" className="section">
+      {/* Section masthead */}
+      <div className="flex items-end justify-between mb-10 desktop:mb-14 pb-4 border-b border-neutral-03">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-09 mb-3">
+            Chapter 01 — Capabilities
+          </p>
+          <h2 className="text-neutral-12 max-w-[640px]">
+            ATL reach, BTL <span className="text-main-02 italic">activation</span>.
+          </h2>
+        </div>
+        <span className="hidden tablet:block text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-09">
+          Featured in this issue
+        </span>
+      </div>
+
+      {/* Three-up editorial grid */}
+      <div className="grid grid-cols-1 desktop:grid-cols-3 gap-px bg-neutral-03 border border-neutral-03 rounded-[24px] overflow-hidden">
+        {/* ATL */}
+        <article className="bg-neutral-00 p-8 tablet:p-10 group flex flex-col">
+          <div className="editorial-numeral text-[64px] leading-none mb-6">01</div>
+          <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-main-02 mb-3">
+            <Megaphone className="w-4 h-4" /> ATL activities
+          </div>
+          <h3 className="text-neutral-12 mb-4">
+            Mass-reach above-the-line.
+          </h3>
+          <p className="text-body text-neutral-10 mb-8">
+            TV, print, radio, OOH and cinema — built for awareness and brand recall at
+            national scale across India's metros and tier-2 markets.
+          </p>
+          <ul className="space-y-2 mt-auto pt-6 border-t border-neutral-03">
+            {channels.map((c) => (
+              <li
+                key={c.label}
+                className="flex items-center gap-3 text-sm font-medium text-neutral-11"
+              >
+                <span className="text-main-02">{c.icon}</span>
+                {c.label}
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        {/* BTL — dark aubergine plate */}
+        <article className="bg-main-02 text-neutral-00 p-8 tablet:p-10 group flex flex-col relative">
+          <div className="editorial-numeral text-[64px] leading-none mb-6 text-coral/70">02</div>
+          <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-coral mb-3">
+            <Users className="w-4 h-4" /> BTL activities
+          </div>
+          <h3 className="text-neutral-00 mb-4">
+            On-ground activation that converts.
+          </h3>
+          <p className="text-body text-main-01 mb-8">
+            Mall promos, road shows, society sampling, retail branding and experiential
+            events — the work that turns awareness into action.
+          </p>
+          <ul className="space-y-2 mt-auto pt-6 border-t border-neutral-00/15">
+            {btl.map((b) => (
+              <li
+                key={b}
+                className="flex items-center gap-3 text-sm font-medium text-neutral-00"
+              >
+                <span className="text-coral">→</span>
+                {b}
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        {/* Barter desk */}
+        <article className="bg-neutral-00 p-8 tablet:p-10 group flex flex-col">
+          <div className="editorial-numeral text-[64px] leading-none mb-6">03</div>
+          <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-main-02 mb-3">
+            <ArrowUpRight className="w-4 h-4" /> Barter desk
+          </div>
+          <h3 className="text-neutral-12 mb-4">
+            Trade your inventory for media.
+          </h3>
+          <p className="text-body text-neutral-10 mb-8">
+            Our proprietary engine for high-value media exchange. Fund part — or all — of
+            your campaign with product, services or excess inventory.
+          </p>
+          <div className="mt-auto pt-6 border-t border-neutral-03">
+            <a
+              href="/how-it-works"
+              className="inline-flex items-center gap-2 text-coral font-bold text-xs uppercase tracking-[0.22em] hover:gap-3 transition-all"
+            >
+              Explore barter
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+        </article>
       </div>
     </section>
   );
