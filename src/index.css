@@ -12,61 +12,61 @@ All colors MUST be HSL.
   }
 
   :root {
-    /* Theme Colors - Purple agency palette (lavender → violet) */
-    --theme-main-00: 260 100% 97%;
-    --theme-main-01: 260 90% 90%;
-    --theme-main-02: 260 67% 55%;
+    /* Theme Colors - Editorial lavender + aubergine */
+    --theme-main-00: 280 88% 95%;
+    --theme-main-01: 271 86% 92%;
+    --theme-main-02: 277 58% 26%;
+    --theme-accent: 12 100% 61%;   /* coral #FF5C39 */
 
-
-    /* Neutral Colors */
-    --neutral-00: 0 0% 100%;
-    --neutral-01: 0 0% 98%;
-    --neutral-02: 0 0% 96%;
-    --neutral-03: 0 0% 93%;
-    --neutral-04: 0 0% 90%;
-    --neutral-05: 0 0% 85%;
-    --neutral-06: 0 0% 80%;
-    --neutral-07: 0 0% 74%;
-    --neutral-08: 0 0% 68%;
-    --neutral-09: 0 0% 60%;
-    --neutral-10: 0 0% 37%;
-    --neutral-11: 0 0% 10%;
-    --neutral-12: 0 0% 0%;
+    /* Neutral Colors - paper to ink */
+    --neutral-00: 280 88% 98%;   /* #FBF7FE paper */
+    --neutral-01: 282 67% 96%;
+    --neutral-02: 277 33% 94%;
+    --neutral-03: 275 25% 90%;
+    --neutral-04: 274 22% 84%;
+    --neutral-05: 271 14% 75%;
+    --neutral-06: 273 11% 64%;
+    --neutral-07: 273 9% 54%;
+    --neutral-08: 273 9% 43%;
+    --neutral-09: 273 9% 33%;
+    --neutral-10: 273 12% 24%;
+    --neutral-11: 273 17% 12%;
+    --neutral-12: 251 24% 9%;    /* #13111C ink */
 
     /* Success Color */
     --success: 142 76% 36%;
 
     /* Star/Rating Color */
-    --star: 45 93% 47%;
+    --star: 12 100% 61%;
 
     /* Semantic mappings */
-    --background: 260 100% 99%;
-    --foreground: 0 0% 10%;
+    --background: 280 88% 98%;
+    --foreground: 251 24% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 251 24% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 251 24% 9%;
 
-    --primary: 260 67% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 277 58% 26%;
+    --primary-foreground: 280 88% 98%;
 
-    --secondary: 260 100% 97%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 271 86% 92%;
+    --secondary-foreground: 251 24% 9%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 37%;
+    --muted: 277 33% 94%;
+    --muted-foreground: 273 12% 24%;
 
-    --accent: 260 90% 90%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 271 86% 92%;
+    --accent-foreground: 277 58% 26%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 260 67% 55%;
+    --border: 275 25% 90%;
+    --input: 275 25% 90%;
+    --ring: 277 58% 26%;
 
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 }
 
