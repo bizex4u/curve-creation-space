@@ -14,7 +14,7 @@ interface FooterNavListProps {
 const FooterNavList = ({ title, items }: FooterNavListProps) => {
   return (
     <div className="flex flex-col gap-4">
-      <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-00/60">{title}</span>
+      <span className="text-body font-medium text-neutral-12">{title}</span>
       <div className="flex flex-col gap-3">
         {items.map((item) => (
           item.external ? (
@@ -23,7 +23,7 @@ const FooterNavList = ({ title, items }: FooterNavListProps) => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-syne text-[18px] font-semibold text-neutral-00 hover:text-coral transition-colors"
+              className="text-body text-neutral-10 hover:text-neutral-12 transition-colors"
             >
               {item.label}
             </a>
@@ -31,7 +31,7 @@ const FooterNavList = ({ title, items }: FooterNavListProps) => {
             <HashLink
               key={item.label}
               to={item.href}
-              className="font-syne text-[18px] font-semibold text-neutral-00 hover:text-coral transition-colors"
+              className="text-body text-neutral-10 hover:text-neutral-12 transition-colors"
             >
               {item.label}
             </HashLink>
