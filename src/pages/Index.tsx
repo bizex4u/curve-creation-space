@@ -4,14 +4,10 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import WhyUsSection from "@/components/WhyUsSection";
-import ProcessSection from "@/components/ProcessSection";
 import IntegrationSection from "@/components/IntegrationSection";
-import PricingSection from "@/components/PricingSection";
 
-import FAQSection from "@/components/FAQSection";
 import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingInstructionsButton from "@/components/FloatingInstructionsButton";
 import FloatingLeadPopup from "@/components/FloatingLeadPopup";
