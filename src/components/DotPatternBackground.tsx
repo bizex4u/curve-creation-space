@@ -35,8 +35,8 @@ const DotPatternBackground = ({
     : defaultPadding;
   const colors = {
     main: {
-      background: 'rgba(207, 226, 252, 0.85)',  // main-01 at 85% opacity
-      dot: '#DADADA',         // neutral-05 from tailwind.config.ts
+      background: 'rgba(217, 199, 255, 0.85)',  // main-01 light purple at 85%
+      dot: '#C9B8F0',
       defaultFade: 55,
     },
     neutral: {

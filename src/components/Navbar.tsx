@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import FilledButton from "./FilledButton";
 import HashLink from "./HashLink";
 import logo from "@/assets/bizex4u-logo.png.asset.json";
 
@@ -15,8 +14,6 @@ interface NavbarProps {
   logoHref?: string;
   logoSrc?: string;
   navItems?: NavItem[];
-  ctaText?: string;
-  ctaHref?: string;
 }
 
 const defaultNavItems: NavItem[] = [
@@ -31,8 +28,6 @@ const Navbar = ({
   logoHref = "/",
   logoSrc,
   navItems = defaultNavItems,
-  ctaText = "Plan my campaign",
-  ctaHref = "/#contact-section",
 }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -73,10 +68,6 @@ const Navbar = ({
           ))}
         </div>
 
-        {/* CTA Button - hidden on mobile */}
-        <div className="hidden tablet:block">
-          <FilledButton href={ctaHref}>{ctaText}</FilledButton>
-        </div>
 
         {/* Mobile Menu Button - visible only on mobile */}
         <button

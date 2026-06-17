@@ -18,31 +18,26 @@ const companyLinks = [
   { label: "Blog", href: "/blog" },
 ];
 
-const adminLinks = [
-  { label: "Login", href: "/auth" },
-];
-
 interface FooterProps {
   showDivider?: boolean;
 }
 
 const Footer = ({ showDivider = true }: FooterProps) => {
   return (
-    <footer className={`py-10 bg-neutral-00 desktop:h-[350px] ${showDivider ? 'border-t border-neutral-03' : ''}`}>
-      <div className="container desktop:h-full">
-        <div className="flex flex-col gap-16 tablet:gap-10 desktop:flex-row desktop:justify-between desktop:h-full">
-          <div className="flex flex-col gap-8 tablet:flex-row tablet:justify-between tablet:items-end desktop:flex-col desktop:justify-between desktop:items-start desktop:h-full">
-            <div className="flex flex-col">
-              <img src={logo.url} alt="BIZEX4U" className="h-10 w-auto" />
-              <p className="text-body text-neutral-10 mt-2 max-w-[280px]">
-                Full-service ad agency for India. Cash. Barter. Or both.
-              </p>
-              <div className="flex flex-col gap-2 mt-6">
-                <span className="text-body font-medium text-neutral-10">yash@bizex4u.com</span>
-                <span className="text-body font-medium text-neutral-10">+91 80905 00009</span>
-              </div>
+    <footer className={`py-12 bg-neutral-00 ${showDivider ? 'border-t border-neutral-03' : ''}`}>
+      <div className="container">
+        <div className="flex flex-col gap-12 desktop:flex-row desktop:justify-between desktop:items-start">
+          <div className="flex flex-col gap-6 max-w-[320px]">
+            <div className="flex items-center">
+              <img src={logo.url} alt="BIZEX4U" className="h-12 w-auto object-contain" />
             </div>
-
+            <p className="text-body text-neutral-10">
+              Full-service ad agency for India. Cash. Barter. Or both.
+            </p>
+            <div className="flex flex-col gap-1">
+              <span className="text-body font-medium text-neutral-11">yash@bizex4u.com</span>
+              <span className="text-body font-medium text-neutral-11">+91 80905 00009</span>
+            </div>
             <div className="flex items-center gap-2">
               <SocialLink href="https://instagram.com" icon={<img src={InstagramLogo} alt="Instagram" className="w-5 h-5" />} />
               <SocialLink href="https://linkedin.com" icon={<img src={LinkedinLogo} alt="LinkedIn" className="w-5 h-5" />} />
@@ -50,13 +45,11 @@ const Footer = ({ showDivider = true }: FooterProps) => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8 tablet:flex-row tablet:justify-between tablet:items-end desktop:flex-col desktop:justify-between desktop:items-end desktop:h-full">
-            <div className="flex gap-10">
+          <div className="flex flex-col gap-10 desktop:items-end">
+            <div className="flex gap-12">
               <FooterNavList title="Agency" items={productLinks} />
               <FooterNavList title="Company" items={companyLinks} />
-              <FooterNavList title="Admin" items={adminLinks} />
             </div>
-
             <p className="text-body text-neutral-10">
               © {new Date().getFullYear()} BIZEX4U. All rights reserved.
             </p>
