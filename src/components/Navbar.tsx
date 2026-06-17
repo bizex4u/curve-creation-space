@@ -14,8 +14,6 @@ interface NavbarProps {
   logoHref?: string;
   logoSrc?: string;
   navItems?: NavItem[];
-  ctaText?: string;
-  ctaHref?: string;
 }
 
 const defaultNavItems: NavItem[] = [

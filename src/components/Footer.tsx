@@ -18,9 +18,6 @@ const companyLinks = [
   { label: "Blog", href: "/blog" },
 ];
 
-const adminLinks = [
-  { label: "Login", href: "/auth" },
-];
 
 interface FooterProps {
   showDivider?: boolean;
@@ -32,16 +29,17 @@ const Footer = ({ showDivider = true }: FooterProps) => {
       <div className="container desktop:h-full">
         <div className="flex flex-col gap-16 tablet:gap-10 desktop:flex-row desktop:justify-between desktop:h-full">
           <div className="flex flex-col gap-8 tablet:flex-row tablet:justify-between tablet:items-end desktop:flex-col desktop:justify-between desktop:items-start desktop:h-full">
-            <div className="flex flex-col">
-              <img src={logo.url} alt="BIZEX4U" className="h-10 w-auto" />
-              <p className="text-body text-neutral-10 mt-2 max-w-[280px]">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center h-12">
+                <img src={logo.url} alt="BIZEX4U" className="h-10 w-auto object-contain" />
+              </div>
+              <p className="text-body text-neutral-10 max-w-[280px]">
                 Full-service ad agency for India. Cash. Barter. Or both.
               </p>
-              <div className="flex flex-col gap-2 mt-6">
+              <div className="flex flex-col gap-2 mt-4">
                 <span className="text-body font-medium text-neutral-10">yash@bizex4u.com</span>
                 <span className="text-body font-medium text-neutral-10">+91 80905 00009</span>
               </div>
-            </div>
 
             <div className="flex items-center gap-2">
               <SocialLink href="https://instagram.com" icon={<img src={InstagramLogo} alt="Instagram" className="w-5 h-5" />} />
