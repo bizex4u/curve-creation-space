@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import DotPatternBackground from "@/components/DotPatternBackground";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
