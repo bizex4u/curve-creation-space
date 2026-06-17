@@ -8,7 +8,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import IntegrationSection from "@/components/IntegrationSection";
 
 import BlogSection from "@/components/BlogSection";
-import CampaignShowcase from "@/components/CampaignShowcase";
+
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import FloatingInstructionsButton from "@/components/FloatingInstructionsButton";
