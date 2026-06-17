@@ -29,7 +29,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-neutral-00">
       <Helmet>
-        <title>Field notes — campaign insights from India | BIZEX4U</title>
+        <title>Advertising Insights & Campaign Notes | BIZEX4U Blog</title>
         <meta
           name="description"
           content="Practical playbooks on outdoor, transit, ATL/BTL and barter advertising in India — written by BIZEX4U's media planners and buyers."

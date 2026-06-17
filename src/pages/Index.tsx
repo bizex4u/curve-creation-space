@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import DotPatternBackground from "@/components/DotPatternBackground";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -47,6 +48,13 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen">
+      <Helmet>
+        <title>Advertising & Barter Media Agency India | BIZEX4U</title>
+        <meta name="description" content="BIZEX4U is India's full-service advertising agency for cash and barter campaigns. Outdoor, transit, mall, cinema, radio, print and digital — across 12+ cities." />
+        <link rel="canonical" href="/" />
+        <meta property="og:title" content="Advertising & Barter Media Agency India | BIZEX4U" />
+        <meta property="og:url" content="/" />
+      </Helmet>
       {/* Background layer - dynamic on mobile, CSS-based on tablet/desktop */}
       <div 
         className="absolute inset-x-0 top-0 tablet:h-[80vh] tablet:min-h-[700px] desktop:h-screen desktop:min-h-[800px] max-h-[1024px] z-0"

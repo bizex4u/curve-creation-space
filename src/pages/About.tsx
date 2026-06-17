@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
@@ -16,6 +17,13 @@ const AboutVideo = () => (
 const About = () => {
   return (
     <div className="min-h-screen bg-neutral-00">
+      <Helmet>
+        <title>About BIZEX4U — India's Barter & Advertising Agency</title>
+        <meta name="description" content="Meet BIZEX4U — India's full-service advertising and barter media agency planning cash and trade campaigns across the country." />
+        <link rel="canonical" href="/about" />
+        <meta property="og:title" content="About BIZEX4U — India's Barter & Advertising Agency" />
+        <meta property="og:url" content="/about" />
+      </Helmet>
       <Navbar />
       <PageHeader
         heading={
