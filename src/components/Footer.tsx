@@ -7,14 +7,13 @@ import logo from "@/assets/bizex4u-logo.png.asset.json";
 
 const productLinks = [
   { label: "Home", href: "/" },
-  { label: "Channels", href: "/#features-section" },
-  { label: "How it works", href: "/#pricing-section" },
-  { label: "FAQ", href: "/#faq-section" },
+  { label: "Channels", href: "/channels" },
+  { label: "How it works", href: "/how-it-works" },
 ];
 
 const companyLinks = [
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact-section" },
+  { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
 ];
 

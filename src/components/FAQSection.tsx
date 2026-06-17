@@ -71,7 +71,7 @@ const FAQSection = () => {
                 Still got questions?
               </p>
               <div className="mt-3">
-                <FilledButton href="/#contact-section">Contact us</FilledButton>
+                <FilledButton href="/contact">Contact us</FilledButton>
               </div>
             </div>
           </div>

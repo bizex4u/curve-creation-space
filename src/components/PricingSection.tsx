@@ -16,7 +16,7 @@ const pricingPlans = [
       "Post-campaign reporting deck",
     ],
     variant: "general" as const,
-    ctaHref: "/#contact-section",
+    ctaHref: "/contact",
   },
   {
     planName: "Hybrid (cash + barter)",
@@ -31,7 +31,7 @@ const pricingPlans = [
       "Transparent PO and contract on both sides",
     ],
     variant: "primary" as const,
-    ctaHref: "/#contact-section",
+    ctaHref: "/contact",
   },
   {
     planName: "Barter campaigns",
@@ -46,7 +46,7 @@ const pricingPlans = [
       "Agency commission on campaign value",
     ],
     variant: "general" as const,
-    ctaHref: "/#contact-section",
+    ctaHref: "/contact",
   },
 ];
 
