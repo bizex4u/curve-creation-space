@@ -20,10 +20,10 @@ const Blog = () => {
       <PageHeader
         heading={
           <>
-            The{" "}
-            <BrushHighlight delay={400}>latest</BrushHighlight>{" "}
-            <BrushHighlight delay={600}>ideas</BrushHighlight>{" "}
-            shaping modern financial teams
+            Field notes from{" "}
+            <BrushHighlight delay={400}>real</BrushHighlight>{" "}
+            <BrushHighlight delay={600}>campaigns</BrushHighlight>{" "}
+            across India
           </>
         }
         media={
