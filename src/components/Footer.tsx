@@ -1,6 +1,4 @@
-import InstagramLogo from "@/assets/Instagram_Logo.png";
 import LinkedinLogo from "@/assets/Linkedin_Logo.png";
-import ThreadsLogo from "@/assets/Threads_Logo.png";
 import SocialLink from "./footer/SocialLink";
 import FooterNavList from "./footer/FooterNavList";
 import logo from "@/assets/bizex4u-logo.png.asset.json";
@@ -38,9 +36,7 @@ const Footer = ({ showDivider = true }: FooterProps) => {
               <span className="text-body font-medium text-neutral-11">+91 80905 00009</span>
             </div>
             <div className="flex items-center gap-2">
-              <SocialLink href="https://instagram.com" icon={<img src={InstagramLogo} alt="Instagram" className="w-5 h-5" />} />
-              <SocialLink href="https://linkedin.com" icon={<img src={LinkedinLogo} alt="LinkedIn" className="w-5 h-5" />} />
-              <SocialLink href="https://threads.com" icon={<img src={ThreadsLogo} alt="Threads" className="w-5 h-5" />} />
+              <SocialLink href="https://in.linkedin.com/company/bizex4u" icon={<img src={LinkedinLogo} alt="LinkedIn" className="w-5 h-5" />} />
             </div>
           </div>
 
