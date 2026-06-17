@@ -68,12 +68,8 @@ const Index = () => {
           </div>
           <WhyUsSection />
         </div>
-        <ProcessSection />
         <IntegrationSection />
-        <PricingSection />
-        <FAQSection />
         <BlogSection />
-        <ContactSection />
         <CTASection />
         <Footer showDivider={false} />
         <FloatingInstructionsButton />
