@@ -3,9 +3,6 @@ import { Banknote, ArrowLeftRight, Layers } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import BenefitCard from "./BenefitCard";
 import BrushHighlight from "./BrushHighlight";
-import WhyUsUI1 from "@/assets/WhyUs_UI_1.png";
-import WhyUsUI2 from "@/assets/WhyUs_UI_2.png";
-import WhyUsUI3 from "@/assets/WhyUs_UI_3.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const benefitData = [
@@ -14,21 +11,21 @@ const benefitData = [
     icon: Banknote,
     title: "Cash campaigns, run sharper",
     description: "Same media owners, better negotiation. Your strategist plans the mix, books direct, and reports back — so cash budgets stretch further across OOH, transit, cinema, print, radio and digital.",
-    image: WhyUsUI1,
+    highlights: ["Direct media-owner rates", "Pan-India planning", "Mounting & monitoring proofs", "Post-campaign reporting"],
   },
   {
     id: "barter",
     icon: ArrowLeftRight,
     title: "Barter — turn idle inventory into reach",
     description: "Sitting on surplus stock, unsold goods or unused service capacity? Convert that value into premium media placements at agreed barter ratios, with a clean PO and contract for every exchange.",
-    image: WhyUsUI2,
+    highlights: ["Inventory valued fairly", "Premium media access", "Contract & PO on both sides", "Zero upfront media cash"],
   },
   {
     id: "hybrid",
     icon: Layers,
     title: "Hybrid — pay part cash, part trade",
     description: "Most brands land here. Cover the channels barter can't reach with a slice of cash, and fund the rest with inventory — so the same budget buys meaningfully more reach.",
-    image: WhyUsUI3,
+    highlights: ["Cash + barter blended", "More reach per rupee", "Channel-by-channel mix", "Dedicated strategist"],
   },
 ];
 
@@ -152,7 +149,8 @@ const WhyUsSection = () => {
             id={benefit.id}
             title={benefit.title}
             description={benefit.description}
-            image={benefit.image}
+            icon={benefit.icon}
+            highlights={benefit.highlights}
           />
         ))}
       </div>
