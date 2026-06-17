@@ -66,7 +66,7 @@ const Navbar = ({
             <HashLink
               key={item.label}
               to={item.href}
-              className="relative text-[13px] font-semibold uppercase tracking-[0.12em] text-neutral-11 hover:text-main-02 px-3 py-1.5 rounded-full transition-colors"
+              className="relative whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.12em] text-neutral-11 hover:text-main-02 px-3 py-1.5 rounded-full transition-colors"
             >
               {item.label}
             </HashLink>
