@@ -6,8 +6,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const mediaPartners = [
   "PVR INOX", "Times Group", "HT Media", "Hindustan Times", "Bombay Times",
-  "Femina", "Vogue India", "Cosmopolitan", "Spotify", "Gaana", "JioSaavn",
-  "Hotstar", "Prime Video", "Netflix DSP", "Delhi Metro", "BMRCL",
+  "Femina", "Vogue India", "Cosmopolitan", "Delhi Metro", "BMRCL",
   "Mumbai Metro", "Indian Railways", "GMR Airports", "Adani Airports",
   "DLF Malls", "Phoenix Mills", "Inorbit", "Select CITYWALK",
 ];
@@ -55,14 +54,14 @@ const IntegrationSection = () => {
     >
       <div className="container">
         <SectionHeader
-          title={<>Media partners we <BrushHighlight>buy across</BrushHighlight></>}
-          subtitle="Direct relationships with the media owners that matter — so your campaign gets prime placements at negotiated rates."
+          title={<>Traditional advertising partners we <BrushHighlight>work with</BrushHighlight></>}
+          subtitle="Direct relationships with the traditional media owners that matter — so your campaign gets prime placements at negotiated rates."
           align="center"
           className="w-full tablet:w-[66%] desktop:w-[50%]"
           maxWidth="600px"
         />
 
-        <div className="flex justify-center section-header">
+        <div className="flex justify-center section-header" style={{ mixBlendMode: 'multiply' }}>
           <LazyVideo src={joyfulGirlVideo} className="w-[210px] h-[210px]" />
         </div>
 
