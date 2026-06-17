@@ -18,10 +18,11 @@ interface NavbarProps {
 
 const defaultNavItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Channels", href: "/#features-section" },
-  { label: "How it works", href: "/#pricing-section" },
+  { label: "Channels", href: "/channels" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact-section" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = ({
