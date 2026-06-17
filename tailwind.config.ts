@@ -17,32 +17,36 @@ export default {
       },
     },
     colors: {
-      /* Theme Colors - Main */
+      /* Theme Colors - Editorial lavender + aubergine + coral accent */
       main: {
-        '00': "#F5F0FF",
-        '01': "#D9C7FF",
-        '02': "#6D3FD9",
+        '00': "#F5EBFE",  // lavender wash
+        '01': "#EADCFB",  // lavender tint
+        '02': "#4C1D6B",  // aubergine (primary)
+      },
+      coral: {
+        DEFAULT: "#FF5C39",
+        '01': "#FFE4DC",
       },
 
-      /* Neutral Colors - Edit these hex values to customize */
+      /* Neutral Colors - paper + ink editorial palette */
       neutral: {
-        '00': "#FFFFFF",  // White
-        '01': "#FAFAFA",
-        '02': "#F4F4F4",
-        '03': "#EEEEEE",
-        '04': "#E6E6E6",
-        '05': "#DADADA",
-        '06': "#CCCCCC",
-        '07': "#BDBDBD",
-        '08': "#AEAEAE",
-        '09': "#999999",
-        '10': "#605F5F",
-        '11': "#1A1A1A",
-        '12': "#000000",  // Black
+        '00': "#FBF7FE",  // Paper (warm lavender white)
+        '01': "#F6F1FB",
+        '02': "#F0EAF6",
+        '03': "#E6DEEE",
+        '04': "#D8CDE2",
+        '05': "#BFB3CC",
+        '06': "#A395B0",
+        '07': "#8B7E97",
+        '08': "#6F6478",
+        '09': "#564C5E",
+        '10': "#3E3645",
+        '11': "#1F1A26",
+        '12': "#13111C",  // Ink
       },
       /* Success & Rating Colors */
       success: "#22C55E",
-      star: "#FBBF24",
+      star: "#FF5C39",
       /* Semantic Colors */
       transparent: 'transparent',
       current: 'currentColor',
@@ -78,8 +82,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        'manrope': ['Manrope', 'sans-serif'],
-        'geist': ['Geist', 'sans-serif'],
+        'syne': ['Syne', 'sans-serif'],
+        'jakarta': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'manrope': ['Syne', 'sans-serif'],
+        'geist': ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
