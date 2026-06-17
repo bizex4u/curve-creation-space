@@ -6,8 +6,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const mediaPartners = [
   "PVR INOX", "Times Group", "HT Media", "Hindustan Times", "Bombay Times",
-  "Femina", "Vogue India", "Cosmopolitan", "Spotify", "Gaana", "JioSaavn",
-  "Hotstar", "Prime Video", "Netflix DSP", "Delhi Metro", "BMRCL",
+  "Femina", "Vogue India", "Cosmopolitan", "Delhi Metro", "BMRCL",
   "Mumbai Metro", "Indian Railways", "GMR Airports", "Adani Airports",
   "DLF Malls", "Phoenix Mills", "Inorbit", "Select CITYWALK",
 ];
