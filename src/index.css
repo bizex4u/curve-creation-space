@@ -103,18 +103,18 @@ All colors MUST be HSL.
   }
 
   /* Mobile (default - 809px and below) */
-  h1 { font-size: 40px; }
-  h2 { font-size: 32px; }
-  h3 { font-size: 24px; }
-  h4 { font-size: 20px; }
+  h1 { font-size: 44px; }
+  h2 { font-size: 34px; }
+  h3 { font-size: 26px; }
+  h4 { font-size: 22px; }
   h5 { font-size: 20px; }
   h6 { font-size: 18px; }
 
   /* Tablet (810px - 1199px) */
   @media (min-width: 810px) {
-    h1 { font-size: 44px; }
-    h2 { font-size: 36px; }
-    h3 { font-size: 26px; }
+    h1 { font-size: 64px; }
+    h2 { font-size: 44px; }
+    h3 { font-size: 30px; }
     h4 { font-size: 24px; }
     h5 { font-size: 22px; }
     h6 { font-size: 18px; }
@@ -122,9 +122,9 @@ All colors MUST be HSL.
 
   /* Desktop (1200px and above) */
   @media (min-width: 1200px) {
-    h1 { font-size: 56px; }
-    h2 { font-size: 44px; }
-    h3 { font-size: 32px; }
+    h1 { font-size: 88px; }
+    h2 { font-size: 56px; }
+    h3 { font-size: 36px; }
     h4 { font-size: 28px; }
     h5 { font-size: 22px; }
     h6 { font-size: 20px; }
