@@ -6,6 +6,7 @@ import ProcessSection from "@/components/ProcessSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import CampaignShowcase from "@/components/CampaignShowcase";
 
 const HowItWorks = () => {
   return (
@@ -19,6 +20,7 @@ const HowItWorks = () => {
         }
       />
       <ProcessSection />
+      <CampaignShowcase />
       <PricingSection />
       <FAQSection />
       <CTASection />
