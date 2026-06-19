@@ -30,25 +30,49 @@ const HeroSection = () => {
         transition: 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out',
       }}
     >
-      {/* Left */}
+      {/* Left: Headline only */}
       <div className="w-full tablet:w-[55%] desktop:w-1/2 flex flex-col">
         <div className="flex items-center gap-2 w-fit px-3 py-1.5 border-neutral-03 border rounded-xl mb-3">
           <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "hsl(var(--theme-main-02))" }} />
           <span className="text-label text-neutral-10">Cash. Barter. Or both.</span>
         </div>
 
-        <h1 className="text-neutral-12 mb-8 tablet:mb-10">
+        <h1 className="text-neutral-12 mb-6 tablet:mb-8">
           Convert inventory into{" "}
           <BrushHighlight delay={600} color="hsl(var(--theme-main-01))">impact</BrushHighlight>.
           India's advertising partner for cash, barter or both
         </h1>
 
-        <p className="text-body-large text-neutral-10 mb-8 tablet:mb-10 max-w-[520px]">
+        <p className="text-body-large text-neutral-10 max-w-[520px]">
           Access outdoor, metro, airport, cinema, radio and digital media while optimizing
           marketing spend through cash, barter or hybrid campaigns.
         </p>
+      </div>
 
-        <div className="grid grid-cols-2 gap-6 tablet:gap-8 mb-8 tablet:mb-10 max-w-[520px]">
+      {/* Right: Video, Logo Ticker, Metrics, CTAs */}
+      <div className="w-full tablet:w-[40%] desktop:w-5/12 flex flex-col gap-5 tablet:gap-6">
+        <div
+          className="hidden tablet:block w-full aspect-[4/3] rounded-xl overflow-hidden"
+          style={{
+            opacity: isLoaded ? 1 : 0,
+            transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+            transition: 'opacity 0.7s ease-out 0.2s, transform 0.7s ease-out 0.2s',
+          }}
+        >
+          <LazyVideo src={heroVideo} className="w-full h-full" />
+        </div>
+
+        <div
+          style={{
+            opacity: isLoaded ? 1 : 0,
+            transition: 'opacity 0.7s ease-out 0.5s',
+          }}
+        >
+          <p className="text-label text-neutral-10 mb-2">Trusted by leading brands</p>
+          <LogoTicker />
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 tablet:gap-6 max-w-[520px]">
           {metrics.map((metric, i) => (
             <div
               key={metric.label}
@@ -69,30 +93,6 @@ const HeroSection = () => {
         <div className="flex flex-wrap items-center gap-3 tablet:gap-4">
           <FilledButton href="/contact">Plan my campaign</FilledButton>
           <OutlineButton href="/how-it-works">See cash &amp; barter plans</OutlineButton>
-        </div>
-      </div>
-
-      {/* Right */}
-      <div className="w-full tablet:w-[40%] desktop:w-5/12 flex flex-col gap-6 tablet:gap-8">
-        <div
-          className="hidden tablet:block w-full aspect-[4/3] rounded-xl overflow-hidden"
-          style={{
-            opacity: isLoaded ? 1 : 0,
-            transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'opacity 0.7s ease-out 0.2s, transform 0.7s ease-out 0.2s',
-          }}
-        >
-          <LazyVideo src={heroVideo} className="w-full h-full" />
-        </div>
-        <div
-          className="w-full"
-          style={{
-            opacity: isLoaded ? 1 : 0,
-            transition: 'opacity 0.7s ease-out 0.5s',
-          }}
-        >
-          <p className="text-label text-neutral-10 mb-3 tablet:mb-4">Trusted by leading brands</p>
-          <LogoTicker />
         </div>
       </div>
     </section>
