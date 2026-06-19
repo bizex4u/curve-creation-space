@@ -4,7 +4,7 @@ interface ProcessCardProps {
   stepNumber: string;
   icon: React.ReactNode;
   title: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 const ProcessCard = memo(({ stepNumber, icon, title, description }: ProcessCardProps) => {

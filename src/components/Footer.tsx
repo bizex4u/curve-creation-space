@@ -3,10 +3,18 @@ import SocialLink from "./footer/SocialLink";
 import FooterNavList from "./footer/FooterNavList";
 import logo from "@/assets/bizex4u-logo.png.asset.json";
 
-const productLinks = [
+const agencyLinks = [
   { label: "Home", href: "/" },
   { label: "Channels", href: "/channels" },
   { label: "How it works", href: "/how-it-works" },
+];
+
+const serviceLinks = [
+  { label: "Barter Advertising", href: "/barter-advertising" },
+  { label: "Outdoor Advertising", href: "/outdoor-advertising" },
+  { label: "Metro Branding", href: "/metro-branding" },
+  { label: "Airport Advertising", href: "/airport-advertising" },
+  { label: "DOOH Advertising", href: "/dooh-advertising" },
 ];
 
 const companyLinks = [
@@ -41,8 +49,9 @@ const Footer = ({ showDivider = true }: FooterProps) => {
           </div>
 
           <div className="flex flex-col gap-10 desktop:items-end">
-            <div className="flex gap-12">
-              <FooterNavList title="Agency" items={productLinks} />
+            <div className="flex flex-wrap gap-12">
+              <FooterNavList title="Agency" items={agencyLinks} />
+              <FooterNavList title="Services" items={serviceLinks} />
               <FooterNavList title="Company" items={companyLinks} />
             </div>
             <p className="text-body text-neutral-10">
