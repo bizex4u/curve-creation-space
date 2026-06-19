@@ -33,15 +33,22 @@ const Navbar = ({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdown on outside click
+  // Close dropdown on outside click or Escape key
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    const handleMouseDown = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setIsServicesOpen(false);
       }
     };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsServicesOpen(false);
+    };
+    document.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   // Close mobile menu on route change
@@ -81,6 +88,8 @@ const Navbar = ({
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setIsServicesOpen((v) => !v)}
+              aria-haspopup="true"
+              aria-expanded={isServicesOpen}
               className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
             >
               Services
@@ -101,7 +110,7 @@ const Navbar = ({
                   key={s.href}
                   to={s.href}
                   onClick={() => setIsServicesOpen(false)}
-                  className="text-nav text-neutral-11 hover:text-neutral-12 hover:bg-neutral-01 px-4 py-2.5 transition-colors"
+                  className="text-nav text-neutral-11 hover:text-neutral-12 hover:bg-neutral-01 px-4 py-2.5 transition-colors first:rounded-t-[12px] last:rounded-b-[12px]"
                 >
                   {s.label}
                 </Link>
@@ -187,7 +196,7 @@ const Navbar = ({
                     key={s.href}
                     to={s.href}
                     onClick={closeMobile}
-                    className="text-nav text-neutral-04 hover:text-neutral-00 transition-colors py-1.5"
+                    className="text-nav text-neutral-04 hover:text-neutral-00 transition-colors py-2.5"
                   >
                     {s.label}
                   </Link>

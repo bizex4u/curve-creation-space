@@ -40,7 +40,7 @@ const FAQItem = memo(({ question, answer, isOpen: controlledIsOpen, onToggle }: 
       
       <div
         className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-          isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <p className="text-body text-neutral-10 pt-4 max-w-[550px]">{answer}</p>

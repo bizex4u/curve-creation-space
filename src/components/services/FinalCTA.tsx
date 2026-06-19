@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import DotPatternBackground from "@/components/DotPatternBackground";
 import SectionHeader from "@/components/SectionHeader";
@@ -70,13 +71,13 @@ const FinalCTA = ({
                 <p className="text-label text-neutral-09">Related services</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {relatedServices.map((s) => (
-                    <a
+                    <Link
                       key={s.href}
-                      href={s.href}
+                      to={s.href}
                       className="text-label text-neutral-11 bg-neutral-00 border border-neutral-03 px-3 py-1.5 rounded-lg hover:border-neutral-05 transition-colors"
                     >
                       {s.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

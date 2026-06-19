@@ -90,7 +90,7 @@ const ServiceHero = ({
       </div>
 
       {/* CTAs */}
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-col items-start gap-3 tablet:flex-row tablet:flex-wrap tablet:items-center">
         <FilledButton href={primaryCTA.href}>{primaryCTA.label}</FilledButton>
         <OutlineButton href={secondaryCTA.href}>{secondaryCTA.label}</OutlineButton>
         <WhatsAppCTA />
