@@ -48,7 +48,7 @@ const HeroSection = () => {
           marketing spend through cash, barter or hybrid campaigns.
         </p>
 
-        <div className="grid grid-cols-2 gap-6 tablet:gap-8 mb-8 tablet:mb-16 max-w-[520px]">
+        <div className="grid grid-cols-2 gap-6 tablet:gap-8 mb-8 tablet:mb-10 max-w-[520px]">
           {metrics.map((metric, i) => (
             <div
               key={metric.label}
@@ -66,18 +66,14 @@ const HeroSection = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 mb-10 tablet:mb-16">
+        <div className="flex flex-wrap items-center gap-3 tablet:gap-4">
           <FilledButton href="/contact">Plan my campaign</FilledButton>
           <OutlineButton href="/how-it-works">See cash &amp; barter plans</OutlineButton>
-        </div>
-
-        <div>
-          <LogoTicker />
         </div>
       </div>
 
       {/* Right */}
-      <div className="w-full tablet:w-[40%] desktop:w-5/12 flex flex-col items-center">
+      <div className="w-full tablet:w-[40%] desktop:w-5/12 flex flex-col gap-6 tablet:gap-8">
         <div
           className="hidden tablet:block w-full aspect-[4/3] rounded-xl overflow-hidden"
           style={{
@@ -87,6 +83,16 @@ const HeroSection = () => {
           }}
         >
           <LazyVideo src={heroVideo} className="w-full h-full" />
+        </div>
+        <div
+          className="w-full"
+          style={{
+            opacity: isLoaded ? 1 : 0,
+            transition: 'opacity 0.7s ease-out 0.5s',
+          }}
+        >
+          <p className="text-label text-neutral-10 mb-3 tablet:mb-4">Trusted by leading brands</p>
+          <LogoTicker />
         </div>
       </div>
     </section>
