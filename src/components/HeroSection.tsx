@@ -3,7 +3,8 @@ import FilledButton from "./FilledButton";
 import OutlineButton from "./OutlineButton";
 import LogoTicker from "./LogoTicker";
 import BrushHighlight from "./BrushHighlight";
-import heroVisual from "@/assets/hero-visual.png";
+import LazyVideo from "./ui/LazyVideo";
+import heroVideo from "@/assets/Collaborative_Work_Scene.mp4";
 
 const metrics = [
   { value: "320+", label: "Brands served" },
