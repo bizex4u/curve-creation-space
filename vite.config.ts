@@ -14,15 +14,12 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [
-    {
-      enforce: "pre",
-      ...mdx({
-        providerImportSource: "@mdx-js/react",
-        remarkPlugins: [remarkFrontmatter, remarkGfm],
-        rehypePlugins: [rehypeSlug],
-      }),
-    },
-    react({ jsxImportSource: undefined }),
+    { enforce: "pre" as const, ...mdx({
+      providerImportSource: "@mdx-js/react",
+      remarkPlugins: [remarkFrontmatter, remarkGfm],
+      rehypePlugins: [rehypeSlug],
+    }) },
+    react(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {

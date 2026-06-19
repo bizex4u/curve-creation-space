@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bizex4U Journal</title>
+    <link>https://bizex4u.com/blog</link>
+    <description>Field notes from real advertising campaigns we run for Indian brands.</description>
+    <language>en-IN</language>
+    <atom:link href="https://bizex4u.com/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jun 2026 15:59:11 GMT</lastBuildDate>
+    <item>
+      <title>Welcome to the Bizex4U Journal</title>
+      <link>https://bizex4u.com/blog/welcome-to-bizex4u</link>
+      <guid isPermaLink="true">https://bizex4u.com/blog/welcome-to-bizex4u</guid>
+      <description>What this blog is for, who it&apos;s for, and what you&apos;ll find in it — field notes from real Indian campaigns.</description>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+      <author>noreply@bizex4u.com (Bizex4U Team)</author>
+      <category>Inside Bizex4U</category>
+    </item>
+    <item>
+      <title>Cash, barter, or both: a practical guide for Indian brands</title>
+      <link>https://bizex4u.com/blog/cash-vs-barter-explained</link>
+      <guid isPermaLink="true">https://bizex4u.com/blog/cash-vs-barter-explained</guid>
+      <description>When to pay cash, when to barter inventory, and when a hybrid campaign beats either — with real numbers from recent Bizex4U campaigns.</description>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <author>noreply@bizex4u.com (Bizex4U Team)</author>
+      <category>Strategy</category>
+    </item>
+  </channel>
+</rss>

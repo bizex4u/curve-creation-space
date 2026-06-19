@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "slug": "welcome-to-bizex4u",
+    "title": "Welcome to the Bizex4U Journal",
+    "description": "What this blog is for, who it's for, and what you'll find in it — field notes from real Indian campaigns.",
+    "date": "2026-06-19",
+    "author": "Bizex4U Team",
+    "category": "Inside Bizex4U",
+    "image": "/placeholder.svg",
+    "tags": [
+      "barter",
+      "strategy",
+      "india"
+    ],
+    "readingMinutes": 1
+  },
+  {
+    "slug": "cash-vs-barter-explained",
+    "title": "Cash, barter, or both: a practical guide for Indian brands",
+    "description": "When to pay cash, when to barter inventory, and when a hybrid campaign beats either — with real numbers from recent Bizex4U campaigns.",
+    "date": "2026-06-15",
+    "author": "Bizex4U Team",
+    "category": "Strategy",
+    "image": "/placeholder.svg",
+    "tags": [
+      "barter",
+      "cash",
+      "strategy",
+      "media-buying"
+    ],
+    "readingMinutes": 1
+  }
+]
