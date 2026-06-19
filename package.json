@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "blog:build": "tsx scripts/build-blog-index.ts && tsx scripts/generate-rss.ts && tsx scripts/generate-sitemap.ts",
+    "predev": "bun run blog:build",
     "dev": "vite",
-    "build": "vite build",
+    "prebuild": "bun run blog:build",
+    "build": "vite build && tsx scripts/postbuild-blog-html.ts",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
