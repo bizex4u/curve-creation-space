@@ -13,26 +13,45 @@ import FinalCTA from "@/components/services/FinalCTA";
 
 const PAGE_URL = "https://bizex4u.com/dooh-advertising";
 
+const metrics = [
+  { value: "5000+", label: "DOOH Screens" },
+  { value: "40+", label: "Cities" },
+  { value: "320+", label: "Brands Served" },
+  { value: "Real-time", label: "Creative Updates" },
+];
+
 const faqs = [
   {
     question: "What is DOOH advertising?",
-    answer: "DOOH (Digital Out-of-Home) advertising is outdoor advertising delivered on digital screens — LED billboards, mall atrium screens, metro digital panels, airport DOOH and roadside digital hoardings. Unlike static OOH, DOOH allows dynamic creative, dayparting, and real-time content updates.",
+    answer: "DOOH (Digital Out-of-Home) advertising is outdoor advertising delivered on digital screens — LED billboards, mall atrium screens, metro digital panels, airport DOOH and roadside digital hoardings. Unlike static OOH, DOOH allows dynamic creative, dayparting and real-time content updates.",
   },
   {
     question: "How does programmatic DOOH work?",
-    answer: "Programmatic DOOH lets you buy screen impressions via a DSP (demand-side platform), targeting by location, time of day, weather or audience segment. BIZEX4U can run both direct-buy and programmatic DOOH campaigns.",
+    answer: "Programmatic DOOH lets you buy screen impressions via a DSP (demand-side platform), targeting by location, time of day, weather or audience segment. BIZEX4U manages both direct-buy and programmatic DOOH campaigns, selecting the most efficient route for your objectives.",
   },
   {
     question: "Can DOOH advertising be bought through barter?",
-    answer: "Yes for direct-buy DOOH. Programmatic DOOH typically requires cash. We'll advise the best route based on your inventory and campaign objectives.",
+    answer: "Yes for direct-buy DOOH at select networks — malls, corporate parks and residential societies. Programmatic DOOH typically requires cash. We'll advise the optimal route based on your inventory type and campaign goals.",
   },
   {
-    question: "What creative specifications does DOOH require?",
-    answer: "Specifications vary by screen network. Most require MP4 video (10–15 seconds, H.264) or static JPEG/PNG at the screen's native resolution. We assist with creative specs and adaptation.",
+    question: "What campaign duration is recommended for DOOH?",
+    answer: "Minimum campaigns are typically 15–30 days. For brand awareness, 30–60 days builds meaningful frequency. DOOH's flexibility means you can also run short burst campaigns — 7–14 days — for product launches or time-sensitive promotions.",
   },
   {
-    question: "How quickly can a DOOH campaign go live?",
-    answer: "Direct-buy DOOH campaigns can go live within 3–5 business days once creative is approved. Programmatic campaigns can launch same-day on connected networks.",
+    question: "How are DOOH impressions measured?",
+    answer: "Direct-buy DOOH networks report actual play counts per creative slot. Programmatic DOOH platforms provide verified impression data with location, time and device breakdowns. We consolidate reporting across all networks into a single post-campaign dashboard.",
+  },
+  {
+    question: "Can DOOH campaigns be geo-targeted to specific locations?",
+    answer: "Yes — DOOH is the most geo-targetable OOH format. You can select screens within a radius of your stores, target specific malls, corporate parks or residential clusters, or run city-block-level campaigns on connected networks.",
+  },
+  {
+    question: "Do you provide creative support for DOOH campaigns?",
+    answer: "Yes. We handle creative adaptation for all DOOH specs — aspect ratios, resolution requirements, motion guidelines and file format mandates per network. Animation and motion graphics are recommended to maximize engagement on digital screens.",
+  },
+  {
+    question: "How quickly can a DOOH campaign launch?",
+    answer: "Direct-buy DOOH campaigns go live within 3–7 business days once creative is approved. Programmatic campaigns can launch same-day on connected networks once creative assets and targeting parameters are confirmed.",
   },
 ];
 
@@ -61,34 +80,34 @@ const benefits = [
 
 const inventory = [
   {
-    title: "LED Roadside Hoardings",
-    description: "Large-format LED screens on high-traffic arterial roads — 10–30 second creative slots in rotation with other advertisers.",
-    tags: ["Cash", "Hybrid"],
+    title: "Corporate Parks",
+    description: "Digital screens in Cyber City Gurugram, Bandra Kurla Complex, Whitefield Bangalore and other major business districts — reaching senior professionals during commute and lunch hours.",
+    tags: ["Barter", "Cash", "Hybrid"],
   },
   {
-    title: "Mall Atrium Screens",
-    description: "High-resolution LED walls and hanging screens in mall atriums — maximum visibility to shoppers across all floors.",
+    title: "Residential Societies",
+    description: "Lobby screens and gate displays in premium high-rises across Delhi NCR, Mumbai and Bangalore — targeting HNI residential audiences in a relaxed, receptive context.",
     tags: ["Barter", "Cash"],
   },
   {
-    title: "Metro Digital Panels",
-    description: "Digital screens on metro platforms and concourses — rotational creative in high-dwell commuter environments.",
+    title: "Malls & Retail Atria",
+    description: "LED walls and hanging screens in mall atriums and food courts — maximum visibility to shoppers across all floors in top-tier malls.",
+    tags: ["Barter", "Cash", "Hybrid"],
+  },
+  {
+    title: "Roadside LED Hoardings",
+    description: "Large-format LED screens on high-traffic arterial roads — 10–30 second creative slots in rotation, with measurable play counts.",
     tags: ["Cash", "Hybrid"],
   },
   {
-    title: "Airport DOOH",
-    description: "HD and 4K screens at check-in, security, gates and baggage claim across 25+ airports.",
+    title: "Metro & Transit DOOH",
+    description: "Digital panels on metro platforms, bus rapid transit corridors and railway station concourses across major cities.",
     tags: ["Cash", "Hybrid"],
   },
   {
-    title: "Petrol Station Screens",
-    description: "DOOH screens at high-footfall fuel station forecourts — reaching drivers during a 3–5 minute dwell window.",
+    title: "Petrol Stations & Gyms",
+    description: "Forecourt screens at high-volume fuel stations and indoor screens in premium gyms and co-working spaces — captive, high-dwell micro-moments.",
     tags: ["Cash"],
-  },
-  {
-    title: "Gym & Café Networks",
-    description: "Indoor DOOH screens in premium gyms, co-working spaces and cafés — reaching urban professionals in relaxed, receptive moments.",
-    tags: ["Cash", "Hybrid"],
   },
 ];
 
@@ -128,7 +147,7 @@ const DoohAdvertising = () => (
         <ServiceHero
           title="DOOH Advertising India"
           highlightWord="DOOH"
-          subtitle="Run dynamic digital out-of-home campaigns across malls, metro stations, airports and roadside LED screens. Real-time creative updates, dayparting, and verifiable impression data."
+          subtitle="Run dynamic digital out-of-home campaigns across corporate parks, malls, residential societies, metro stations and roadside LED screens. Real-time creative, dayparting, verifiable impressions."
           breadcrumbs={[
             { label: "Home", href: "/" },
             { label: "DOOH Advertising" },
@@ -136,7 +155,7 @@ const DoohAdvertising = () => (
         />
       </div>
 
-      <ServiceMetrics />
+      <ServiceMetrics metrics={metrics} />
       <BenefitsSection
         title="Why DOOH outperforms static OOH"
         subtitle="Dynamic creative, precise targeting, real-time data — DOOH brings digital-era flexibility to out-of-home advertising."
@@ -144,7 +163,7 @@ const DoohAdvertising = () => (
       />
       <InventorySection
         title="DOOH inventory across India"
-        subtitle="Direct-buy and programmatic DOOH across every major screen network."
+        subtitle="Direct-buy and programmatic DOOH across every major screen network — corporate, residential, retail and transit."
         items={inventory}
       />
       <FundingModels />
@@ -153,6 +172,7 @@ const DoohAdvertising = () => (
       <FinalCTA
         title="Launch your DOOH campaign"
         subtitle="Share your target locations and audience — we'll map the best digital screens for your brand."
+        primaryCTALabel="Book DOOH Consultation"
         relatedServices={[
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },

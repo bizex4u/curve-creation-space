@@ -13,6 +13,13 @@ import FinalCTA from "@/components/services/FinalCTA";
 
 const PAGE_URL = "https://bizex4u.com/airport-advertising";
 
+const metrics = [
+  { value: "50M+", label: "Passengers Reached" },
+  { value: "Top 12", label: "Airports" },
+  { value: "320+", label: "Brands Served" },
+  { value: "Premium", label: "Audience" },
+];
+
 const faqs = [
   {
     question: "What is airport advertising?",
@@ -20,19 +27,31 @@ const faqs = [
   },
   {
     question: "How much does airport advertising cost in India?",
-    answer: "Costs depend on the terminal, format and airport. Entry-level digital screen slots at Tier 2 airports start from ₹2 lakh per month. Premium T3 Delhi or T2 Mumbai formats can range from ₹5–50 lakh. Contact us for a custom plan.",
+    answer: "Costs depend on the terminal, format and airport. Entry-level digital screen slots at Tier 2 airports start from ₹2 lakh per month. Premium T3 Delhi or T2 Mumbai formats can range from ₹5–50 lakh per month. Contact us for a custom plan.",
   },
   {
     question: "Can airport advertising be purchased through barter?",
-    answer: "Yes — airport advertising is barter-eligible for select formats at many Indian airports. We evaluate your inventory and negotiate directly with airport media concessionaires.",
+    answer: "Yes — airport advertising is barter-eligible for select formats at many Indian airports. We evaluate your inventory and negotiate directly with airport media concessionaires on your behalf.",
   },
   {
-    question: "Which airports do you cover?",
-    answer: "Delhi (T1, T2, T3), Mumbai (T1, T2), Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Kochi, Goa and 20+ additional airports across India.",
+    question: "What campaign duration is recommended for airport advertising?",
+    answer: "Minimum campaigns are typically 30 days. Premium brands often run 60–90 day campaigns at key airports to build sustained recall among frequent flyers. Shorter burst campaigns are possible for product launches.",
   },
   {
-    question: "What kind of brands typically advertise at airports?",
-    answer: "Luxury and premium consumer brands, financial services, travel and hospitality, automotive, real estate, and D2C brands targeting HNI and frequent-flyer demographics.",
+    question: "How are impressions measured at airports?",
+    answer: "Impressions are estimated using published passenger footfall data from AAI and private airport operators, combined with panel location scores and dwell time research. We provide DEC-backed reach estimates in every plan.",
+  },
+  {
+    question: "Can airport campaigns be targeted to specific terminals or gates?",
+    answer: "Yes. We can target by terminal (domestic vs international), by gate cluster, by floor level, or by specific journey stage — departure, security hold, baggage claim. This allows precise audience targeting by route and travel type.",
+  },
+  {
+    question: "Do you provide creative support for airport advertising?",
+    answer: "Yes. We adapt your master creative to all airport-specific format specs — large-format static, DOOH screen ratios, aerobridge vinyl templates. We also assist with AAI and private operator creative approval submissions.",
+  },
+  {
+    question: "How quickly can an airport campaign go live?",
+    answer: "Typically 10–21 days after brief and creative sign-off. Static large-format sites require print production time. Digital screen campaigns can go live in 5–7 days once creative is approved by the airport operator.",
   },
 ];
 
@@ -55,39 +74,39 @@ const benefits = [
   {
     icon: "📺",
     title: "Digital + static flexibility",
-    description: "Choose between high-impact static large-format boards or targeted digital screens that can be day-parted and rotated for different audience windows.",
+    description: "Choose high-impact static large-format boards or targeted DOOH screens that can be day-parted and rotated for different audience windows.",
   },
 ];
 
 const inventory = [
   {
-    title: "Large Format Static",
-    description: "Backlit and non-backlit hoardings at gates, arrivals, departures and curbside — maximum size, maximum impact.",
+    title: "Delhi Airport (T1, T2, T3)",
+    description: "India's busiest airport — static hoardings, DOOH screens, aerobridges, baggage claim and lounge branding across all terminals.",
+    tags: ["Barter", "Cash", "Hybrid"],
+  },
+  {
+    title: "Mumbai Airport (T1, T2)",
+    description: "Premium domestic and international terminals at CSIA — high-footfall concourse, gate and check-in formats.",
     tags: ["Barter", "Cash"],
   },
   {
-    title: "Digital Screens (DOOH)",
-    description: "HD and 4K screens across terminal interiors — rotational 10–30 second creative slots.",
+    title: "Bangalore Airport (KIA)",
+    description: "Kempegowda International — tech-sector travellers, domestic and international gates, terminal 1 and 2.",
     tags: ["Cash", "Hybrid"],
   },
   {
-    title: "Aerobridge Branding",
-    description: "Full aerobridge wraps seen by every passenger boarding and deplaning — highest dwell time at the gate.",
+    title: "Hyderabad Airport (RGIA)",
+    description: "Rajiv Gandhi International — pharma, IT and manufacturing sector audience. Premium concourse and gate inventory.",
     tags: ["Cash", "Hybrid"],
   },
   {
-    title: "Baggage Claim Wraps",
-    description: "Carousel and baggage belt branding — 10–20 minutes of captive eyetime as passengers wait for luggage.",
+    title: "Chennai, Kolkata & Pune",
+    description: "Regional hub airports with targeted domestic audience — ideal for regional brand pushes or complementary national campaigns.",
     tags: ["Barter", "Cash"],
   },
   {
-    title: "Check-in Counter Fascia",
-    description: "Branding across the check-in counter front panels — seen during the peak queue wait period.",
-    tags: ["Cash"],
-  },
-  {
-    title: "Lounge & F&B Zones",
-    description: "Digital screens and static panels inside airport lounges and food courts — premium audience, relaxed mindset.",
+    title: "Tier 2 & Leisure Airports",
+    description: "Goa, Kochi, Ahmedabad, Jaipur, Lucknow and more — tourism, lifestyle and regional brand opportunities at lower entry costs.",
     tags: ["Cash", "Hybrid"],
   },
 ];
@@ -136,15 +155,15 @@ const AirportAdvertising = () => (
         />
       </div>
 
-      <ServiceMetrics />
+      <ServiceMetrics metrics={metrics} />
       <BenefitsSection
         title="Why airport advertising delivers"
         subtitle="Premium audience quality, long dwell times and an international brand halo — airport is India's highest-CPM-justified OOH channel."
         benefits={benefits}
       />
       <InventorySection
-        title="Airport advertising formats"
-        subtitle="Every major format across India's busiest airports — domestic and international terminals."
+        title="Airports we cover"
+        subtitle="Direct access to every major Indian airport — domestic, international and Tier 2 leisure hubs."
         items={inventory}
       />
       <FundingModels />
@@ -153,6 +172,7 @@ const AirportAdvertising = () => (
       <FinalCTA
         title="Plan your airport campaign"
         subtitle="Tell us your target airports and audience — we'll map the highest-impact inventory for your brand."
+        primaryCTALabel="Get Airport Proposal"
         relatedServices={[
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },

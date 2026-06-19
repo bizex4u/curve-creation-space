@@ -13,6 +13,13 @@ import FinalCTA from "@/components/services/FinalCTA";
 
 const PAGE_URL = "https://bizex4u.com/metro-branding";
 
+const metrics = [
+  { value: "15M+", label: "Monthly Commuters" },
+  { value: "40+", label: "Cities" },
+  { value: "320+", label: "Brands Served" },
+  { value: "95%", label: "Cost Efficiency" },
+];
+
 const faqs = [
   {
     question: "What is metro branding?",
@@ -20,19 +27,31 @@ const faqs = [
   },
   {
     question: "How much does Delhi Metro advertising cost?",
-    answer: "Costs depend on format, station and duration. Platform panels start from ₹80,000 per month per station. Train wraps and full-station dominations vary — contact us for a custom quote.",
+    answer: "Costs depend on format, station and duration. Platform panels start from ₹80,000 per month per station. Train wraps and full-station dominations vary widely — contact us for a custom quote based on your target lines and campaign duration.",
   },
   {
-    question: "Can metro branding be purchased through barter?",
+    question: "Can metro advertising be purchased through barter?",
     answer: "Yes. Metro branding is barter-eligible for select formats and networks. We assess your inventory and match it against available metro inventory across DMRC, MMRC and other networks.",
   },
   {
-    question: "Which metro networks do you cover?",
-    answer: "Delhi (DMRC), Mumbai (MMRC), Bangalore (BMRCL), Hyderabad (HMRL), Chennai (CMRL), Kolkata (KMRC) and Pune (PMRDA). Coverage varies by network and format.",
+    question: "What campaign duration is recommended for metro advertising?",
+    answer: "Minimum booking is typically 30 days. Most brand campaigns run 60–90 days for meaningful recall. Train wraps and station dominations are often booked for 90–180 days to build sustained brand association with commuters.",
   },
   {
-    question: "How long are metro advertising campaigns?",
-    answer: "Minimum booking is typically 30 days. Most brand campaigns run 30–90 days. Train wraps and station dominations are often booked for 60–180 days for maximum brand recall.",
+    question: "How are impressions measured in metro advertising?",
+    answer: "Impressions are estimated using DMRC and network-published daily ridership figures per station/line, combined with panel visibility scores and dwell time data. We provide reach estimates in your media plan and a post-campaign summary report.",
+  },
+  {
+    question: "Can metro campaigns be geo-targeted to specific corridors?",
+    answer: "Yes. You can select specific metro lines, interchange stations or station clusters to target relevant neighbourhoods — IT corridors in Bangalore, commercial hubs in Delhi, residential zones in Mumbai.",
+  },
+  {
+    question: "Do you provide creative support for metro campaigns?",
+    answer: "Yes. Our in-house team handles artwork adaptation for all metro-specific formats — platform panel sizes, train wrap templates, digital screen specs. We ensure every asset meets network approval requirements.",
+  },
+  {
+    question: "How quickly can a metro campaign launch?",
+    answer: "Typically 10–15 business days after brief confirmation and creative approval. Station dominations and train wraps may require 15–21 days due to production lead time for vinyl printing and network approval.",
   },
 ];
 
@@ -61,33 +80,33 @@ const benefits = [
 
 const inventory = [
   {
-    title: "Platform Panels",
-    description: "Backlit and non-backlit panels on metro station platforms — maximum dwell time during wait periods.",
-    tags: ["Barter", "Cash"],
+    title: "Delhi Metro (DMRC)",
+    description: "Platform panels, concourse banners, train wraps and digital screens across all DMRC lines. India's most-ridden metro network.",
+    tags: ["Barter", "Cash", "Hybrid"],
   },
   {
-    title: "Train Wraps",
-    description: "Full-exterior or partial vinyl wraps on metro train coaches. Moving billboards on every route the train runs.",
+    title: "Noida Metro (NMRC)",
+    description: "Station branding and platform panels on the Aqua Line — premium IT and residential corridor targeting.",
     tags: ["Cash", "Hybrid"],
   },
   {
-    title: "Concourse Banners",
-    description: "Large hanging banners and horizontal formats in the main concourse areas — seen by everyone entering or exiting.",
+    title: "Mumbai Metro (MMRC)",
+    description: "Line 1 (Versova–Ghatkopar) and upcoming Line 2/7 — high-footfall stations across western and central corridors.",
     tags: ["Barter", "Cash"],
   },
   {
-    title: "Digital Screens",
-    description: "DOOH screens inside stations and on platforms running 10–30 second creatives in rotation.",
+    title: "Bangalore Metro (BMRCL)",
+    description: "Purple and Green Line station panels and digital screens — reaching IT professionals on Whitefield and Electronic City corridors.",
     tags: ["Cash", "Hybrid"],
   },
   {
-    title: "Pillar Branding",
-    description: "Pillar wraps at high-footfall interchange stations — a consistent brand presence across multiple sight lines.",
-    tags: ["Barter", "Cash"],
+    title: "Hyderabad Metro (HMRL)",
+    description: "Elevated station branding with premium visibility across HiTech City, Ameerpet and MGBS corridors.",
+    tags: ["Cash", "Hybrid"],
   },
   {
     title: "Station Domination",
-    description: "Own an entire metro station — every panel, screen and surface — for maximum brand impact over 30–90 days.",
+    description: "Own an entire metro station — every panel, screen and surface — for maximum brand saturation over 30–90 days.",
     tags: ["Cash", "Hybrid"],
   },
 ];
@@ -136,15 +155,15 @@ const MetroBranding = () => (
         />
       </div>
 
-      <ServiceMetrics />
+      <ServiceMetrics metrics={metrics} />
       <BenefitsSection
         title="Why metro advertising works"
         subtitle="Captive commuters, daily frequency, premium demographics — metro is one of the highest-recall formats in urban India."
         benefits={benefits}
       />
       <InventorySection
-        title="Metro advertising formats"
-        subtitle="Every format available across India's major metro networks."
+        title="Metro networks we cover"
+        subtitle="Platform panels, train wraps and station dominations across India's major metro networks."
         items={inventory}
       />
       <FundingModels />
@@ -153,6 +172,7 @@ const MetroBranding = () => (
       <FinalCTA
         title="Plan your metro campaign"
         subtitle="Tell us which cities and corridors matter — we'll map the best metro inventory for your brand."
+        primaryCTALabel="Get Metro Media Plan"
         relatedServices={[
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
           { label: "Airport Advertising", href: "/airport-advertising" },

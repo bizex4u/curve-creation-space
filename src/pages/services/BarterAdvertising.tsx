@@ -13,6 +13,13 @@ import FinalCTA from "@/components/services/FinalCTA";
 
 const PAGE_URL = "https://bizex4u.com/barter-advertising";
 
+const metrics = [
+  { value: "₹150Cr+", label: "Barter Value Transacted" },
+  { value: "40+", label: "Cities" },
+  { value: "320+", label: "Brands Served" },
+  { value: "Zero", label: "Cash Outlay Possible" },
+];
+
 const faqs = [
   {
     question: "What is barter advertising?",
@@ -20,19 +27,31 @@ const faqs = [
   },
   {
     question: "What types of inventory can be used for barter?",
-    answer: "FMCG, consumer goods, electronics, accessories, eyewear, jewellery, beverages, and services with measurable retail value. We evaluate your inventory on a call and propose a barter ratio per channel.",
+    answer: "FMCG, consumer goods, electronics, accessories, eyewear, jewellery, beverages, and services with measurable retail value. We evaluate your inventory on a discovery call and propose a barter ratio per channel.",
   },
   {
     question: "Can I mix cash and barter in a single campaign?",
-    answer: "Yes. Most clients use a hybrid model — covering OOH, transit, radio and print largely through barter and topping up digital and OTT in cash.",
+    answer: "Yes. Most clients use a hybrid model — covering OOH, transit, radio and print largely through barter and topping up digital and OTT in cash. The split ratio is fully flexible based on your inventory and objectives.",
+  },
+  {
+    question: "What campaign duration is recommended for barter campaigns?",
+    answer: "Barter campaigns run on the same timelines as cash campaigns — minimum 30 days for most formats. Longer campaigns (60–90 days) allow more time to use inventory value and achieve meaningful brand recall across channels.",
+  },
+  {
+    question: "How is my inventory valued for barter?",
+    answer: "We value inventory at MRP or an agreed market rate, then apply a barter ratio negotiated with the media owner. The ratio varies by channel and media owner — typically 1:1 to 1:1.5 (₹1 of inventory for ₹1–₹1.5 of media value).",
+  },
+  {
+    question: "Can barter campaigns be geo-targeted to specific markets?",
+    answer: "Yes. We run single-city barter campaigns as well as national multi-channel barters. Geo-targeting is determined by the media formats chosen — OOH and metro are naturally city-specific, while radio and print can be geographically segmented.",
+  },
+  {
+    question: "Do you provide creative support for barter campaigns?",
+    answer: "Yes. BIZEX4U provides artwork adaptation and creative specs for all barter media placements. We ensure every asset meets the respective media owner's format and quality requirements.",
   },
   {
     question: "How long does it take to activate a barter campaign?",
-    answer: "Typically 7–14 days after inventory valuation is agreed. Faster activations are possible for select media formats.",
-  },
-  {
-    question: "Is there a minimum campaign value for barter?",
-    answer: "We work with barter campaigns starting from ₹5 lakh in media value. Contact us to discuss your inventory and budget.",
+    answer: "Typically 7–14 days after inventory valuation is agreed and creative is approved. The barter agreement (PO + contract) is issued before any media booking is confirmed.",
   },
 ];
 
@@ -62,33 +81,33 @@ const benefits = [
 const inventory = [
   {
     title: "OOH & Outdoor",
-    description: "Billboards, unipoles, highway hoardings and city branding across 40+ cities.",
-    tags: ["Barter accepted", "Cash accepted"],
+    description: "Billboards, unipoles, highway hoardings and city branding across 40+ cities — one of the most barter-receptive formats in India.",
+    tags: ["Barter", "Cash", "Hybrid"],
   },
   {
     title: "Metro Advertising",
-    description: "Platform panels, train wraps and station domination in Delhi, Mumbai, Bangalore, Hyderabad.",
-    tags: ["Barter accepted"],
+    description: "Platform panels, concourse banners and train wraps on DMRC, MMRC, BMRCL and other metro networks.",
+    tags: ["Barter", "Cash"],
   },
   {
     title: "Airport Advertising",
-    description: "Premium screens and static at T1/T2/T3 gates and arrivals across major airports.",
-    tags: ["Barter accepted", "Cash accepted"],
+    description: "Static large-format and select digital formats at major Indian airports — barter-eligible at key locations.",
+    tags: ["Barter", "Cash"],
   },
   {
-    title: "Cinema",
-    description: "PVR INOX on-screen and foyer branding in premium multiplexes.",
-    tags: ["Barter accepted"],
+    title: "Cinema (PVR INOX)",
+    description: "On-screen ads and foyer branding at premium multiplexes across India's top cities.",
+    tags: ["Barter", "Cash"],
   },
   {
     title: "Radio",
-    description: "30-second spots on leading FM stations — city-specific or national.",
-    tags: ["Barter accepted", "Cash accepted"],
+    description: "30-second spots on leading FM stations — city-specific or national. High barter acceptance across major networks.",
+    tags: ["Barter", "Cash"],
   },
   {
     title: "Print",
-    description: "Mainline newspapers and lifestyle magazine insertions with guaranteed positions.",
-    tags: ["Barter accepted"],
+    description: "Mainline newspaper and lifestyle magazine insertions with guaranteed positions. Wide barter acceptance.",
+    tags: ["Barter", "Cash"],
   },
 ];
 
@@ -136,7 +155,7 @@ const BarterAdvertising = () => (
         />
       </div>
 
-      <ServiceMetrics />
+      <ServiceMetrics metrics={metrics} />
       <BenefitsSection benefits={benefits} />
       <InventorySection
         title="Channels that accept barter"
@@ -149,6 +168,7 @@ const BarterAdvertising = () => (
       <FinalCTA
         title="Start your barter campaign"
         subtitle="Tell us what inventory you have — we'll value it and build a media plan."
+        primaryCTALabel="Check Inventory Eligibility"
         relatedServices={[
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },

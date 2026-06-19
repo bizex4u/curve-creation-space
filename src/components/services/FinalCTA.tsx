@@ -13,12 +13,14 @@ export interface RelatedService {
 interface FinalCTAProps {
   title?: string;
   subtitle?: string;
+  primaryCTALabel?: string;
   relatedServices?: RelatedService[];
 }
 
 const FinalCTA = ({
   title = "Get your free media plan",
   subtitle = "Tell us your market, budget and timeline. We'll build the plan — cash, barter or both.",
+  primaryCTALabel = "Get Free Media Plan",
   relatedServices = [],
 }: FinalCTAProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -57,7 +59,7 @@ const FinalCTA = ({
               />
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-              <FilledButton href="/contact">Get Free Media Plan</FilledButton>
+              <FilledButton href="/contact">{primaryCTALabel}</FilledButton>
               <OutlineButton href="/contact">Book Consultation</OutlineButton>
               <a
                 href="https://wa.me/919999999999"

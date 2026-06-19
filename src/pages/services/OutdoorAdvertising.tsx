@@ -13,6 +13,13 @@ import FinalCTA from "@/components/services/FinalCTA";
 
 const PAGE_URL = "https://bizex4u.com/outdoor-advertising";
 
+const metrics = [
+  { value: "10,000+", label: "OOH Sites" },
+  { value: "40+", label: "Cities" },
+  { value: "320+", label: "Brands Served" },
+  { value: "95%", label: "Cost Efficiency" },
+];
+
 const faqs = [
   {
     question: "What is outdoor advertising?",
@@ -20,19 +27,31 @@ const faqs = [
   },
   {
     question: "How much does outdoor advertising cost in India?",
-    answer: "Costs vary by city, site size and duration. A prime Delhi or Mumbai hoarding ranges from ₹1–10 lakh per month. We negotiate bulk rates and pass savings to you — and barter campaigns can reduce cash outlay to near zero.",
+    answer: "Costs vary by city, site size and duration. A prime Delhi or Mumbai arterial road hoarding ranges from ₹1–10 lakh per month. We negotiate bulk rates and pass savings to you — and barter campaigns can reduce cash outlay to near zero.",
   },
   {
     question: "Can outdoor advertising be bought through barter?",
-    answer: "Yes. OOH is one of the most barter-friendly channels. We accept a wide range of consumer goods, FMCG and services as barter consideration against media owners across 40+ cities.",
+    answer: "Yes. OOH is one of the most barter-friendly channels. We accept a wide range of consumer goods, FMCG products and services as barter consideration against media owners across 40+ cities.",
   },
   {
-    question: "How long does an outdoor campaign take to go live?",
-    answer: "Typically 7–10 business days after brief confirmation. Creative artwork and mounting slots are booked in parallel to minimize lead time.",
+    question: "What campaign duration is recommended for outdoor advertising?",
+    answer: "Minimum campaigns are typically 30 days. For brand recall, 60–90 day campaigns build meaningful frequency among regular commuters. Highway and transit corridor campaigns often run 90–180 days for sustained brand presence.",
   },
   {
-    question: "Do you provide proof of display?",
-    answer: "Yes. We provide geo-tagged photo proof for every site on the campaign plan, along with a post-campaign report covering impressions and reach estimates.",
+    question: "How are OOH impressions measured?",
+    answer: "We use DEC (Daily Effective Circulation) data and traffic count figures to estimate reach per site. Post-campaign reports include geo-tagged photo proof for every panel, along with impression and reach estimates based on published traffic data.",
+  },
+  {
+    question: "Can outdoor campaigns be geo-targeted to specific areas?",
+    answer: "Yes. You can select sites by city, zone, corridor or pin code. We can map OOH inventory near your retail stores, in competitor-heavy areas, or along commuter routes used by your target audience.",
+  },
+  {
+    question: "Do you provide creative support for OOH campaigns?",
+    answer: "Yes. We adapt your master creative to all OOH format specifications — billboard bleed sizes, unipole templates, bus shelter specs. We also assist with artwork that performs well at outdoor scale and typical viewing distances.",
+  },
+  {
+    question: "How quickly can an outdoor campaign go live?",
+    answer: "Typically 7–10 business days after brief confirmation and creative sign-off. Production and mounting slots are booked in parallel to minimize lead time. Urgent campaigns can sometimes be activated in 5 business days for available inventory.",
   },
 ];
 
@@ -55,39 +74,39 @@ const benefits = [
   {
     icon: "📊",
     title: "Measurable impressions",
-    description: "BIZEX4U uses traffic count data and DEC (Daily Effective Circulation) figures to estimate reach — giving you defensible numbers for your media plan.",
+    description: "BIZEX4U uses DEC (Daily Effective Circulation) figures to estimate reach — giving you defensible numbers for your media plan and post-campaign report.",
   },
 ];
 
 const inventory = [
   {
     title: "Billboards & Hoardings",
-    description: "Large-format roadside hoardings on high-traffic arterial roads and flyovers.",
+    description: "Large-format roadside hoardings on high-traffic arterial roads, flyovers and commercial corridors across 40+ cities.",
     tags: ["Barter", "Cash", "Hybrid"],
   },
   {
     title: "Unipoles",
-    description: "Single-pole structures at highway junctions and city entry/exit points for maximum visibility.",
+    description: "Single-pole structures at highway junctions and city entry/exit points — maximum height, maximum visibility.",
     tags: ["Barter", "Cash"],
   },
   {
     title: "Bus Shelters",
-    description: "Backlit panels at bus stops in residential, commercial and IT corridors.",
+    description: "Backlit panels at bus stops in residential, commercial and IT corridors — high dwell time during wait periods.",
     tags: ["Cash", "Hybrid"],
   },
   {
     title: "Gantries & Sky Signs",
-    description: "Overhead gantry banners spanning entire roads — highest dwell time of any OOH format.",
+    description: "Overhead gantry banners spanning entire roads — the highest dwell time of any OOH format, seen by every vehicle passing below.",
     tags: ["Cash", "Hybrid"],
   },
   {
     title: "Highway Panels",
-    description: "State highway and national highway boards reaching intercity travellers.",
+    description: "State highway and national highway boards reaching intercity travellers and logistics corridor traffic.",
     tags: ["Barter", "Cash"],
   },
   {
     title: "Kiosks & Pillars",
-    description: "Street furniture and pillar wraps in high-footfall commercial and retail zones.",
+    description: "Street furniture and pillar wraps in high-footfall commercial, retail and transit zones.",
     tags: ["Cash", "Hybrid"],
   },
 ];
@@ -136,11 +155,11 @@ const OutdoorAdvertising = () => (
         />
       </div>
 
-      <ServiceMetrics />
+      <ServiceMetrics metrics={metrics} />
       <BenefitsSection benefits={benefits} />
       <InventorySection
         title="OOH inventory across India"
-        subtitle="From arterial road hoardings to highway panels — access the full OOH stack."
+        subtitle="From arterial road hoardings to highway panels — access the full OOH stack across 40+ cities."
         items={inventory}
       />
       <FundingModels />
@@ -149,6 +168,7 @@ const OutdoorAdvertising = () => (
       <FinalCTA
         title="Plan your outdoor campaign"
         subtitle="Share your target cities and budget — we'll map the best OOH sites for your brand."
+        primaryCTALabel="Get Free Media Plan"
         relatedServices={[
           { label: "Barter Advertising", href: "/barter-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },
