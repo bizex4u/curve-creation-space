@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { ClipboardList, Map, Scale, Rocket, FileBarChart, Clock, MapPin, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BrushHighlight from "@/components/BrushHighlight";
@@ -15,36 +16,57 @@ const steps = [
     stepNumber: "01",
     icon: <ClipboardList size={36} strokeWidth={1.75} />,
     title: "Brief",
-    description:
-      "Share your target cities, audience, and rough budget — cash, inventory, or a mix. A dedicated strategist picks it up within 24 hours.",
+    description: (
+      <>
+        Share your target cities, audience, and rough budget — cash, inventory, or a mix. A dedicated strategist picks it up within 24 hours.
+      </>
+    ),
   },
   {
     stepNumber: "02",
     icon: <Map size={36} strokeWidth={1.75} />,
     title: "Plan",
-    description:
-      "Your strategist maps the right channels — outdoor, transit, mall, cinema, radio, print or digital — and negotiates directly with media owners.",
+    description: (
+      <>
+        Your strategist maps the right channels —{" "}
+        <Link to="/outdoor-advertising" className="text-main-02 hover:underline">outdoor</Link>,{" "}
+        <Link to="/metro-branding" className="text-main-02 hover:underline">metro</Link>,{" "}
+        <Link to="/airport-advertising" className="text-main-02 hover:underline">airport</Link>,{" "}
+        <Link to="/dooh-advertising" className="text-main-02 hover:underline">DOOH</Link>, cinema, radio or print — and negotiates directly with media owners.
+      </>
+    ),
   },
   {
     stepNumber: "03",
     icon: <Scale size={36} strokeWidth={1.75} />,
     title: "Barter valuation",
-    description:
-      "If you're using barter, we value your inventory, agree a fair worth, and match it to media of equivalent value. Contracts raised on both sides.",
+    description: (
+      <>
+        If you're using{" "}
+        <Link to="/barter-advertising" className="text-main-02 hover:underline">barter</Link>,
+        we value your inventory, agree a fair worth, and match it to media of equivalent value. Contracts raised on both sides.
+      </>
+    ),
   },
   {
     stepNumber: "04",
     icon: <Rocket size={36} strokeWidth={1.75} />,
     title: "Execute",
-    description:
-      "Campaign goes live. We send geo-tagged mounting proofs and conduct regular monitoring visits. You get updates without chasing.",
+    description: (
+      <>
+        Campaign goes live. We send geo-tagged mounting proofs and conduct regular monitoring visits. You get updates without chasing.
+      </>
+    ),
   },
   {
     stepNumber: "05",
     icon: <FileBarChart size={36} strokeWidth={1.75} />,
     title: "Report",
-    description:
-      "Full report at the end of every campaign: placements, impressions, photos, and what we'd recommend for next time.",
+    description: (
+      <>
+        Full report at the end of every campaign: placements, impressions, photos, and what we'd recommend for next time.
+      </>
+    ),
   },
 ];
 
