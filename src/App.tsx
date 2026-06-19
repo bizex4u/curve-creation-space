@@ -24,6 +24,11 @@ const AdminAccess = lazy(() => import("./pages/admin/AdminAccess"));
 const TeamAdmin = lazy(() => import("./pages/admin/TeamAdmin"));
 const TeamMemberEditor = lazy(() => import("./pages/admin/TeamMemberEditor"));
 const Auth = lazy(() => import("./pages/Auth"));
+const BarterAdvertising = lazy(() => import("./pages/services/BarterAdvertising"));
+const OutdoorAdvertising = lazy(() => import("./pages/services/OutdoorAdvertising"));
+const MetroBranding = lazy(() => import("./pages/services/MetroBranding"));
+const AirportAdvertising = lazy(() => import("./pages/services/AirportAdvertising"));
+const DoohAdvertising = lazy(() => import("./pages/services/DoohAdvertising"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -116,6 +121,11 @@ const App = () => (
                   </ProtectedRoute>
                 }
               />
+              <Route path="/barter-advertising" element={<BarterAdvertising />} />
+              <Route path="/outdoor-advertising" element={<OutdoorAdvertising />} />
+              <Route path="/metro-branding" element={<MetroBranding />} />
+              <Route path="/airport-advertising" element={<AirportAdvertising />} />
+              <Route path="/dooh-advertising" element={<DoohAdvertising />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

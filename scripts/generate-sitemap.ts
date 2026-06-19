@@ -27,6 +27,11 @@ function build() {
     { path: "/how-it-works", changefreq: "monthly", priority: "0.7" },
     { path: "/contact", changefreq: "monthly", priority: "0.6" },
     { path: "/blog", changefreq: "weekly", priority: "0.9" },
+    { path: "/barter-advertising", changefreq: "monthly", priority: "0.9" },
+    { path: "/outdoor-advertising", changefreq: "monthly", priority: "0.9" },
+    { path: "/metro-branding", changefreq: "monthly", priority: "0.9" },
+    { path: "/airport-advertising", changefreq: "monthly", priority: "0.9" },
+    { path: "/dooh-advertising", changefreq: "monthly", priority: "0.9" },
   ];
 
   if (existsSync(INDEX_FILE)) {
