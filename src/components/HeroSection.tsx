@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
-import { Star } from "lucide-react";
 import FilledButton from "./FilledButton";
 import OutlineButton from "./OutlineButton";
 import LogoTicker from "./LogoTicker";
 import BrushHighlight from "./BrushHighlight";
-import LazyVideo from "./ui/LazyVideo";
-import heroVideo from "@/assets/Collaborative_Work_Scene.mp4";
+import heroVisual from "@/assets/hero-visual.png";
+
+const metrics = [
+  { value: "320+", label: "Brands served" },
+  { value: "₹150Cr+", label: "Media transacted" },
+  { value: "95%", label: "Marketing cost efficiency" },
+  { value: "40+", label: "Cities covered" },
+];
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,17 +37,33 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-neutral-12 mb-[32px] tablet:mb-[40px]">
-          India's full-service ad agency for{" "}
-          <BrushHighlight delay={600} color="hsl(var(--theme-main-01))">cash</BrushHighlight>{" "}
-          and{" "}
-          <BrushHighlight delay={800} color="hsl(var(--theme-main-01))">barter</BrushHighlight>{" "}
-          campaigns
+          Convert inventory into{" "}
+          <BrushHighlight delay={600} color="hsl(var(--theme-main-01))">impact</BrushHighlight>.
+          India's advertising partner for cash, barter or both
         </h1>
 
         <p className="text-body-large text-neutral-10 mb-[32px] tablet:mb-[40px] max-w-[520px]">
-          BIZEX4U plans, negotiates and executes outdoor, transit, mall, cinema, radio,
-          print and digital media across India — funded in cash, in trade, or a mix of both.
+          Access outdoor, metro, airport, cinema, radio and digital media while optimizing
+          marketing spend through cash, barter or hybrid campaigns.
         </p>
+
+        <div className="grid grid-cols-2 gap-6 tablet:gap-8 mb-[32px] tablet:mb-[40px] max-w-[520px]">
+          {metrics.map((metric, i) => (
+            <div
+              key={metric.label}
+              style={{
+                opacity: isLoaded ? 1 : 0,
+                transform: isLoaded ? 'translateY(0)' : 'translateY(12px)',
+                transition: `opacity 0.5s ease-out ${0.3 + i * 0.1}s, transform 0.5s ease-out ${0.3 + i * 0.1}s`,
+              }}
+            >
+              <div className="text-neutral-12 font-semibold" style={{ fontSize: '28px', lineHeight: 1.2, letterSpacing: '-0.05em' }}>
+                {metric.value}
+              </div>
+              <div className="text-label text-neutral-10 mt-1">{metric.label}</div>
+            </div>
+          ))}
+        </div>
 
         <div className="flex flex-wrap items-center gap-4 mb-[32px] tablet:mb-[64px]">
           <FilledButton href="/contact">Plan my campaign</FilledButton>
@@ -55,23 +76,23 @@ const HeroSection = () => {
       </div>
 
       {/* Right */}
-      <div className="w-full tablet:w-[32%] flex flex-col gap-4">
-        <div className="hidden tablet:block w-full aspect-[4/3] rounded-xl overflow-hidden">
-          <LazyVideo src={heroVideo} className="w-full h-full" />
-        </div>
-
-        <div className="max-w-[450px]">
-          <p className="text-body text-neutral-10">
-            A dedicated strategist plans, negotiates and runs your campaign end-to-end —
-            whether the budget is cash, trade credits, or a blend.
-          </p>
-
-          <div className="flex items-center gap-2 mt-4">
-            <div className="flex items-center gap-0.5">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-star text-star" />)}
-            </div>
-            <span className="text-label text-neutral-12">Trusted by 40+ Indian brands</span>
-          </div>
+      <div className="w-full tablet:w-[32%] flex flex-col items-center">
+        <div
+          className="hidden tablet:block w-full rounded-xl overflow-hidden"
+          style={{
+            opacity: isLoaded ? 1 : 0,
+            transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
+            transition: 'opacity 0.7s ease-out 0.2s, transform 0.7s ease-out 0.2s',
+          }}
+        >
+          <img
+            src={heroVisual}
+            alt="Premium advertising media visualization"
+            width={1024}
+            height={1024}
+            className="w-full h-auto"
+            loading="eager"
+          />
         </div>
       </div>
     </section>
