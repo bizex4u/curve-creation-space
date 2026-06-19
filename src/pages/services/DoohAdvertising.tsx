@@ -134,6 +134,14 @@ const DoohAdvertising = () => (
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bizex4u.com/" },
           { "@type": "ListItem", "position": 2, "name": "DOOH Advertising", "item": PAGE_URL },
         ],
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+        })),
       })}</script>
     </Helmet>
 
@@ -168,7 +176,7 @@ const DoohAdvertising = () => (
       />
       <FundingModels />
       <BrandsSection />
-      <ServiceFAQ faqs={faqs} pageUrl={PAGE_URL} />
+      <ServiceFAQ faqs={faqs} />
       <FinalCTA
         title="Launch your DOOH campaign"
         subtitle="Share your target locations and audience — we'll map the best digital screens for your brand."

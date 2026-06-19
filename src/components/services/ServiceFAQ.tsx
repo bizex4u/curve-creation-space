@@ -12,29 +12,14 @@ interface ServiceFAQProps {
   title?: string;
   subtitle?: string;
   faqs: FAQEntry[];
-  pageUrl: string;
 }
 
 const ServiceFAQ = ({
   title = "Frequently asked questions",
   subtitle = "Quick answers about this advertising channel.",
   faqs,
-  pageUrl,
 }: ServiceFAQProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((f) => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer,
-      },
-    })),
-  };
 
   return (
     <section
@@ -46,10 +31,6 @@ const ServiceFAQ = ({
         transition: "opacity 0.6s ease-in-out, transform 0.6s ease-in-out",
       }}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <div className="container">
         <div className="flex flex-col tablet:flex-row tablet:justify-between gap-10">
           <div className="w-full tablet:w-[33%] tablet:sticky tablet:top-[160px] tablet:self-start">

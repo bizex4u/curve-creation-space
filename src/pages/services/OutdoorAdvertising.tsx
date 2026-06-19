@@ -134,6 +134,14 @@ const OutdoorAdvertising = () => (
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bizex4u.com/" },
           { "@type": "ListItem", "position": 2, "name": "Outdoor Advertising", "item": PAGE_URL },
         ],
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+        })),
       })}</script>
     </Helmet>
 
@@ -164,7 +172,7 @@ const OutdoorAdvertising = () => (
       />
       <FundingModels />
       <BrandsSection />
-      <ServiceFAQ faqs={faqs} pageUrl={PAGE_URL} />
+      <ServiceFAQ faqs={faqs} />
       <FinalCTA
         title="Plan your outdoor campaign"
         subtitle="Share your target cities and budget — we'll map the best OOH sites for your brand."

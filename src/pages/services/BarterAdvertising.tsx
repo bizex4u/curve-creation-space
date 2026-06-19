@@ -134,6 +134,14 @@ const BarterAdvertising = () => (
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bizex4u.com/" },
           { "@type": "ListItem", "position": 2, "name": "Barter Advertising", "item": PAGE_URL },
         ],
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+        })),
       })}</script>
     </Helmet>
 
@@ -164,7 +172,7 @@ const BarterAdvertising = () => (
       />
       <FundingModels />
       <BrandsSection />
-      <ServiceFAQ faqs={faqs} pageUrl={PAGE_URL} />
+      <ServiceFAQ faqs={faqs} />
       <FinalCTA
         title="Start your barter campaign"
         subtitle="Tell us what inventory you have — we'll value it and build a media plan."

@@ -5,15 +5,8 @@ import HashLink from "./HashLink";
 import FilledButton from "./FilledButton";
 import logo from "@/assets/bizex4u-logo.png.asset.json";
 
-interface NavItem {
-  label: string;
-  href: string;
-}
-
 interface NavbarProps {
   logoHref?: string;
-  logoSrc?: string;
-  navItems?: NavItem[];
 }
 
 const serviceLinks = [
@@ -22,15 +15,6 @@ const serviceLinks = [
   { label: "Metro Branding", href: "/metro-branding" },
   { label: "Airport Advertising", href: "/airport-advertising" },
   { label: "DOOH Advertising", href: "/dooh-advertising" },
-];
-
-const primaryNavItems = [
-  { label: "Home", href: "/" },
-  { label: "Channels", href: "/channels" },
-  { label: "How it works", href: "/how-it-works" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = ({
@@ -69,7 +53,7 @@ const Navbar = ({
   return (
     <>
       <nav
-        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[780px] rounded-[18px] py-[10px] pl-[14px] pr-[10px] items-center justify-between gap-4 border flex flex-row transition-all duration-300 ${
+        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[860px] rounded-[18px] py-[10px] pl-[14px] pr-[10px] items-center justify-between gap-4 border flex flex-row transition-all duration-300 ${
           scrolled
             ? "bg-neutral-00/85 backdrop-blur-md border-neutral-03 shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
             : "bg-neutral-00 border-neutral-03 shadow-md"
@@ -108,7 +92,7 @@ const Navbar = ({
 
             {/* Dropdown panel */}
             <div
-              className={`absolute top-[calc(100%+8px)] left-0 w-[220px] bg-neutral-00 border border-neutral-03 rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.10)] py-2 flex flex-col transition-all duration-200 ${
+              className={`absolute top-[calc(100%+8px)] left-0 z-50 w-[220px] bg-neutral-00 border border-neutral-03 rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.10)] py-2 flex flex-col transition-all duration-200 ${
                 isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
               }`}
             >

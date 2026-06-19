@@ -134,6 +134,14 @@ const MetroBranding = () => (
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bizex4u.com/" },
           { "@type": "ListItem", "position": 2, "name": "Metro Branding", "item": PAGE_URL },
         ],
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+        })),
       })}</script>
     </Helmet>
 
@@ -168,7 +176,7 @@ const MetroBranding = () => (
       />
       <FundingModels />
       <BrandsSection />
-      <ServiceFAQ faqs={faqs} pageUrl={PAGE_URL} />
+      <ServiceFAQ faqs={faqs} />
       <FinalCTA
         title="Plan your metro campaign"
         subtitle="Tell us which cities and corridors matter — we'll map the best metro inventory for your brand."
