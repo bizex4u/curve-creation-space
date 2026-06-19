@@ -79,21 +79,14 @@ const HeroSection = () => {
       {/* Right */}
       <div className="w-full tablet:w-[32%] flex flex-col items-center">
         <div
-          className="hidden tablet:block w-full rounded-xl overflow-hidden"
+          className="hidden tablet:block w-full aspect-[4/3] rounded-xl overflow-hidden"
           style={{
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
             transition: 'opacity 0.7s ease-out 0.2s, transform 0.7s ease-out 0.2s',
           }}
         >
-          <img
-            src={heroVisual}
-            alt="Premium advertising media visualization"
-            width={1024}
-            height={1024}
-            className="w-full h-auto"
-            loading="eager"
-          />
+          <LazyVideo src={heroVideo} className="w-full h-full" />
         </div>
       </div>
     </section>
