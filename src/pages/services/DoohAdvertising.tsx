@@ -117,7 +117,7 @@ const DoohAdvertising = () => (
       <title>DOOH Advertising India — Digital Out-of-Home Campaigns | BIZEX4U</title>
       <meta
         name="description"
-        content="Run programmatic and direct-buy DOOH campaigns across malls, metros, airports and roadside LED screens in India. Dynamic creative, dayparting, real-time impressions."
+        content="Run high-impact digital out-of-home campaigns on premium DOOH screens across India. Mall, metro, airport and roadside LED — dynamic creative and dayparting."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="DOOH Advertising India | BIZEX4U" />

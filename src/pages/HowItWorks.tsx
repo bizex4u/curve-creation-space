@@ -131,7 +131,7 @@ const HowItWorks = () => {
         <title>How Cash & Barter Advertising Works | BIZEX4U</title>
         <meta
           name="description"
-          content="See how BIZEX4U plans, negotiates and executes cash and barter advertising campaigns across India — step by step."
+          content="Learn how cash, barter and hybrid advertising campaigns work with BIZEX4U and discover how brands across India optimise their media budgets."
         />
         <link rel="canonical" href="https://bizex4u.com/how-it-works" />
         <meta property="og:title" content="How Cash & Barter Advertising Works | BIZEX4U" />

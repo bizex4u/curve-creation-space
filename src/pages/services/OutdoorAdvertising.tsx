@@ -117,7 +117,7 @@ const OutdoorAdvertising = () => (
       <title>Outdoor Advertising Agency India — OOH Hoardings & Billboards | BIZEX4U</title>
       <meta
         name="description"
-        content="Book billboards, hoardings, unipoles and gantries across 40+ Indian cities. Cash, barter or hybrid outdoor advertising campaigns with guaranteed proof of display."
+        content="India's outdoor advertising agency for billboards, hoardings and large-format OOH campaigns nationwide. Cash, barter and hybrid options across 40+ cities."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="Outdoor Advertising Agency India | BIZEX4U" />

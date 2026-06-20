@@ -117,7 +117,7 @@ const AirportAdvertising = () => (
       <title>Airport Advertising India — Delhi, Mumbai, Bangalore Airport Ads | BIZEX4U</title>
       <meta
         name="description"
-        content="Book airport advertising at Delhi T3, Mumbai T2, Bangalore, Hyderabad and 25+ Indian airports. Large format, DOOH, aerobridge — cash, barter or hybrid campaigns."
+        content="Book premium airport advertising across Delhi, Mumbai, Bengaluru and major Indian airports with BIZEX4U. Cash, barter and hybrid campaign options available."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="Airport Advertising India | BIZEX4U" />

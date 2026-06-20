@@ -19,7 +19,7 @@ const About = () => {
     <div className="min-h-screen bg-neutral-00">
       <Helmet>
         <title>About BIZEX4U — India's Barter & Advertising Agency</title>
-        <meta name="description" content="Meet BIZEX4U — India's full-service advertising and barter media agency planning cash and trade campaigns across the country." />
+        <meta name="description" content="Meet BIZEX4U, India's barter and advertising agency helping brands convert surplus inventory into measurable marketing reach across 40+ cities." />
         <link rel="canonical" href="https://bizex4u.com/about" />
         <meta property="og:title" content="About BIZEX4U — India's Barter & Advertising Agency" />
         <meta property="og:description" content="Meet BIZEX4U — India's full-service advertising and barter media agency planning cash and trade campaigns across the country." />

@@ -117,7 +117,7 @@ const BarterAdvertising = () => (
       <title>Barter Advertising Agency India — Exchange Inventory for Media | BIZEX4U</title>
       <meta
         name="description"
-        content="Run premium OOH, metro, airport, cinema and radio campaigns using your surplus inventory — no cash outlay. India's leading barter advertising agency."
+        content="Exchange excess inventory for advertising with India's barter media specialists. Reduce cash burn and unlock nationwide OOH, metro, airport and cinema reach."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="Barter Advertising Agency India | BIZEX4U" />

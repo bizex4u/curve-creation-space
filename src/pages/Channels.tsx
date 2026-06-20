@@ -12,7 +12,7 @@ const Channels = () => {
     <div className="min-h-screen bg-neutral-00">
       <Helmet>
         <title>Advertising Channels India — OOH, Transit, Mall, Cinema | BIZEX4U</title>
-        <meta name="description" content="Explore advertising channels BIZEX4U buys across India — OOH, transit, mall, cinema, radio, print and digital." />
+        <meta name="description" content="Explore airport, metro, mall, cinema, DOOH, radio and outdoor advertising channels available through BIZEX4U across India. Book any channel, cash or barter." />
         <link rel="canonical" href="https://bizex4u.com/channels" />
         <meta property="og:title" content="Advertising Channels India — OOH, Transit, Mall, Cinema | BIZEX4U" />
         <meta property="og:description" content="Explore advertising channels BIZEX4U buys across India — OOH, transit, mall, cinema, radio, print and digital." />

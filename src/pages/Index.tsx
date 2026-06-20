@@ -48,7 +48,7 @@ const Index = () => {
     <div className="relative min-h-screen">
       <Helmet>
         <title>Advertising & Barter Media Agency India | BIZEX4U</title>
-        <meta name="description" content="BIZEX4U is India's full-service advertising agency for cash and barter campaigns. Outdoor, transit, mall, cinema, radio, print and digital — across 12+ cities." />
+        <meta name="description" content="Advertising & barter media agency in India offering OOH, airport, metro, DOOH and inventory-led campaigns. Plan your next campaign with BIZEX4U today." />
         <link rel="canonical" href="https://bizex4u.com/" />
         <meta property="og:title" content="Advertising & Barter Media Agency India | BIZEX4U" />
         <meta property="og:description" content="BIZEX4U is India's full-service advertising agency for cash and barter campaigns. Outdoor, transit, mall, cinema, radio, print and digital — across 12+ cities." />

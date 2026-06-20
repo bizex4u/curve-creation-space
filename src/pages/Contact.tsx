@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="min-h-screen bg-neutral-00">
       <Helmet>
         <title>Contact BIZEX4U — Plan Your Campaign</title>
-        <meta name="description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
+        <meta name="description" content="Connect with BIZEX4U to plan barter, cash or hybrid advertising campaigns across India. Request a customised media plan from our strategists today." />
         <link rel="canonical" href="https://bizex4u.com/contact" />
         <meta property="og:title" content="Contact BIZEX4U — Plan Your Campaign" />
         <meta property="og:description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
