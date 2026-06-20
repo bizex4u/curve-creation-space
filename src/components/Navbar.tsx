@@ -60,7 +60,7 @@ const Navbar = ({
   return (
     <>
       <nav
-        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[860px] rounded-[18px] py-[10px] pl-[14px] pr-[10px] items-center justify-between gap-4 border flex flex-row transition-all duration-300 ${
+        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[860px] h-[72px] rounded-[18px] pl-[14px] pr-[10px] items-center justify-between gap-6 border flex flex-row whitespace-nowrap transition-all duration-300 ${
           scrolled
             ? "bg-neutral-00/85 backdrop-blur-md border-neutral-03 shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
             : "bg-neutral-00 border-neutral-03 shadow-md"
@@ -76,10 +76,10 @@ const Navbar = ({
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden tablet:flex items-center gap-[4px]">
+        <div className="hidden tablet:flex items-center gap-2">
           <HashLink
             to="/"
-            className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors"
+            className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap"
           >
             Home
           </HashLink>
@@ -90,7 +90,7 @@ const Navbar = ({
               onClick={() => setIsServicesOpen((v) => !v)}
               aria-haspopup="true"
               aria-expanded={isServicesOpen}
-              className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
+              className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
             >
               Services
               <ChevronDown
@@ -130,7 +130,7 @@ const Navbar = ({
               <HashLink
                 key={label}
                 to={href}
-                className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors"
+                className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap"
               >
                 {label}
               </HashLink>

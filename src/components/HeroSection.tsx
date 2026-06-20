@@ -5,6 +5,9 @@ import LogoTicker from "./LogoTicker";
 import BrushHighlight from "./BrushHighlight";
 import LazyVideo from "./ui/LazyVideo";
 import heroVideo from "@/assets/Collaborative_Work_Scene.mp4";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { track } from "@/lib/analytics";
 
 const metrics = [
   { value: "320+", label: "Brands served" },
@@ -15,15 +18,46 @@ const metrics = [
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [leadEmail, setLeadEmail] = useState("");
+  const [leadCompany, setLeadCompany] = useState("");
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 50);
     return () => clearTimeout(timer);
   }, []);
 
+  const handleInlineLead = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = leadEmail.trim();
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      toast({ title: "Enter a valid email" });
+      return;
+    }
+    setLeadSubmitting(true);
+    track("lead_submit", { source: "hero_inline" });
+    const { error } = await supabase.from("leads").insert({
+      name: leadCompany.trim() || "Hero inline lead",
+      email,
+      company: leadCompany.trim() || null,
+      source: "hero_inline",
+      funding_model: "Not sure yet",
+      landing_page: typeof window !== "undefined" ? window.location.pathname : null,
+    });
+    setLeadSubmitting(false);
+    if (error) {
+      toast({ title: "Something went wrong. Please try again." });
+      return;
+    }
+    track("lead_success", { source: "hero_inline" });
+    toast({ title: "Thanks! We'll reply within 2 hours." });
+    setLeadEmail("");
+    setLeadCompany("");
+  };
+
   return (
     <section
-      className="flex flex-col gap-8 tablet:gap-10 page-header-top pb-16 tablet:pb-20 desktop:pb-24"
+      className="flex flex-col gap-8 tablet:gap-10 page-header-top pb-0"
       style={{
         opacity: isLoaded ? 1 : 0,
         transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
@@ -49,6 +83,38 @@ const HeroSection = () => {
             Access outdoor, metro, airport, cinema, radio and digital media while optimizing
             marketing spend through cash, barter or hybrid campaigns.
           </p>
+
+          {/* Inline lead capture card */}
+          <form
+            onSubmit={handleInlineLead}
+            className="mt-6 tablet:mt-8 w-full max-w-[520px] bg-neutral-00 border border-neutral-03 rounded-2xl p-4 tablet:p-5 shadow-[0_4px_16px_rgba(0,0,0,0.04)] flex flex-col gap-3"
+          >
+            <div className="flex flex-col tablet:flex-row gap-3">
+              <input
+                type="email"
+                required
+                value={leadEmail}
+                onChange={(e) => setLeadEmail(e.target.value)}
+                placeholder="Email"
+                className="flex-1 bg-neutral-00 border border-neutral-04 rounded-[10px] px-4 py-3 text-body text-neutral-12 placeholder:text-neutral-09 focus:outline-none focus:border-[hsl(var(--theme-main-02))] transition-colors"
+              />
+              <input
+                type="text"
+                value={leadCompany}
+                onChange={(e) => setLeadCompany(e.target.value)}
+                placeholder="Company"
+                className="flex-1 bg-neutral-00 border border-neutral-04 rounded-[10px] px-4 py-3 text-body text-neutral-12 placeholder:text-neutral-09 focus:outline-none focus:border-[hsl(var(--theme-main-02))] transition-colors"
+              />
+            </div>
+            <FilledButton type="submit" disabled={leadSubmitting} fullWidth showArrow={false}>
+              {leadSubmitting ? "Sending…" : "Get Media Plan"}
+            </FilledButton>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-label text-neutral-10">
+              <span>✓ 320+ Brands</span>
+              <span>✓ ₹150Cr+ Media</span>
+              <span>✓ Reply within 2 hours</span>
+            </div>
+          </form>
         </div>
 
         {/* Right: Video + Logo Ticker */}
