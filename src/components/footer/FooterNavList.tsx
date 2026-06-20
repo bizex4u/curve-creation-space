@@ -14,7 +14,7 @@ interface FooterNavListProps {
 const FooterNavList = ({ title, items }: FooterNavListProps) => {
   return (
     <div className="flex flex-col gap-4">
-      <span className="text-body font-medium text-neutral-12">{title}</span>
+      <span className="text-label font-medium text-neutral-08 uppercase tracking-widest">{title}</span>
       <div className="flex flex-col gap-3">
         {items.map((item) => (
           item.external ? (

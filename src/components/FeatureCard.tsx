@@ -12,14 +12,16 @@ interface FeatureCardProps {
 const FeatureCard = memo(({ icon, title, description, href }: FeatureCardProps) => {
   const inner = (
     <>
-      <div className="text-neutral-12">{icon}</div>
+      <div className="w-10 h-10 flex items-center justify-center rounded-[10px] bg-neutral-03 text-neutral-11">
+        {icon}
+      </div>
       <div className="max-w-[550px]">
-        <h6 className="text-neutral-12 mt-6">{title}</h6>
-        <p className="text-body text-neutral-10 mt-2">{description}</p>
+        <h6 className="text-neutral-12 mt-5">{title}</h6>
+        <p className="text-body text-neutral-10 mt-2 leading-relaxed">{description}</p>
       </div>
       {href && (
-        <div className="mt-4 flex items-center gap-1 text-label text-main-02">
-          Explore {title} <ArrowRight size={12} />
+        <div className="mt-auto pt-5 flex items-center gap-1 text-label font-medium text-main-02">
+          Explore <ArrowRight size={12} />
         </div>
       )}
     </>
@@ -29,7 +31,7 @@ const FeatureCard = memo(({ icon, title, description, href }: FeatureCardProps) 
     return (
       <Link
         to={href}
-        className="bg-neutral-01 rounded-[12px] p-4 flex flex-col hover:bg-main-00 hover:border-main-01 border border-transparent transition-colors duration-200"
+        className="bg-neutral-01 rounded-[20px] p-6 flex flex-col border border-transparent hover:border-main-01 hover:bg-main-00 transition-all duration-200"
       >
         {inner}
       </Link>
@@ -37,7 +39,7 @@ const FeatureCard = memo(({ icon, title, description, href }: FeatureCardProps) 
   }
 
   return (
-    <div className="bg-neutral-01 rounded-[12px] p-4 flex flex-col">
+    <div className="bg-neutral-01 rounded-[20px] p-6 flex flex-col border border-transparent hover:border-neutral-03 hover:bg-neutral-02 transition-all duration-200">
       {inner}
     </div>
   );

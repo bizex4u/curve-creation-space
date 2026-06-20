@@ -136,7 +136,7 @@ const HeroSection = () => {
               transition: 'opacity 0.7s ease-out 0.5s',
             }}
           >
-            <p className="text-label text-neutral-10 mb-2">Trusted by leading brands</p>
+            <p className="text-label font-medium text-neutral-08 uppercase tracking-widest mb-3">Trusted by leading brands</p>
             <LogoTicker />
           </div>
         </div>
@@ -144,7 +144,7 @@ const HeroSection = () => {
 
       {/* Bottom row: Metrics + CTAs parallel */}
       <div className="flex flex-col tablet:flex-row tablet:items-end tablet:justify-between gap-6 tablet:gap-8">
-        <div className="grid grid-cols-2 gap-4 tablet:gap-6 max-w-[520px]">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-6 tablet:gap-x-12 tablet:gap-y-8">
           {metrics.map((metric, i) => (
             <div
               key={metric.label}
@@ -154,10 +154,13 @@ const HeroSection = () => {
                 transition: `opacity 0.5s ease-out ${0.3 + i * 0.1}s, transform 0.5s ease-out ${0.3 + i * 0.1}s`,
               }}
             >
-              <div className="text-neutral-12 font-semibold text-2xl tablet:text-[28px] leading-tight tracking-tight">
+              <div
+                className="text-neutral-12 leading-none tracking-tighter"
+                style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, fontSize: 'clamp(32px, 4.5vw, 52px)' }}
+              >
                 {metric.value}
               </div>
-              <div className="text-label text-neutral-10 mt-1">{metric.label}</div>
+              <div className="text-body text-neutral-09 mt-2">{metric.label}</div>
             </div>
           ))}
         </div>

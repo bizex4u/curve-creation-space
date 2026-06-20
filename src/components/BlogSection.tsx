@@ -20,7 +20,7 @@ const BlogSection = () => {
     }
 
     return (
-      <div className="flex flex-col tablet:flex-row gap-y-10 tablet:gap-x-3 tablet:gap-y-0">
+      <div className="flex flex-col tablet:flex-row gap-y-6 tablet:gap-x-6 tablet:gap-y-0">
         {displayPosts.map((post) => (
           <div key={post.slug} className="flex-1">
             <HomeBlogPostCard
