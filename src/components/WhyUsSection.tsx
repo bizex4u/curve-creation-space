@@ -104,7 +104,7 @@ const WhyUsSection = () => {
   return (
     <section 
       ref={scrollRef}
-      className="section flex flex-col gap-y-10 tablet:flex-row tablet:flex-wrap tablet:justify-start tablet:gap-x-8 desktop:justify-between desktop:gap-0"
+      className="pt-0 pb-16 desktop:pb-20 flex flex-col gap-y-10 tablet:flex-row tablet:flex-wrap tablet:justify-start tablet:gap-x-8 desktop:justify-between desktop:gap-0"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
@@ -119,21 +119,21 @@ const WhyUsSection = () => {
         />
 
         
-        {/* Navigation Buttons - Desktop only */}
-        <div className="hidden desktop:flex flex-col gap-2 mt-8">
+        {/* Navigation — Desktop only */}
+        <div className="hidden desktop:flex flex-col mt-8 border-l border-neutral-03">
           {benefitData.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <button
                 key={benefit.id}
                 onClick={() => scrollToCard(benefit.id)}
-                className={`flex items-center gap-3 w-full text-left p-5 rounded-lg border text-neutral-12 text-body-large transition-colors ${
+                className={`flex items-center gap-3 w-full text-left px-5 py-3.5 text-body transition-all duration-200 border-l-2 -ml-[1px] ${
                   activeId === benefit.id
-                    ? 'bg-main-00 border-main-01'
-                    : 'bg-neutral-01 border-neutral-02 hover:bg-neutral-02'
+                    ? 'border-neutral-12 text-neutral-12 font-medium'
+                    : 'border-transparent text-neutral-09 hover:text-neutral-11 hover:border-neutral-05'
                 }`}
               >
-                <Icon size={20} />
+                <Icon size={16} strokeWidth={1.75} />
                 <span>{benefit.title}</span>
               </button>
             );

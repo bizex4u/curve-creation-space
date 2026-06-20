@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 interface HomeBlogPostCardProps {
   slug: string;
@@ -12,33 +13,26 @@ const HomeBlogPostCard = memo(({ slug, thumbnailUrl, title, briefIntro }: HomeBl
   return (
     <Link
       to={`/blog/${slug}`}
-      className="group flex flex-col gap-3"
+      className="group flex flex-col gap-0 rounded-[20px] overflow-hidden border border-neutral-03 hover:border-neutral-05 transition-all duration-300 hover:shadow-[0_8px_32px_hsl(var(--neutral-12)/0.08)]"
     >
-      <div className="overflow-hidden rounded-[16px] border-2 border-neutral-00 transition-shadow duration-300 group-hover:shadow-[0_4px_20px_hsl(var(--neutral-12)/0.15)]">
+      <div className="overflow-hidden">
         <img
           src={thumbnailUrl}
           alt={title}
-          className="w-full aspect-[16/9] object-cover"
+          className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           loading="lazy"
         />
       </div>
-      <div className="relative overflow-hidden bg-neutral-01 p-5 rounded-[16px] flex flex-col gap-4 transition-colors duration-300 group-hover:bg-neutral-02">
-        {/* Dot pattern background - bottom area with fade */}
-        <div 
-          className="absolute inset-0 opacity-50"
-          style={{
-            backgroundImage: 'radial-gradient(circle, hsl(var(--neutral-05)) 1px, transparent 1px)',
-            backgroundSize: '8px 8px',
-            maskImage: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 15%, transparent 35%)',
-            WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 15%, transparent 35%)',
-          }}
-        />
-        <h6 className="relative z-10 text-h6 text-neutral-12 line-clamp-2">
+      <div className="bg-neutral-00 p-6 flex flex-col gap-3 flex-1">
+        <h6 className="text-neutral-12 line-clamp-2 leading-snug">
           {title}
         </h6>
-        <p className="relative z-10 text-body text-neutral-10 line-clamp-2">
+        <p className="text-body text-neutral-09 line-clamp-2">
           {briefIntro}
         </p>
+        <div className="mt-auto pt-2 flex items-center gap-1 text-label font-medium text-neutral-11 group-hover:text-neutral-12 transition-colors">
+          Read article <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+        </div>
       </div>
     </Link>
   );

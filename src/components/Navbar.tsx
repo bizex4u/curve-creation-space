@@ -60,7 +60,7 @@ const Navbar = ({
   return (
     <>
       <nav
-        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[860px] rounded-[18px] py-[10px] pl-[14px] pr-[10px] items-center justify-between gap-4 border flex flex-row transition-all duration-300 ${
+        className={`fixed top-[16px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] tablet:w-fit tablet:min-w-[860px] h-[76px] rounded-[18px] pl-[16px] pr-[12px] items-center justify-between gap-8 border flex flex-row whitespace-nowrap transition-all duration-300 ${
           scrolled
             ? "bg-neutral-00/85 backdrop-blur-md border-neutral-03 shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
             : "bg-neutral-00 border-neutral-03 shadow-md"
@@ -76,21 +76,14 @@ const Navbar = ({
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden tablet:flex items-center gap-[4px]">
-          <HashLink
-            to="/"
-            className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors"
-          >
-            Home
-          </HashLink>
-
+        <div className="hidden tablet:flex items-center gap-1">
           {/* Services dropdown */}
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setIsServicesOpen((v) => !v)}
               aria-haspopup="true"
               aria-expanded={isServicesOpen}
-              className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
+              className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-4 py-2 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
             >
               Services
               <ChevronDown
@@ -118,19 +111,19 @@ const Navbar = ({
             </div>
           </div>
 
-          {["Channels", "How it works", "Blog", "About", "Contact"].map((label) => {
-            const href = {
+          {["Channels", "Work", "Blog", "About", "Contact"].map((label) => {
+            const href: Record<string, string> = {
               Channels: "/channels",
-              "How it works": "/how-it-works",
+              Work: "/how-it-works",
               Blog: "/blog",
               About: "/about",
               Contact: "/contact",
-            }[label]!;
+            };
             return (
               <HashLink
                 key={label}
-                to={href}
-                className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors"
+                to={href[label]}
+                className="relative text-nav text-neutral-11 hover:text-neutral-12 px-4 py-2 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap"
               >
                 {label}
               </HashLink>
@@ -139,7 +132,7 @@ const Navbar = ({
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden tablet:block flex-shrink-0">
+        <div className="hidden tablet:flex flex-shrink-0 items-center">
           <FilledButton href="/contact" showArrow={false}>Get Media Plan</FilledButton>
         </div>
 

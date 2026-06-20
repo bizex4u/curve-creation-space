@@ -3,40 +3,14 @@ import { ArrowRight } from "lucide-react";
 import HomeBlogPostCard from "./HomeBlogPostCard";
 import OutlineButton from "./OutlineButton";
 import BrushHighlight from "./BrushHighlight";
-import { useBlogPosts } from "@/hooks/useBlogPosts";
+import { getAllPosts } from "@/blog-mdx/loader";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Skeleton } from "@/components/ui/skeleton";
 
 const BlogSection = () => {
-  const { data: blogPosts, isLoading, isError } = useBlogPosts(true);
-  const displayPosts = blogPosts?.slice(0, 3) || [];
+  const displayPosts = getAllPosts().slice(0, 3);
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  // Determine what to render inside
   const renderContent = () => {
-    if (isLoading) {
-      return (
-        <div className="flex flex-col tablet:flex-row gap-y-10 tablet:gap-x-3 tablet:gap-y-0">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="flex-1 space-y-4">
-              <Skeleton className="w-full aspect-[4/3] rounded-xl" />
-              <Skeleton className="h-6 w-3/4" />
-              <Skeleton className="h-4 w-full" />
-              <Skeleton className="h-4 w-2/3" />
-            </div>
-          ))}
-        </div>
-      );
-    }
-
-    if (isError) {
-      return (
-        <div className="text-center py-10">
-          <p className="text-body text-neutral-10">Unable to load blog posts.</p>
-        </div>
-      );
-    }
-
     if (displayPosts.length === 0) {
       return (
         <div className="text-center py-10">
@@ -46,14 +20,14 @@ const BlogSection = () => {
     }
 
     return (
-      <div className="flex flex-col tablet:flex-row gap-y-10 tablet:gap-x-3 tablet:gap-y-0">
+      <div className="flex flex-col tablet:flex-row gap-y-6 tablet:gap-x-6 tablet:gap-y-0">
         {displayPosts.map((post) => (
           <div key={post.slug} className="flex-1">
             <HomeBlogPostCard
               slug={post.slug}
-              thumbnailUrl={post.thumbnail_url || "/placeholder.svg"}
+              thumbnailUrl={post.image || "/placeholder.svg"}
               title={post.title}
-              briefIntro={post.brief_intro || ""}
+              briefIntro={post.description || ""}
             />
           </div>
         ))}

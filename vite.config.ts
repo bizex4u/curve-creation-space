@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     { enforce: "pre" as const, ...mdx({
+      development: mode === "development",
       providerImportSource: "@mdx-js/react",
       remarkPlugins: [remarkFrontmatter, remarkGfm],
       rehypePlugins: [rehypeSlug],

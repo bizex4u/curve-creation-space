@@ -16,8 +16,8 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features-section" className="section flex flex-col items-center gap-10">
-      <div className="w-full grid grid-cols-1 gap-3 tablet:grid-cols-2 desktop:grid-cols-4 desktop:gap-[20px]">
+    <section id="features-section" className="flex flex-col items-center gap-10 pt-20 pb-20">
+      <div className="w-full grid grid-cols-1 gap-4 tablet:grid-cols-2 desktop:grid-cols-4 desktop:gap-5">
         {features.map((f, i) => (
           <FeatureCard key={i} icon={f.icon} title={f.title} description={f.description} href={f.href} />
         ))}
