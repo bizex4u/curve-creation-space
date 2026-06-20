@@ -11,9 +11,15 @@ const Contact = () => {
       <Helmet>
         <title>Contact BIZEX4U — Plan Your Campaign</title>
         <meta name="description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
-        <link rel="canonical" href="/contact" />
+        <link rel="canonical" href="https://bizex4u.com/contact" />
         <meta property="og:title" content="Contact BIZEX4U — Plan Your Campaign" />
-        <meta property="og:url" content="/contact" />
+        <meta property="og:description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
+        <meta property="og:url" content="https://bizex4u.com/contact" />
+        <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact BIZEX4U — Plan Your Campaign" />
+        <meta name="twitter:description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
+        <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       <PageHeader

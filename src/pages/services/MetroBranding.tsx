@@ -124,9 +124,11 @@ const MetroBranding = () => (
       <meta property="og:description" content="Platform panels, train wraps and station dominations across DMRC, MMRC, BMRCL and more. Cash, barter or hybrid metro advertising campaigns." />
       <meta property="og:url" content={PAGE_URL} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Metro Branding India | BIZEX4U" />
       <meta name="twitter:description" content="Delhi Metro, Mumbai Metro, Bangalore Metro advertising — platform panels, train wraps, station domination. Cash and barter." />
+      <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

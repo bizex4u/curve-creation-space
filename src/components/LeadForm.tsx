@@ -11,11 +11,16 @@ const MIN_SUBMIT_DELAY_MS = 3000;
 function getAttribution() {
   if (typeof window === "undefined") return {};
   const p = new URLSearchParams(window.location.search);
+  const ua = navigator.userAgent;
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(ua);
   return {
-    landing_page: window.location.pathname || null,
-    utm_source:   p.get("utm_source")   || null,
-    utm_medium:   p.get("utm_medium")   || null,
-    utm_campaign: p.get("utm_campaign") || null,
+    landing_page:  window.location.pathname || null,
+    utm_source:    p.get("utm_source")   || null,
+    utm_medium:    p.get("utm_medium")   || null,
+    utm_campaign:  p.get("utm_campaign") || null,
+    referrer:      document.referrer || null,
+    device:        isMobile ? "mobile" : "desktop",
+    screen_width:  window.screen.width || null,
   };
 }
 

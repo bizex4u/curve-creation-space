@@ -13,9 +13,15 @@ const Channels = () => {
       <Helmet>
         <title>Advertising Channels India — OOH, Transit, Mall, Cinema | BIZEX4U</title>
         <meta name="description" content="Explore advertising channels BIZEX4U buys across India — OOH, transit, mall, cinema, radio, print and digital." />
-        <link rel="canonical" href="/channels" />
+        <link rel="canonical" href="https://bizex4u.com/channels" />
         <meta property="og:title" content="Advertising Channels India — OOH, Transit, Mall, Cinema | BIZEX4U" />
-        <meta property="og:url" content="/channels" />
+        <meta property="og:description" content="Explore advertising channels BIZEX4U buys across India — OOH, transit, mall, cinema, radio, print and digital." />
+        <meta property="og:url" content="https://bizex4u.com/channels" />
+        <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Advertising Channels India — OOH, Transit, Mall, Cinema | BIZEX4U" />
+        <meta name="twitter:description" content="Explore advertising channels BIZEX4U buys across India — OOH, transit, mall, cinema, radio, print and digital." />
+        <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       <PageHeader

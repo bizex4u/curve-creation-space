@@ -124,9 +124,11 @@ const OutdoorAdvertising = () => (
       <meta property="og:description" content="Book OOH hoardings, billboards and unipoles across 40+ Indian cities. Cash, barter or hybrid campaigns with geo-tagged proof of display." />
       <meta property="og:url" content={PAGE_URL} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Outdoor Advertising Agency India | BIZEX4U" />
       <meta name="twitter:description" content="Book OOH hoardings, billboards, gantries and unipoles across 40+ cities. Cash, barter or hybrid." />
+      <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
