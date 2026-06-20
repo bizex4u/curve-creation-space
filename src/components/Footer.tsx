@@ -30,7 +30,7 @@ interface FooterProps {
 
 const Footer = ({ showDivider = true }: FooterProps) => {
   return (
-    <footer className={`pt-16 pb-10 desktop:pt-20 desktop:pb-12 bg-neutral-00 border-t-2 border-neutral-12`}>
+    <footer className={`py-20 bg-neutral-00 border-t-2 border-neutral-12`}>
       <div className="container">
         <div className="flex flex-col gap-12 desktop:flex-row desktop:justify-between desktop:items-start">
           <div className="flex flex-col gap-6 max-w-[340px]">
