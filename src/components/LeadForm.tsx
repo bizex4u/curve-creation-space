@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import FilledButton from "./FilledButton";
+
+// Minimum ms between page mount and submit — blocks instant-submit bots
+const MIN_SUBMIT_DELAY_MS = 3000;
 
 const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -25,6 +28,24 @@ const fieldClass =
 
 const labelClass = "text-label text-neutral-10 mb-1.5 block";
 
+// Minimal analytics — wraps window.gtag / plausible if present, otherwise no-op
+function track(event: string, props?: Record<string, string>) {
+  try {
+    if (typeof window === "undefined") return;
+    // Plausible
+    if ((window as any).plausible) {
+      (window as any).plausible(event, { props });
+    }
+    // GA4
+    if ((window as any).gtag) {
+      (window as any).gtag("event", event, props);
+    }
+    console.debug(`[analytics] ${event}`, props);
+  } catch {
+    // Never let analytics break the form
+  }
+}
+
 const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormProps) => {
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
@@ -37,17 +58,45 @@ const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormPr
     message: "",
   });
 
+  // Honeypot field — bots fill it, humans don't see it
+  const [honeypot, setHoneypot] = useState("");
+
+  // Track mount time for minimum delay enforcement
+  const mountedAt = useRef(Date.now());
+
+  useEffect(() => {
+    mountedAt.current = Date.now();
+  }, []);
+
   const update = (k: keyof typeof form, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot check — silently succeed for bots
+    if (honeypot) {
+      toast({ title: "Thanks! Our strategist will reach out within 1 business day." });
+      return;
+    }
+
+    // Minimum delay check
+    const elapsed = Date.now() - mountedAt.current;
+    if (elapsed < MIN_SUBMIT_DELAY_MS) {
+      toast({ title: "Please review your details before submitting." });
+      return;
+    }
+
     const parsed = leadSchema.safeParse(form);
     if (!parsed.success) {
       toast({ title: parsed.error.errors[0]?.message ?? "Please check the form" });
       return;
     }
+
+    track("lead_submit", { source });
     setSubmitting(true);
-    const { error } = await supabase.from("leads").insert({
+
+    // Step 1: Insert lead — this is the source of truth
+    const { error: insertError } = await supabase.from("leads").insert({
       name: parsed.data.name,
       email: parsed.data.email,
       phone: parsed.data.phone || null,
@@ -57,18 +106,78 @@ const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormPr
       message: parsed.data.message || null,
       source,
     });
+
     setSubmitting(false);
-    if (error) {
+
+    if (insertError) {
+      track("lead_submit_error", { source, error: insertError.message });
       toast({ title: "Something went wrong. Please try again." });
       return;
     }
+
+    // Lead saved — show success immediately, never block on email
+    track("lead_success", { source });
     toast({ title: "Thanks! Our strategist will reach out within 1 business day." });
     setForm({ name: "", email: "", phone: "", company: "", budget: "", funding_model: "Hybrid", message: "" });
     onSuccess?.();
+
+    // Step 2: Fire-and-forget email notification — failure must never affect UX
+    supabase.functions
+      .invoke("notify-lead", {
+        body: {
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: parsed.data.phone || null,
+          company: parsed.data.company || null,
+          budget: parsed.data.budget || null,
+          funding_model: parsed.data.funding_model || null,
+          message: parsed.data.message || null,
+          source,
+          created_at: new Date().toISOString(),
+        },
+      })
+      .then(({ error: emailError }) => {
+        if (emailError) {
+          console.error("[LeadForm] notify-lead failed:", emailError);
+          track("lead_email_failed", { source, error: emailError.message });
+        } else {
+          track("lead_email_sent", { source });
+        }
+      })
+      .catch((err) => {
+        console.error("[LeadForm] notify-lead threw:", err);
+        track("lead_email_failed", { source, error: String(err) });
+      });
   };
 
   return (
     <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
+      {/* Honeypot — visually hidden, must NOT be aria-hidden (bots check that) */}
+      <div
+        style={{
+          position: "absolute",
+          width: "1px",
+          height: "1px",
+          overflow: "hidden",
+          clip: "rect(0,0,0,0)",
+          whiteSpace: "nowrap",
+          border: 0,
+        }}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          autoComplete="off"
+          tabIndex={-1}
+        />
+      </div>
+
       <div className={`grid grid-cols-1 ${compact ? "" : "tablet:grid-cols-2"} gap-4`}>
         <div>
           <label className={labelClass}>Your name</label>
