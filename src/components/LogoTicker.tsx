@@ -15,11 +15,11 @@ const LogoTicker = () => {
     >
       <div className="flex w-max animate-ticker [animation-duration:40s]">
         {[1, 2, 3].map((setIndex) => (
-          <div key={setIndex} className="flex shrink-0 gap-8 pr-8 items-center">
+          <div key={setIndex} className="flex shrink-0 gap-10 pr-10 items-center">
             {clients.map((name, i) => (
               <span
                 key={i}
-                className="text-neutral-10 text-[14px] tracking-[0.18em] font-semibold whitespace-nowrap"
+                className="text-neutral-12 text-[16px] tracking-[0.18em] font-semibold whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity"
                 style={{ fontFamily: "'Manrope', sans-serif" }}
               >
                 {name}
