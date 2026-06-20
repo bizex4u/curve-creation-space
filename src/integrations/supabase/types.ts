@@ -81,6 +81,7 @@ export type Database = {
           budget: string | null
           company: string | null
           created_at: string
+          device: string | null
           email: string
           funding_model: string | null
           id: string
@@ -88,6 +89,8 @@ export type Database = {
           message: string | null
           name: string
           phone: string | null
+          referrer: string | null
+          screen_width: number | null
           source: string
           utm_campaign: string | null
           utm_medium: string | null
@@ -97,6 +100,7 @@ export type Database = {
           budget?: string | null
           company?: string | null
           created_at?: string
+          device?: string | null
           email: string
           funding_model?: string | null
           id?: string
@@ -104,6 +108,8 @@ export type Database = {
           message?: string | null
           name: string
           phone?: string | null
+          referrer?: string | null
+          screen_width?: number | null
           source?: string
           utm_campaign?: string | null
           utm_medium?: string | null
@@ -113,6 +119,7 @@ export type Database = {
           budget?: string | null
           company?: string | null
           created_at?: string
+          device?: string | null
           email?: string
           funding_model?: string | null
           id?: string
@@ -120,6 +127,8 @@ export type Database = {
           message?: string | null
           name?: string
           phone?: string | null
+          referrer?: string | null
+          screen_width?: number | null
           source?: string
           utm_campaign?: string | null
           utm_medium?: string | null

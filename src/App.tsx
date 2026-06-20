@@ -15,6 +15,7 @@ const About = lazy(() => import("./pages/About"));
 const Channels = lazy(() => import("./pages/Channels"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Trust = lazy(() => import("./pages/Trust"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Blog = lazy(() => import("./pages/MdxBlogIndex"));
 const BlogPost = lazy(() => import("./pages/MdxBlogPost"));
@@ -62,6 +63,7 @@ const App = () => (
               <Route path="/channels" element={<Channels />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/trust" element={<Trust />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
