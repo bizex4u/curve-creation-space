@@ -84,14 +84,10 @@ export type Database = {
           email: string
           funding_model: string | null
           id: string
-          landing_page: string | null
           message: string | null
           name: string
           phone: string | null
           source: string
-          utm_campaign: string | null
-          utm_medium: string | null
-          utm_source: string | null
         }
         Insert: {
           budget?: string | null
@@ -100,14 +96,10 @@ export type Database = {
           email: string
           funding_model?: string | null
           id?: string
-          landing_page?: string | null
           message?: string | null
           name: string
           phone?: string | null
           source?: string
-          utm_campaign?: string | null
-          utm_medium?: string | null
-          utm_source?: string | null
         }
         Update: {
           budget?: string | null
@@ -116,14 +108,10 @@ export type Database = {
           email?: string
           funding_model?: string | null
           id?: string
-          landing_page?: string | null
           message?: string | null
           name?: string
           phone?: string | null
           source?: string
-          utm_campaign?: string | null
-          utm_medium?: string | null
-          utm_source?: string | null
         }
         Relationships: []
       }
