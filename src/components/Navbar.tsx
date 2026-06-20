@@ -90,7 +90,7 @@ const Navbar = ({
               onClick={() => setIsServicesOpen((v) => !v)}
               aria-haspopup="true"
               aria-expanded={isServicesOpen}
-              className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
+              className={`flex items-center gap-1 text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap ${isServicesOpen ? "bg-neutral-02 text-neutral-12" : ""}`}
             >
               Services
               <ChevronDown
