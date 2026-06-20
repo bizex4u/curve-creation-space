@@ -185,9 +185,13 @@ const AirportAdvertising = () => (
         subtitle="Tell us your target airports and audience — we'll map the highest-impact inventory for your brand."
         primaryCTALabel="Get Airport Proposal"
         relatedServices={[
-          { label: "Outdoor Advertising", href: "/outdoor-advertising" },
+          { label: "Airport Advertising Delhi (IGI)", href: "/airport-advertising-delhi" },
+          { label: "Airport Advertising Mumbai (CSIA)", href: "/airport-advertising-mumbai" },
+          { label: "Airport Advertising Bangalore", href: "/airport-advertising-bangalore" },
           { label: "Metro Branding", href: "/metro-branding" },
           { label: "DOOH Advertising", href: "/dooh-advertising" },
+          { label: "Airport Advertising ROI Guide", href: "/blog/airport-advertising-roi" },
+          { label: "Airport Advertising Cost India 2026", href: "/blog/airport-advertising-cost-india-2026" },
           { label: "Barter Advertising", href: "/barter-advertising" },
         ]}
       />

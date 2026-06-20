@@ -185,8 +185,11 @@ const MetroBranding = () => (
         subtitle="Tell us which cities and corridors matter — we'll map the best metro inventory for your brand."
         primaryCTALabel="Get Metro Media Plan"
         relatedServices={[
+          { label: "Delhi Metro Advertising", href: "/delhi-metro-advertising" },
+          { label: "Mumbai Metro Advertising", href: "/mumbai-metro-advertising" },
+          { label: "Delhi Metro Advertising Cost Guide", href: "/blog/delhi-metro-advertising-cost" },
+          { label: "Transit Advertising India Guide", href: "/blog/transit-advertising-india" },
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
-          { label: "Airport Advertising", href: "/airport-advertising" },
           { label: "DOOH Advertising", href: "/dooh-advertising" },
           { label: "Barter Advertising", href: "/barter-advertising" },
         ]}

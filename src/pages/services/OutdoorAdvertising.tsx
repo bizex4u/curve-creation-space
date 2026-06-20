@@ -181,10 +181,14 @@ const OutdoorAdvertising = () => (
         subtitle="Share your target cities and budget — we'll map the best OOH sites for your brand."
         primaryCTALabel="Get Free Media Plan"
         relatedServices={[
+          { label: "Gurgaon Hoardings", href: "/gurgaon-hoardings" },
+          { label: "Noida Hoardings", href: "/noida-hoardings" },
+          { label: "Delhi Billboard Advertising", href: "/delhi-billboard-advertising" },
+          { label: "OOH vs DOOH Guide", href: "/blog/ooh-vs-dooh" },
+          { label: "Outdoor Advertising Buyer's Playbook", href: "/blog/outdoor-advertising-india-buyers-playbook" },
+          { label: "DOOH Advertising", href: "/dooh-advertising" },
           { label: "Barter Advertising", href: "/barter-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },
-          { label: "Airport Advertising", href: "/airport-advertising" },
-          { label: "DOOH Advertising", href: "/dooh-advertising" },
         ]}
       />
       <Footer showDivider={false} />

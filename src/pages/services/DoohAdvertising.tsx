@@ -185,10 +185,13 @@ const DoohAdvertising = () => (
         subtitle="Share your target locations and audience — we'll map the best digital screens for your brand."
         primaryCTALabel="Book DOOH Consultation"
         relatedServices={[
+          { label: "Gurgaon DOOH Advertising", href: "/gurgaon-dooh-advertising" },
+          { label: "Bangalore DOOH Advertising", href: "/bangalore-dooh-advertising" },
+          { label: "OOH vs DOOH Guide", href: "/blog/ooh-vs-dooh" },
+          { label: "DOOH Advertising India Guide", href: "/blog/dooh-advertising-india-guide" },
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },
           { label: "Airport Advertising", href: "/airport-advertising" },
-          { label: "Barter Advertising", href: "/barter-advertising" },
         ]}
       />
       <Footer showDivider={false} />
