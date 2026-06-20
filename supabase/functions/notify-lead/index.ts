@@ -14,6 +14,10 @@ interface LeadPayload {
   funding_model?: string | null;
   message?: string | null;
   source?: string | null;
+  landing_page?: string | null;
+  utm_source?: string | null;
+  utm_medium?: string | null;
+  utm_campaign?: string | null;
   created_at?: string | null;
 }
 
@@ -76,6 +80,10 @@ function buildHtml(lead: LeadPayload): string {
                 ${row("Budget", lead.budget)}
                 ${row("Funding model", lead.funding_model)}
                 ${row("Source", lead.source)}
+                ${row("Landing page", lead.landing_page)}
+                ${row("UTM source", lead.utm_source)}
+                ${row("UTM medium", lead.utm_medium)}
+                ${row("UTM campaign", lead.utm_campaign)}
                 ${row("Submitted", ts)}
               </table>
             </td>

@@ -7,6 +7,18 @@ import FilledButton from "./FilledButton";
 // Minimum ms between page mount and submit — blocks instant-submit bots
 const MIN_SUBMIT_DELAY_MS = 3000;
 
+// Read UTM params + landing page once at module load (URL won't change within a SPA visit)
+function getAttribution() {
+  if (typeof window === "undefined") return {};
+  const p = new URLSearchParams(window.location.search);
+  return {
+    landing_page: window.location.pathname || null,
+    utm_source:   p.get("utm_source")   || null,
+    utm_medium:   p.get("utm_medium")   || null,
+    utm_campaign: p.get("utm_campaign") || null,
+  };
+}
+
 const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
   email: z.string().trim().email("Enter a valid email").max(255),
@@ -95,6 +107,8 @@ const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormPr
     track("lead_submit", { source });
     setSubmitting(true);
 
+    const attribution = getAttribution();
+
     // Step 1: Insert lead — this is the source of truth
     const { error: insertError } = await supabase.from("leads").insert({
       name: parsed.data.name,
@@ -105,6 +119,7 @@ const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormPr
       funding_model: parsed.data.funding_model || null,
       message: parsed.data.message || null,
       source,
+      ...attribution,
     });
 
     setSubmitting(false);
@@ -133,6 +148,7 @@ const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormPr
           funding_model: parsed.data.funding_model || null,
           message: parsed.data.message || null,
           source,
+          ...attribution,
           created_at: new Date().toISOString(),
         },
       })
