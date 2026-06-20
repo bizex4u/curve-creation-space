@@ -104,7 +104,7 @@ const WhyUsSection = () => {
   return (
     <section 
       ref={scrollRef}
-      className="section flex flex-col gap-y-10 tablet:flex-row tablet:flex-wrap tablet:justify-start tablet:gap-x-8 desktop:justify-between desktop:gap-0"
+      className="pt-0 pb-16 desktop:pb-20 flex flex-col gap-y-10 tablet:flex-row tablet:flex-wrap tablet:justify-start tablet:gap-x-8 desktop:justify-between desktop:gap-0"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
