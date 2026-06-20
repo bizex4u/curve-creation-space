@@ -4,6 +4,7 @@ import ContactInfoCard from "./ContactInfoCard";
 import BrushHighlight from "./BrushHighlight";
 import LeadForm from "./LeadForm";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { trackPhone, trackEmail } from "@/lib/analytics";
 
 const LeadFormMount = () => <LeadForm source="contact_section" />;
 
@@ -40,10 +41,10 @@ const ContactSection = () => {
 
           <div className="w-full grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-3 mt-10">
             <ContactInfoCard icon={<Phone strokeWidth={1.5} />}>
-              +91 80905 00009
+              <a href="tel:+918090500009" onClick={() => trackPhone("contact_section")} className="hover:text-main-01 transition-colors">+91 80905 00009</a>
             </ContactInfoCard>
             <ContactInfoCard icon={<Mail strokeWidth={1.5} />}>
-              yash@bizex4u.com
+              <a href="mailto:yash@bizex4u.com" onClick={() => trackEmail("contact_section")} className="hover:text-main-01 transition-colors">yash@bizex4u.com</a>
             </ContactInfoCard>
             <ContactInfoCard icon={<Building2 strokeWidth={1.5} />}>
               Pan-India campaigns

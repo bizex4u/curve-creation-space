@@ -3,7 +3,6 @@ import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import FilledButton from "./FilledButton";
-
 // Minimum ms between page mount and submit — blocks instant-submit bots
 const MIN_SUBMIT_DELAY_MS = 3000;
 
@@ -38,6 +37,7 @@ interface LeadFormProps {
   source?: string;
   compact?: boolean;
   onSuccess?: () => void;
+  ctaLabel?: string;
 }
 
 const fieldClass =
@@ -45,25 +45,9 @@ const fieldClass =
 
 const labelClass = "text-label text-neutral-10 mb-1.5 block";
 
-// Minimal analytics — wraps window.gtag / plausible if present, otherwise no-op
-function track(event: string, props?: Record<string, string>) {
-  try {
-    if (typeof window === "undefined") return;
-    // Plausible
-    if ((window as any).plausible) {
-      (window as any).plausible(event, { props });
-    }
-    // GA4
-    if ((window as any).gtag) {
-      (window as any).gtag("event", event, props);
-    }
-    console.debug(`[analytics] ${event}`, props);
-  } catch {
-    // Never let analytics break the form
-  }
-}
+import { track } from "@/lib/analytics";
 
-const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormProps) => {
+const LeadForm = ({ source = "contact", compact = false, onSuccess, ctaLabel }: LeadFormProps) => {
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -248,7 +232,7 @@ const LeadForm = ({ source = "contact", compact = false, onSuccess }: LeadFormPr
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <p className="text-label text-neutral-10">We reply within 1 business day. No spam, ever.</p>
         <FilledButton type="submit" disabled={submitting} showArrow>
-          {submitting ? "Sending…" : "Get my plan"}
+          {submitting ? "Sending…" : (ctaLabel ?? "Get my plan")}
         </FilledButton>
       </div>
     </form>

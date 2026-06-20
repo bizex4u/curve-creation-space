@@ -34,6 +34,12 @@
 
   <!-- Services -->
   <url>
+    <loc>https://bizex4u.com/trust</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
     <loc>https://bizex4u.com/barter-advertising</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -63,6 +69,110 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Geo / Industry Landing Pages -->
+  <url>
+    <loc>https://bizex4u.com/airport-advertising-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/airport-advertising-mumbai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/airport-advertising-bangalore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/delhi-metro-advertising</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/mumbai-metro-advertising</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/gurgaon-hoardings</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/noida-hoardings</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/delhi-billboard-advertising</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/gurgaon-dooh-advertising</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/bangalore-dooh-advertising</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/advertising-for-fmcg-brands</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/advertising-for-d2c-brands</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/advertising-for-real-estate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Lead Magnet Resources -->
+  <url>
+    <loc>https://bizex4u.com/resources/airport-advertising-media-kit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/resources/metro-branding-media-kit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/resources/barter-advertising-playbook</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/resources/dooh-advertising-media-kit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog Hub -->
   <url>
     <loc>https://bizex4u.com/blog</loc>
@@ -75,26 +185,47 @@
     <loc>https://bizex4u.com/blog/welcome-to-bizex4u</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/atl-vs-btl-advertising-india</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://bizex4u.com/blog/cash-vs-barter-explained</loc>
+    <loc>https://bizex4u.com/blog/how-brands-save-costs-using-inventory-barter</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://bizex4u.com/blog/barter-advertising-india-guide</loc>
-    <lastmod>2026-04-12</lastmod>
+    <loc>https://bizex4u.com/blog/mumbai-airport-advertising-guide</loc>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://bizex4u.com/blog/atl-vs-btl-advertising-india-2026</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://bizex4u.com/blog/airport-advertising-cost-india-2026</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/delhi-metro-advertising-cost</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/ooh-vs-dooh</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -104,6 +235,69 @@
     <lastmod>2026-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/barter-advertising-india-guide</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/how-fmcg-brands-use-barter</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/dooh-advertising-india-guide</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/media-buying-agency-india</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/airport-advertising-roi</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/transit-advertising-india</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/mall-branding-india</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/cinema-advertising-india</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bizex4u.com/blog/cash-vs-barter-explained</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

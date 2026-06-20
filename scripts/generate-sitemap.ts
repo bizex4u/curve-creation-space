@@ -26,12 +26,32 @@ function build() {
     { path: "/channels", changefreq: "monthly", priority: "0.8" },
     { path: "/how-it-works", changefreq: "monthly", priority: "0.7" },
     { path: "/contact", changefreq: "monthly", priority: "0.6" },
+    { path: "/trust", changefreq: "yearly", priority: "0.4" },
     { path: "/blog", changefreq: "weekly", priority: "0.9" },
     { path: "/barter-advertising", changefreq: "monthly", priority: "0.9" },
     { path: "/outdoor-advertising", changefreq: "monthly", priority: "0.9" },
     { path: "/metro-branding", changefreq: "monthly", priority: "0.9" },
     { path: "/airport-advertising", changefreq: "monthly", priority: "0.9" },
     { path: "/dooh-advertising", changefreq: "monthly", priority: "0.9" },
+    // Geo / industry landing pages
+    { path: "/airport-advertising-delhi", changefreq: "monthly", priority: "0.85" },
+    { path: "/airport-advertising-mumbai", changefreq: "monthly", priority: "0.85" },
+    { path: "/airport-advertising-bangalore", changefreq: "monthly", priority: "0.85" },
+    { path: "/delhi-metro-advertising", changefreq: "monthly", priority: "0.85" },
+    { path: "/mumbai-metro-advertising", changefreq: "monthly", priority: "0.85" },
+    { path: "/gurgaon-hoardings", changefreq: "monthly", priority: "0.85" },
+    { path: "/noida-hoardings", changefreq: "monthly", priority: "0.85" },
+    { path: "/delhi-billboard-advertising", changefreq: "monthly", priority: "0.85" },
+    { path: "/gurgaon-dooh-advertising", changefreq: "monthly", priority: "0.85" },
+    { path: "/bangalore-dooh-advertising", changefreq: "monthly", priority: "0.85" },
+    { path: "/advertising-for-fmcg-brands", changefreq: "monthly", priority: "0.85" },
+    { path: "/advertising-for-d2c-brands", changefreq: "monthly", priority: "0.85" },
+    { path: "/advertising-for-real-estate", changefreq: "monthly", priority: "0.85" },
+    // Lead magnet resource pages
+    { path: "/resources/airport-advertising-media-kit", changefreq: "monthly", priority: "0.8" },
+    { path: "/resources/metro-branding-media-kit", changefreq: "monthly", priority: "0.8" },
+    { path: "/resources/barter-advertising-playbook", changefreq: "monthly", priority: "0.8" },
+    { path: "/resources/dooh-advertising-media-kit", changefreq: "monthly", priority: "0.8" },
   ];
 
   if (existsSync(INDEX_FILE)) {

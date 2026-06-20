@@ -29,9 +29,13 @@ const Trust = () => {
           name="description"
           content="How BIZEX4U handles security and privacy for visitors and customers of bizex4u.com."
         />
-        <link rel="canonical" href="/trust" />
+        <link rel="canonical" href="https://bizex4u.com/trust" />
         <meta property="og:title" content="Trust & privacy — BIZEX4U" />
-        <meta property="og:url" content="/trust" />
+        <meta property="og:url" content="https://bizex4u.com/trust" />
+        <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Trust & privacy — BIZEX4U" />
+        <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       <PageHeader

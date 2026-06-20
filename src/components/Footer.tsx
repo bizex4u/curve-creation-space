@@ -2,6 +2,7 @@ import LinkedinLogo from "@/assets/Linkedin_Logo.png";
 import SocialLink from "./footer/SocialLink";
 import FooterNavList from "./footer/FooterNavList";
 import logo from "@/assets/bizex4u-logo.png.asset.json";
+import { trackEmail, trackPhone } from "@/lib/analytics";
 
 const agencyLinks = [
   { label: "Home", href: "/" },
@@ -40,8 +41,8 @@ const Footer = ({ showDivider = true }: FooterProps) => {
               Full-service ad agency for India. Cash. Barter. Or both.
             </p>
             <div className="flex flex-col gap-1">
-              <span className="text-body font-medium text-neutral-11">yash@bizex4u.com</span>
-              <span className="text-body font-medium text-neutral-11">+91 80905 00009</span>
+              <a href="mailto:yash@bizex4u.com" onClick={() => trackEmail("footer")} className="text-body font-medium text-neutral-11 hover:text-main-01 transition-colors">yash@bizex4u.com</a>
+              <a href="tel:+918090500009" onClick={() => trackPhone("footer")} className="text-body font-medium text-neutral-11 hover:text-main-01 transition-colors">+91 80905 00009</a>
             </div>
             <div className="flex items-center gap-2">
               <SocialLink href="https://in.linkedin.com/company/bizex4u" icon={<img src={LinkedinLogo} alt="LinkedIn" className="w-5 h-5" />} />

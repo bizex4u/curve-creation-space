@@ -181,10 +181,13 @@ const BarterAdvertising = () => (
         subtitle="Tell us what inventory you have — we'll value it and build a media plan."
         primaryCTALabel="Check Inventory Eligibility"
         relatedServices={[
+          { label: "Barter Advertising Guide", href: "/blog/barter-advertising-india-guide" },
+          { label: "How FMCG Brands Use Barter", href: "/blog/how-fmcg-brands-use-barter" },
+          { label: "How Brands Save 40–60% on Media Costs", href: "/blog/how-brands-save-costs-using-inventory-barter" },
+          { label: "Advertising for FMCG Brands", href: "/advertising-for-fmcg-brands" },
+          { label: "Advertising for D2C Brands", href: "/advertising-for-d2c-brands" },
           { label: "Outdoor Advertising", href: "/outdoor-advertising" },
           { label: "Metro Branding", href: "/metro-branding" },
-          { label: "Airport Advertising", href: "/airport-advertising" },
-          { label: "DOOH Advertising", href: "/dooh-advertising" },
         ]}
       />
       <Footer showDivider={false} />

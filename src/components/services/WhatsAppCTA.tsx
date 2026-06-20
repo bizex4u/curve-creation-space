@@ -1,6 +1,8 @@
+import { trackWhatsApp } from "@/lib/analytics";
+
 const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER as string | undefined;
 
-const WhatsAppCTA = () => {
+const WhatsAppCTA = ({ source }: { source?: string } = {}) => {
   if (!waNumber) return null;
 
   return (
@@ -8,6 +10,7 @@ const WhatsAppCTA = () => {
       href={`https://wa.me/${waNumber}`}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsApp(source)}
       className="inline-flex items-center gap-2 text-button text-neutral-12 py-[12px] px-[20px] rounded-[12px] border border-neutral-04 bg-neutral-00 transition-colors hover:bg-neutral-02 shadow-[0_4px_8px_hsl(var(--neutral-12)/0.15)] whitespace-nowrap"
     >
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-[#25D366]">
