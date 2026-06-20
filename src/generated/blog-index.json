@@ -2,13 +2,17 @@
   {
     "slug": "welcome-to-bizex4u",
     "title": "Welcome to the Bizex4U Journal",
-    "description": "What this blog is for, who it's for, and what you'll find in it — field notes from real Indian campaigns.",
+    "description": "What this blog is for, who it's for and what you'll find here — field notes, guides and campaign insights from real Indian advertising campaigns.",
     "date": "2026-06-19",
     "author": "Bizex4U Team",
     "category": "Inside Bizex4U",
     "image": "/placeholder.svg",
-    "tags": ["barter", "strategy", "india"],
-    "readingMinutes": 2
+    "tags": [
+      "barter",
+      "strategy",
+      "india"
+    ],
+    "readingMinutes": 1
   },
   {
     "slug": "atl-vs-btl-advertising-india",
@@ -18,19 +22,49 @@
     "author": "Bizex4U Team",
     "category": "Strategy",
     "image": "/placeholder.svg",
-    "tags": ["ATL advertising", "BTL advertising", "integrated marketing", "india", "media strategy", "OOH"],
-    "readingMinutes": 8
+    "tags": [
+      "ATL advertising",
+      "BTL advertising",
+      "integrated marketing",
+      "india",
+      "media strategy",
+      "OOH"
+    ],
+    "readingMinutes": 7
   },
   {
     "slug": "how-brands-save-costs-using-inventory-barter",
     "title": "How Brands Save 40–60% on Media Costs Using Inventory Barter in India",
-    "description": "How Indian brands use inventory barter to reduce advertising costs by 40–60%. Real examples, mechanics, eligible categories and formats across OOH, airport and transit.",
+    "description": "How Indian brands use inventory barter to cut advertising costs by 40–60%. Real examples, eligible categories and formats across OOH, airport and transit.",
     "date": "2026-06-15",
     "author": "Bizex4U Team",
     "category": "Barter Advertising",
     "image": "/placeholder.svg",
-    "tags": ["barter advertising", "inventory barter", "media costs", "india", "FMCG", "cost reduction"],
-    "readingMinutes": 9
+    "tags": [
+      "barter advertising",
+      "inventory barter",
+      "media costs",
+      "india",
+      "FMCG",
+      "cost reduction"
+    ],
+    "readingMinutes": 7
+  },
+  {
+    "slug": "cash-vs-barter-explained",
+    "title": "Cash, barter, or both: a practical guide for Indian brands",
+    "description": "When to pay cash, when to barter inventory and when a hybrid campaign beats either — practical guide with real numbers from recent BIZEX4U campaigns in India.",
+    "date": "2026-06-15",
+    "author": "Bizex4U Team",
+    "category": "Strategy",
+    "image": "/placeholder.svg",
+    "tags": [
+      "barter",
+      "cash",
+      "strategy",
+      "media-buying"
+    ],
+    "readingMinutes": 1
   },
   {
     "slug": "mumbai-airport-advertising-guide",
@@ -40,118 +74,190 @@
     "author": "Bizex4U Team",
     "category": "Airport Advertising",
     "image": "/placeholder.svg",
-    "tags": ["airport advertising", "mumbai airport", "CSIA", "T2 Mumbai", "OOH", "india"],
-    "readingMinutes": 9
+    "tags": [
+      "airport advertising",
+      "mumbai airport",
+      "CSIA",
+      "T2 Mumbai",
+      "OOH",
+      "india"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "airport-advertising-cost-india-2026",
     "title": "Airport Advertising Cost in India 2026: Complete Rate Guide",
-    "description": "Airport advertising costs in India 2026. IGI Delhi, Mumbai, Bangalore and 25+ airports — format-wise rate ranges, CPM analysis and campaign planning guide.",
+    "description": "Complete guide to airport advertising costs in India 2026 — Delhi, Mumbai, Bangalore rates for DOOH screens, static hoardings, aerobridges and baggage claim.",
     "date": "2026-06-10",
     "author": "Bizex4U Team",
     "category": "Airport Advertising",
     "image": "/placeholder.svg",
-    "tags": ["airport advertising", "cost", "india", "OOH", "media buying", "rates"],
-    "readingMinutes": 10
+    "tags": [
+      "airport advertising",
+      "cost guide",
+      "india",
+      "OOH",
+      "media buying"
+    ],
+    "readingMinutes": 5
   },
   {
     "slug": "delhi-metro-advertising-cost",
-    "title": "Delhi Metro Advertising Cost 2026: Formats, Rates and ROI Guide",
-    "description": "Delhi Metro advertising costs 2026. Platform panels, station dominations, train wraps and DOOH — DMRC format rates, line-by-line targeting and campaign ROI guide.",
+    "title": "Delhi Metro Advertising Cost 2026: Complete Rate Guide for DMRC Campaigns",
+    "description": "Delhi Metro advertising costs, formats and booking guide for 2026. Platform panels, train wraps, station dominations and DOOH rates across DMRC's 390+ stations.",
     "date": "2026-06-08",
     "author": "Bizex4U Team",
     "category": "Metro Branding",
     "image": "/placeholder.svg",
-    "tags": ["delhi metro", "DMRC", "metro advertising", "india", "OOH", "transit"],
-    "readingMinutes": 9
+    "tags": [
+      "delhi metro advertising",
+      "DMRC",
+      "metro branding",
+      "cost guide",
+      "OOH"
+    ],
+    "readingMinutes": 5
   },
   {
     "slug": "ooh-vs-dooh",
-    "title": "OOH vs DOOH Advertising in India: Key Differences and When to Choose Each",
-    "description": "OOH vs DOOH advertising in India — formats, cost differences, targeting capabilities and campaign strategy guide for 2026.",
+    "title": "OOH vs DOOH: Which Outdoor Advertising Format Is Right for Your Brand?",
+    "description": "OOH vs DOOH for Indian brands. Cost, reach, creative flexibility, targeting and campaign suitability — which outdoor format delivers better ROI in 2026?",
     "date": "2026-06-05",
     "author": "Bizex4U Team",
     "category": "Strategy",
     "image": "/placeholder.svg",
-    "tags": ["OOH", "DOOH", "outdoor advertising", "india", "media strategy"],
-    "readingMinutes": 8
-  },
-  {
-    "slug": "outdoor-advertising-india-buyers-playbook",
-    "title": "Outdoor Advertising in India: The Buyer's Playbook for 2026",
-    "description": "Complete outdoor advertising buying guide for India 2026. OOH formats, city rates, site selection, barter options and campaign planning across 40+ Indian cities.",
-    "date": "2026-05-22",
-    "author": "Bizex4U Team",
-    "category": "Outdoor Advertising",
-    "image": "/placeholder.svg",
-    "tags": ["outdoor advertising", "OOH", "india", "hoardings", "billboards", "media buying"],
-    "readingMinutes": 10
+    "tags": [
+      "OOH",
+      "DOOH",
+      "outdoor advertising",
+      "strategy",
+      "media buying"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "barter-advertising-india-guide",
-    "title": "Barter Advertising in India: The Complete Guide for Brands in 2026",
-    "description": "Complete guide to barter advertising in India 2026. How barter works, eligible media formats, FMCG barter examples and how to run a GST-compliant barter campaign.",
+    "title": "Barter Advertising in India: Complete Guide for Brands in 2026",
+    "description": "Complete barter advertising guide for India. How inventory exchange works, barter ratios, eligible media categories and how to start a barter campaign.",
     "date": "2026-05-28",
     "author": "Bizex4U Team",
     "category": "Barter Advertising",
     "image": "/placeholder.svg",
-    "tags": ["barter advertising", "india", "FMCG", "media buying", "OOH"],
-    "readingMinutes": 9
+    "tags": [
+      "barter advertising",
+      "inventory exchange",
+      "india",
+      "OOH",
+      "media buying",
+      "strategy"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "how-fmcg-brands-use-barter",
-    "title": "How FMCG Brands Use Barter Advertising to Stretch Media Budgets in India",
-    "description": "How India's FMCG brands use inventory barter advertising to get 2–3x media value. Real campaign structures, categories that work and how to start your first barter campaign.",
+    "title": "How FMCG Brands Use Barter Advertising to Reduce Marketing Costs",
+    "description": "How Indian FMCG brands convert surplus inventory into advertising. Real barter models, cost structures and campaign examples for FMCG advertisers in India.",
     "date": "2026-05-25",
     "author": "Bizex4U Team",
     "category": "Barter Advertising",
     "image": "/placeholder.svg",
-    "tags": ["FMCG", "barter advertising", "india", "media buying", "inventory"],
-    "readingMinutes": 8
+    "tags": [
+      "FMCG",
+      "barter advertising",
+      "inventory",
+      "india",
+      "cost reduction",
+      "OOH"
+    ],
+    "readingMinutes": 6
+  },
+  {
+    "slug": "outdoor-advertising-india-buyers-playbook",
+    "title": "Outdoor Advertising in India: The Buyer's Playbook for 2026",
+    "description": "Outdoor advertising buying guide for India 2026. OOH formats, city rates, site selection, barter options and campaign planning across 40+ Indian cities.",
+    "date": "2026-05-22",
+    "author": "Bizex4U Team",
+    "category": "Outdoor Advertising",
+    "image": "/placeholder.svg",
+    "tags": [
+      "outdoor advertising",
+      "OOH",
+      "india",
+      "hoardings",
+      "billboards",
+      "media buying"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "dooh-advertising-india-guide",
     "title": "DOOH Advertising in India: Complete Guide for 2026",
-    "description": "Complete guide to DOOH advertising in India 2026. Digital out-of-home formats, programmatic buying, city-specific rates, audience targeting and campaign planning.",
+    "description": "Complete guide to Digital Out-of-Home advertising in India. DOOH formats, networks, costs, targeting, dayparting and how to plan a DOOH campaign in 2026.",
     "date": "2026-05-20",
     "author": "Bizex4U Team",
     "category": "DOOH Advertising",
     "image": "/placeholder.svg",
-    "tags": ["DOOH", "digital out-of-home", "programmatic OOH", "india", "outdoor advertising"],
-    "readingMinutes": 9
+    "tags": [
+      "DOOH",
+      "digital OOH",
+      "outdoor advertising",
+      "india",
+      "media buying",
+      "guide"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "media-buying-agency-india",
-    "title": "How to Choose a Media Buying Agency in India: A Brand Marketer's Guide",
-    "description": "How to choose the right media buying agency in India. What agencies actually do, how to evaluate them, what to pay and red flags to avoid.",
+    "title": "How to Choose a Media Buying Agency in India: 2026 Guide",
+    "description": "How to choose a media buying agency in India. Key questions, red flags, service models, fee structures and what separates good agencies from mediocre ones.",
     "date": "2026-05-15",
     "author": "Bizex4U Team",
     "category": "Media Buying",
     "image": "/placeholder.svg",
-    "tags": ["media buying", "agency", "india", "advertising", "OOH"],
-    "readingMinutes": 8
+    "tags": [
+      "media buying",
+      "advertising agency",
+      "india",
+      "OOH",
+      "campaign planning"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "airport-advertising-roi",
     "title": "Airport Advertising ROI: How to Measure and Maximise Returns in India",
-    "description": "How to measure and maximise airport advertising ROI in India. DEC, CPM, brand lift, audience quality metrics and campaign optimisation strategies for airport media.",
+    "description": "How to measure airport advertising ROI in India. DEC, CPM, brand lift, audience quality and campaign optimisation strategies for airport media buyers.",
     "date": "2026-05-10",
     "author": "Bizex4U Team",
     "category": "Airport Advertising",
     "image": "/placeholder.svg",
-    "tags": ["airport advertising", "ROI", "media measurement", "india", "OOH"],
-    "readingMinutes": 9
+    "tags": [
+      "airport advertising",
+      "ROI",
+      "media measurement",
+      "india",
+      "OOH"
+    ],
+    "readingMinutes": 7
   },
   {
     "slug": "transit-advertising-india",
     "title": "Transit Advertising in India: Metro, Bus, Railway and Auto Formats Guide",
-    "description": "Complete guide to transit advertising in India. Metro, bus, railway, auto and cab advertising — formats, costs, targeting and campaign planning across Indian cities.",
+    "description": "Transit advertising guide for India. Metro, bus, railway, auto and cab advertising — formats, costs, targeting and campaign planning across Indian cities.",
     "date": "2026-05-05",
     "author": "Bizex4U Team",
     "category": "Metro Branding",
     "image": "/placeholder.svg",
-    "tags": ["transit advertising", "metro", "bus", "india", "OOH", "urban advertising"],
-    "readingMinutes": 9
+    "tags": [
+      "transit advertising",
+      "metro",
+      "bus",
+      "india",
+      "OOH",
+      "urban advertising"
+    ],
+    "readingMinutes": 6
   },
   {
     "slug": "mall-branding-india",
@@ -161,29 +267,32 @@
     "author": "Bizex4U Team",
     "category": "Outdoor Advertising",
     "image": "/placeholder.svg",
-    "tags": ["mall branding", "mall advertising", "india", "OOH", "retail advertising", "DOOH"],
-    "readingMinutes": 8
+    "tags": [
+      "mall branding",
+      "mall advertising",
+      "india",
+      "OOH",
+      "retail advertising",
+      "DOOH"
+    ],
+    "readingMinutes": 5
   },
   {
     "slug": "cinema-advertising-india",
     "title": "Cinema Advertising in India: Formats, Costs and Campaign Guide 2026",
-    "description": "Cinema advertising guide for India 2026. In-film branding, pre-show spots, foyer activations and multiplex screen advertising costs across PVR, INOX and regional chains.",
+    "description": "Cinema advertising guide India 2026. In-film branding, pre-show spots, foyer activations and screen ad costs across PVR, INOX and regional chains.",
     "date": "2026-04-20",
     "author": "Bizex4U Team",
     "category": "Media Buying",
     "image": "/placeholder.svg",
-    "tags": ["cinema advertising", "in-film branding", "multiplex", "india", "OOH", "media buying"],
-    "readingMinutes": 8
-  },
-  {
-    "slug": "cash-vs-barter-explained",
-    "title": "Cash, barter, or both: a practical guide for Indian brands",
-    "description": "When to pay cash, when to barter inventory, and when a hybrid campaign beats either — with real numbers from recent Bizex4U campaigns.",
-    "date": "2026-04-15",
-    "author": "Bizex4U Team",
-    "category": "Strategy",
-    "image": "/placeholder.svg",
-    "tags": ["barter", "cash", "strategy", "media-buying"],
-    "readingMinutes": 4
+    "tags": [
+      "cinema advertising",
+      "in-film branding",
+      "multiplex",
+      "india",
+      "OOH",
+      "media buying"
+    ],
+    "readingMinutes": 5
   }
 ]
