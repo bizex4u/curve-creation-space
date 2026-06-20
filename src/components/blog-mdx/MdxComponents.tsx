@@ -40,7 +40,7 @@ export const mdxComponents = {
     <pre className="bg-neutral-01 border border-neutral-03 rounded-[12px] p-4 overflow-x-auto mb-6 text-sm" {...props} />
   ),
   hr: () => <hr className="my-10 border-neutral-03" />,
-  img: (props: ComponentProps<"img">) => (
-    <img className="w-full rounded-[16px] my-6" loading="lazy" {...props} />
+  img: ({ alt, ...props }: ComponentProps<"img">) => (
+    <img className="w-full rounded-[16px] my-6 object-cover h-auto" loading="lazy" alt={alt ?? ""} {...props} />
   ),
 };

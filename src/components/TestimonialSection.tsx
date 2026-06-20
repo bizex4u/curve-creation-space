@@ -23,7 +23,7 @@ const TestimonialSection = () => {
           <div className="flex-shrink-0">
             <img
               src={testimonialPhoto}
-              alt="Testimonial"
+              alt="Chandra Kiran Dubey, Director at Mishrambu"
               className="max-w-[350px] tablet:max-w-none max-h-[400px] aspect-[3/4] object-cover rounded-[16px] border-2 border-neutral-02 shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
               loading="lazy"
             />
@@ -33,7 +33,7 @@ const TestimonialSection = () => {
           <div className="flex flex-col gap-8 tablet:gap-16 flex-1">
             {/* Upper: Quote */}
             <div>
-              <img src={quoteIcon} alt="Quote" className="h-6 mb-4" />
+              <img src={quoteIcon} alt="" role="presentation" className="h-6 mb-4" />
               <h3 className="max-w-[600px]">
                 Managing seasonal inventory was always a challenge. With BIZEX4U's barter
                 model we turned excess stock into advertising and doubled our brand

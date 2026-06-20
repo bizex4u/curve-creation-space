@@ -19,7 +19,7 @@ const FeatureCard = memo(({ icon, title, description, href }: FeatureCardProps) 
       </div>
       {href && (
         <div className="mt-4 flex items-center gap-1 text-label text-main-02">
-          Learn more <ArrowRight size={12} />
+          Explore {title} <ArrowRight size={12} />
         </div>
       )}
     </>

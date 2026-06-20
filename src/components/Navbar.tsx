@@ -70,7 +70,7 @@ const Navbar = ({
         <Link to={logoHref} className="flex-shrink-0 flex items-center gap-2 pl-1">
           <img
             src={logo.url}
-            alt="BIZEX4U"
+            alt="Bizex4U – India's Barter and Media Buying Agency"
             className="h-10 tablet:h-11 w-auto object-contain block"
           />
         </Link>
@@ -146,6 +146,9 @@ const Navbar = ({
         {/* Mobile menu button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
           className="tablet:hidden btn-filled flex items-center gap-2 text-neutral-00 py-[10px] px-[12px] rounded-[12px] text-nav"
         >
           <span>{isMobileMenuOpen ? "Close" : "Menu"}</span>
@@ -165,6 +168,7 @@ const Navbar = ({
         />
 
         <div
+          id="mobile-menu"
           className={`absolute top-[96px] left-1/2 -translate-x-1/2 w-[calc(100%-48px)] bg-neutral-12 rounded-[12px] p-[20px] shadow-[0_2px_20px_rgba(0,0,0,0.15)] border border-neutral-10 transition-all duration-300 ease-out flex flex-col items-center gap-1 ${
             isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
@@ -177,6 +181,9 @@ const Navbar = ({
           <div className="w-full">
             <button
               onClick={() => setIsMobileServicesOpen((v) => !v)}
+              aria-haspopup="true"
+              aria-expanded={isMobileServicesOpen}
+              aria-controls="mobile-services-menu"
               className="w-full flex items-center justify-center gap-1.5 text-nav text-neutral-00 hover:text-neutral-03 transition-colors py-2"
             >
               Services
@@ -186,6 +193,7 @@ const Navbar = ({
               />
             </button>
             <div
+              id="mobile-services-menu"
               className={`overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                 isMobileServicesOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
               }`}
