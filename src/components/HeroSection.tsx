@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="flex flex-col gap-8 tablet:gap-10 page-header-top pb-16 tablet:pb-20 desktop:pb-24"
+      className="flex flex-col gap-8 tablet:gap-10 page-header-top pb-0"
       style={{
         opacity: isLoaded ? 1 : 0,
         transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
