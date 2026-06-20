@@ -117,16 +117,18 @@ const BarterAdvertising = () => (
       <title>Barter Advertising Agency India — Exchange Inventory for Media | BIZEX4U</title>
       <meta
         name="description"
-        content="Run premium OOH, metro, airport, cinema and radio campaigns using your surplus inventory — no cash outlay. India's leading barter advertising agency."
+        content="Exchange excess inventory for advertising with India's barter media specialists. Reduce cash burn and unlock nationwide OOH, metro, airport and cinema reach."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="Barter Advertising Agency India | BIZEX4U" />
       <meta property="og:description" content="Exchange surplus inventory for premium ad placements across OOH, metro, cinema, radio and more. Clean PO, formal contract, 40+ cities." />
       <meta property="og:url" content={PAGE_URL} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Barter Advertising Agency India | BIZEX4U" />
       <meta name="twitter:description" content="Exchange inventory for premium media placements across India. OOH, metro, cinema, radio — cash, barter or hybrid." />
+      <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

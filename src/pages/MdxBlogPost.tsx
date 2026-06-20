@@ -25,16 +25,29 @@ const MdxBlogPost = () => {
 
   const related = getRelatedPosts(post.slug, 3);
 
+  const ogImage = image ?? `${SITE_URL}/og-image.jpg`;
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    image: image ? [image] : undefined,
+    image: image ? [image] : [`${SITE_URL}/og-image.jpg`],
     datePublished: post.date,
-    author: { "@type": "Person", name: post.author },
-    publisher: { "@type": "Organization", name: "Bizex4U" },
-    mainEntityOfPage: url,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author ?? "BIZEX4U",
+      url: `${SITE_URL}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "BIZEX4U",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
   };
 
   const breadcrumbSchema = {
@@ -66,11 +79,11 @@ const MdxBlogPost = () => {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
         <meta property="og:url" content={url} />
-        {image && <meta property="og:image" content={image} />}
+        <meta property="og:image" content={ogImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
-        {image && <meta name="twitter:image" content={image} />}
+        <meta name="twitter:image" content={ogImage} />
         {post.author && <meta name="author" content={post.author} />}
         <meta property="article:published_time" content={post.date} />
         {post.tags.map((t) => (

@@ -117,16 +117,18 @@ const AirportAdvertising = () => (
       <title>Airport Advertising India — Delhi, Mumbai, Bangalore Airport Ads | BIZEX4U</title>
       <meta
         name="description"
-        content="Book airport advertising at Delhi T3, Mumbai T2, Bangalore, Hyderabad and 25+ Indian airports. Large format, DOOH, aerobridge — cash, barter or hybrid campaigns."
+        content="Book premium airport advertising across Delhi, Mumbai, Bengaluru and major Indian airports with BIZEX4U. Cash, barter and hybrid campaign options available."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="Airport Advertising India | BIZEX4U" />
       <meta property="og:description" content="Premium airport ads at Delhi, Mumbai, Bangalore and 25+ airports. Large format static, DOOH, aerobridges, baggage claim — cash, barter or hybrid." />
       <meta property="og:url" content={PAGE_URL} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Airport Advertising India | BIZEX4U" />
       <meta name="twitter:description" content="Reach India's highest-income audience at airports. Large format, DOOH, aerobridges — cash, barter or hybrid campaigns." />
+      <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

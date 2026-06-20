@@ -10,10 +10,16 @@ const Contact = () => {
     <div className="min-h-screen bg-neutral-00">
       <Helmet>
         <title>Contact BIZEX4U — Plan Your Campaign</title>
-        <meta name="description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
-        <link rel="canonical" href="/contact" />
+        <meta name="description" content="Connect with BIZEX4U to plan barter, cash or hybrid advertising campaigns across India. Request a customised media plan from our strategists today." />
+        <link rel="canonical" href="https://bizex4u.com/contact" />
         <meta property="og:title" content="Contact BIZEX4U — Plan Your Campaign" />
-        <meta property="og:url" content="/contact" />
+        <meta property="og:description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
+        <meta property="og:url" content="https://bizex4u.com/contact" />
+        <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact BIZEX4U — Plan Your Campaign" />
+        <meta name="twitter:description" content="Contact BIZEX4U to plan your next cash or barter advertising campaign across India." />
+        <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       <PageHeader

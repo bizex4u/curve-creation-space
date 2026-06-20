@@ -117,16 +117,18 @@ const DoohAdvertising = () => (
       <title>DOOH Advertising India — Digital Out-of-Home Campaigns | BIZEX4U</title>
       <meta
         name="description"
-        content="Run programmatic and direct-buy DOOH campaigns across malls, metros, airports and roadside LED screens in India. Dynamic creative, dayparting, real-time impressions."
+        content="Run high-impact digital out-of-home campaigns on premium DOOH screens across India. Mall, metro, airport and roadside LED — dynamic creative and dayparting."
       />
       <link rel="canonical" href={PAGE_URL} />
       <meta property="og:title" content="DOOH Advertising India | BIZEX4U" />
       <meta property="og:description" content="Digital Out-of-Home advertising across malls, metros, airports and roadside LED screens. Dynamic creative, dayparting, programmatic and direct-buy." />
       <meta property="og:url" content={PAGE_URL} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="DOOH Advertising India | BIZEX4U" />
       <meta name="twitter:description" content="Digital OOH campaigns across malls, metros, airports and LED hoardings. Dynamic creative, dayparting, real-time data." />
+      <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

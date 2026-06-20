@@ -88,7 +88,7 @@ const BlogSection = () => {
         <div className="flex justify-center mt-8">
           <Link to="/blog">
             <OutlineButton icon={<ArrowRight className="w-4 h-4" />}>
-              Read more
+              Read all articles on barter & media buying
             </OutlineButton>
           </Link>
         </div>

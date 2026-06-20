@@ -34,7 +34,7 @@ const Footer = ({ showDivider = true }: FooterProps) => {
         <div className="flex flex-col gap-12 desktop:flex-row desktop:justify-between desktop:items-start">
           <div className="flex flex-col gap-6 max-w-[320px]">
             <div className="flex items-center">
-              <img src={logo.url} alt="BIZEX4U" className="h-12 w-auto object-contain" />
+              <img src={logo.url} alt="Bizex4U – India's Barter and Media Buying Agency" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-body text-neutral-10">
               Full-service ad agency for India. Cash. Barter. Or both.

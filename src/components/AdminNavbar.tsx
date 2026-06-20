@@ -29,7 +29,7 @@ const AdminNavbar = () => {
           <nav className="bg-neutral-00 rounded-[16px] py-[10px] px-[12px] items-center justify-between gap-8 border border-neutral-03 flex flex-row desktop:grid desktop:grid-cols-[1fr_auto_1fr]">
             {/* Logo */}
             <Link to="/admin/blog" className="flex-shrink-0">
-              <img src={logo} alt="Logo" className="h-[24px] w-auto" />
+              <img src={logo} alt="Bizex4U logo" className="h-[24px] w-auto" />
             </Link>
 
             {/* Desktop Navigation Links */}

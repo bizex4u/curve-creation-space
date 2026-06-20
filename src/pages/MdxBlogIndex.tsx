@@ -38,6 +38,11 @@ const MdxBlogIndex = () => {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
         <link rel="alternate" type="application/rss+xml" title="Bizex4U Journal" href={`${SITE_URL}/rss.xml`} />
       </Helmet>
 

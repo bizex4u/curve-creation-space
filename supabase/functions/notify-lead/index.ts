@@ -18,6 +18,9 @@ interface LeadPayload {
   utm_source?: string | null;
   utm_medium?: string | null;
   utm_campaign?: string | null;
+  referrer?: string | null;
+  device?: string | null;
+  screen_width?: number | null;
   created_at?: string | null;
 }
 
@@ -84,6 +87,9 @@ function buildHtml(lead: LeadPayload): string {
                 ${row("UTM source", lead.utm_source)}
                 ${row("UTM medium", lead.utm_medium)}
                 ${row("UTM campaign", lead.utm_campaign)}
+                ${row("Referrer", lead.referrer)}
+                ${row("Device", lead.device)}
+                ${row("Screen width", lead.screen_width != null ? `${lead.screen_width}px` : null)}
                 ${row("Submitted", ts)}
               </table>
             </td>

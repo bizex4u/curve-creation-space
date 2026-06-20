@@ -48,10 +48,41 @@ const Index = () => {
     <div className="relative min-h-screen">
       <Helmet>
         <title>Advertising & Barter Media Agency India | BIZEX4U</title>
-        <meta name="description" content="BIZEX4U is India's full-service advertising agency for cash and barter campaigns. Outdoor, transit, mall, cinema, radio, print and digital — across 12+ cities." />
-        <link rel="canonical" href="/" />
+        <meta name="description" content="Advertising & barter media agency in India offering OOH, airport, metro, DOOH and inventory-led campaigns. Plan your next campaign with BIZEX4U today." />
+        <link rel="canonical" href="https://bizex4u.com/" />
         <meta property="og:title" content="Advertising & Barter Media Agency India | BIZEX4U" />
-        <meta property="og:url" content="/" />
+        <meta property="og:description" content="BIZEX4U is India's full-service advertising agency for cash and barter campaigns. Outdoor, transit, mall, cinema, radio, print and digital — across 12+ cities." />
+        <meta property="og:url" content="https://bizex4u.com/" />
+        {/* TODO: replace with actual OG image at https://bizex4u.com/og-image.jpg */}
+        <meta property="og:image" content="https://bizex4u.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Advertising & Barter Media Agency India | BIZEX4U" />
+        <meta name="twitter:description" content="BIZEX4U is India's full-service advertising agency for cash and barter campaigns. Outdoor, transit, mall, cinema, radio, print and digital — across 12+ cities." />
+        <meta name="twitter:image" content="https://bizex4u.com/og-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": ["Organization", "LocalBusiness"],
+              "@id": "https://bizex4u.com/#organization",
+              name: "BIZEX4U",
+              url: "https://bizex4u.com/",
+              logo: "https://bizex4u.com/og-image.jpg",
+              description: "India's barter and media buying agency — cash, barter and hybrid campaigns across OOH, metro, airport, DOOH, cinema, radio and print in 40+ cities.",
+              areaServed: { "@type": "Country", name: "India" },
+              address: { "@type": "PostalAddress", addressCountry: "IN" },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-80905-00009",
+                contactType: "sales",
+                email: "yash@bizex4u.com",
+                availableLanguage: ["English", "Hindi"],
+              },
+              sameAs: [],
+              knowsAbout: ["Outdoor Advertising", "Barter Advertising", "Media Buying", "OOH Advertising", "Airport Advertising", "Metro Branding", "DOOH Advertising", "ATL Advertising", "BTL Advertising"],
+            },
+          ],
+        })}</script>
       </Helmet>
       {/* Background layer - dynamic on mobile, CSS-based on tablet/desktop */}
       <div 
