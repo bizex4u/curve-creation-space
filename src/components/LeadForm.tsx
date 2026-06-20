@@ -3,6 +3,7 @@ import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import FilledButton from "./FilledButton";
+import { track } from "@/lib/analytics";
 // Minimum ms between page mount and submit — blocks instant-submit bots
 const MIN_SUBMIT_DELAY_MS = 3000;
 
@@ -44,8 +45,6 @@ const fieldClass =
   "w-full bg-neutral-00 border border-neutral-04 rounded-[10px] px-4 py-3 text-body text-neutral-12 placeholder:text-neutral-09 focus:outline-none focus:border-[hsl(var(--theme-main-02))] transition-colors";
 
 const labelClass = "text-label text-neutral-10 mb-1.5 block";
-
-import { track } from "@/lib/analytics";
 
 const LeadForm = ({ source = "contact", compact = false, onSuccess, ctaLabel }: LeadFormProps) => {
   const [submitting, setSubmitting] = useState(false);
