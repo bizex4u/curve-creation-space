@@ -34,8 +34,6 @@ const BarterPlaybook = () => (
           </p>
         </div>
         <LeadMagnet
-          title="Barter Advertising Playbook India 2026"
-          subtitle="Free resource for FMCG, D2C and consumer goods brands"
           assetName="Barter Advertising Playbook — India 2026"
           assetDescription="Step-by-step guide to running GST-compliant barter campaigns across India's OOH, cinema, transit and mall media."
           source="lead_magnet_barter_playbook"

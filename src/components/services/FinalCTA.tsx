@@ -63,7 +63,7 @@ const FinalCTA = ({
             <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
               <FilledButton href="/contact">{primaryCTALabel}</FilledButton>
               <OutlineButton href="/contact">Book Consultation</OutlineButton>
-              <WhatsAppCTA />
+              <WhatsAppCTA source="final_cta" />
             </div>
 
             {relatedServices.length > 0 && (

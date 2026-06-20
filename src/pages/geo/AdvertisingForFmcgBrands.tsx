@@ -74,6 +74,15 @@ const config = {
         { "@type": "Question", name: "What barter ratio can FMCG brands expect?", acceptedAnswer: { "@type": "Answer", text: "FMCG barter ratios typically range from 1:1 to 1:1.5 — ₹1 of inventory exchanges for ₹1–1.5 of media value. Ratio depends on product category and media channel." } },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "BIZEX4U",
+      url: "https://bizex4u.com/advertising-for-fmcg-brands",
+      description: "FMCG advertising and barter media agency in India. OOH, transit, cinema, radio and barter campaigns across 40+ cities.",
+      areaServed: { "@type": "Country", name: "India" },
+      address: { "@type": "PostalAddress", addressCountry: "IN" },
+    },
   ],
 } as const;
 

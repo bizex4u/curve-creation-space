@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Download, CheckCircle2 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
+import { trackDownload } from "@/lib/analytics";
 
 interface LeadMagnetProps {
-  title: string;
-  subtitle: string;
   assetName: string;
   assetDescription: string;
   bullets: string[];
@@ -12,8 +11,6 @@ interface LeadMagnetProps {
 }
 
 const LeadMagnet = ({
-  title,
-  subtitle,
   assetName,
   assetDescription,
   bullets,
@@ -56,7 +53,7 @@ const LeadMagnet = ({
             <LeadForm
               source={source}
               ctaLabel="Get Free Download →"
-              onSuccess={() => setSubmitted(true)}
+              onSuccess={() => { trackDownload(assetName); setSubmitted(true); }}
             />
           </div>
         </div>

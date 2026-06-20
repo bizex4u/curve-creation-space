@@ -73,6 +73,21 @@ const config = {
         { "@type": "Question", name: "Can real estate advertising use barter?", acceptedAnswer: { "@type": "Answer", text: "Yes. Developers can offer unsold inventory (flats, commercial units) in exchange for advertising. BIZEX4U structures real estate barter deals with media owners." } },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "BIZEX4U",
+      url: "https://bizex4u.com/advertising-for-real-estate",
+      description: "Real estate advertising agency in India. OOH hoardings, airport, metro and DOOH campaigns for property developers across Delhi NCR, Mumbai and Bangalore.",
+      areaServed: [
+        { "@type": "City", name: "Delhi" },
+        { "@type": "City", name: "Mumbai" },
+        { "@type": "City", name: "Bangalore" },
+        { "@type": "City", name: "Gurgaon" },
+        { "@type": "City", name: "Noida" },
+      ],
+      address: { "@type": "PostalAddress", addressCountry: "IN" },
+    },
   ],
 } as const;
 

@@ -34,8 +34,6 @@ const AirportMediaKit = () => (
           </p>
         </div>
         <LeadMagnet
-          title="Airport Advertising Media Kit India 2026"
-          subtitle="Free campaign planning resource from BIZEX4U"
           assetName="Airport Advertising Media Kit India 2026"
           assetDescription="A comprehensive guide to airport advertising in India — formats, rates and audience data."
           source="lead_magnet_airport_kit"

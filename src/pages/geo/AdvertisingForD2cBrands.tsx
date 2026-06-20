@@ -73,6 +73,15 @@ const config = {
         { "@type": "Question", name: "Can D2C brands with physical products use barter for advertising?", acceptedAnswer: { "@type": "Answer", text: "Yes. D2C brands with consumer goods inventory are excellent barter candidates. BIZEX4U evaluates your inventory and proposes a barter ratio on a discovery call." } },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "BIZEX4U",
+      url: "https://bizex4u.com/advertising-for-d2c-brands",
+      description: "D2C advertising and barter media agency in India. OOH, metro, airport, DOOH and inventory-led campaigns for D2C brands across 40+ cities.",
+      areaServed: { "@type": "Country", name: "India" },
+      address: { "@type": "PostalAddress", addressCountry: "IN" },
+    },
   ],
 } as const;
 

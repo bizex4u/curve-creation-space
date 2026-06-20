@@ -34,8 +34,6 @@ const MetroMediaKit = () => (
           </p>
         </div>
         <LeadMagnet
-          title="Metro Branding Media Kit India 2026"
-          subtitle="Free campaign planning resource from BIZEX4U"
           assetName="Metro Branding Media Kit India 2026"
           assetDescription="Complete metro advertising planning guide for Delhi, Mumbai, Bangalore, Hyderabad and Chennai."
           source="lead_magnet_metro_kit"

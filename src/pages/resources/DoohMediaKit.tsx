@@ -34,8 +34,6 @@ const DoohMediaKit = () => (
           </p>
         </div>
         <LeadMagnet
-          title="DOOH Advertising Media Kit India 2026"
-          subtitle="Free campaign planning resource from BIZEX4U"
           assetName="DOOH Advertising Media Kit India 2026"
           assetDescription="Complete DOOH planning guide — screen networks, formats, programmatic buying and audience targeting in India."
           source="lead_magnet_dooh_kit"
