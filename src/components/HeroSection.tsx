@@ -18,11 +18,42 @@ const metrics = [
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [leadEmail, setLeadEmail] = useState("");
+  const [leadCompany, setLeadCompany] = useState("");
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 50);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleInlineLead = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = leadEmail.trim();
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      toast({ title: "Enter a valid email" });
+      return;
+    }
+    setLeadSubmitting(true);
+    track("lead_submit", { source: "hero_inline" });
+    const { error } = await supabase.from("leads").insert({
+      name: leadCompany.trim() || "Hero inline lead",
+      email,
+      company: leadCompany.trim() || null,
+      source: "hero_inline",
+      funding_model: "Not sure yet",
+      landing_page: typeof window !== "undefined" ? window.location.pathname : null,
+    });
+    setLeadSubmitting(false);
+    if (error) {
+      toast({ title: "Something went wrong. Please try again." });
+      return;
+    }
+    track("lead_success", { source: "hero_inline" });
+    toast({ title: "Thanks! We'll reply within 2 hours." });
+    setLeadEmail("");
+    setLeadCompany("");
+  };
 
   return (
     <section
