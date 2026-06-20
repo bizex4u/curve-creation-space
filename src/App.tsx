@@ -15,6 +15,7 @@ const About = lazy(() => import("./pages/About"));
 const Channels = lazy(() => import("./pages/Channels"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Trust = lazy(() => import("./pages/Trust"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Blog = lazy(() => import("./pages/MdxBlogIndex"));
 const BlogPost = lazy(() => import("./pages/MdxBlogPost"));
