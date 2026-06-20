@@ -5,6 +5,9 @@ import LogoTicker from "./LogoTicker";
 import BrushHighlight from "./BrushHighlight";
 import LazyVideo from "./ui/LazyVideo";
 import heroVideo from "@/assets/Collaborative_Work_Scene.mp4";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { track } from "@/lib/analytics";
 
 const metrics = [
   { value: "320+", label: "Brands served" },
