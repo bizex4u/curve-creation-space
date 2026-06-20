@@ -130,7 +130,7 @@ const Navbar = ({
               <HashLink
                 key={label}
                 to={href}
-                className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors"
+                className="relative text-nav text-neutral-11 hover:text-neutral-12 px-3 py-1.5 rounded-[10px] hover:bg-neutral-02 transition-colors whitespace-nowrap"
               >
                 {label}
               </HashLink>
