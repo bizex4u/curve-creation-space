@@ -25,6 +25,19 @@ const fmtDate = (d: string) =>
     ? new Date(d).toLocaleDateString("en-IN", { month: "short", year: "numeric" })
     : "";
 
+const categoryTeaser = (cat: string): string => {
+  const map: Record<string, string> = {
+    "Airport Advertising": "From a Delhi & Mumbai airport campaign",
+    "Metro Branding": "From a metro activation across DMRC",
+    "Barter Advertising": "From an FMCG barter program",
+    "Outdoor Advertising": "From an OOH campaign across 12 cities",
+    "DOOH Advertising": "From a programmatic DOOH buy",
+    "Strategy": "From a multi-channel media planning engagement",
+    "Inside Bizex4U": "From the Bizex4U media desk",
+  };
+  return map[cat] ?? "From a live campaign";
+};
+
 /* ─── micro newsletter ───────────────────────────────────────────────── */
 
 const NewsletterInline = ({ light = false }: { light?: boolean }) => {
@@ -163,12 +176,12 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Bottom ticker */}
+        {/* Bottom ticker — proof only */}
         <div
           className="mt-16 pt-6 flex flex-wrap gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.22em]"
           style={{ borderTop: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.4)" }}
         >
-          {["Airport Advertising", "Metro Branding", "Barter Campaigns", "DOOH Intelligence", "Cinema Media", "Outdoor OOH"].map((t) => (
+          {["17 reports published", "₹150Cr+ media transacted", "320+ brands", "40+ cities"].map((t) => (
             <span key={t}>{t}</span>
           ))}
         </div>
@@ -219,10 +232,12 @@ const FeaturedSection = ({ post }: { post: BlogPostMeta }) => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5 mb-5 text-[11px] uppercase tracking-[0.22em]" style={{ color: NAVY, opacity: 0.55 }}>
+              <div className="flex flex-wrap items-center gap-4 mb-5 text-[11px] uppercase tracking-[0.22em]" style={{ color: NAVY, opacity: 0.55 }}>
                 <span>{fmtDate(post.date)}</span>
                 <span>·</span>
                 <span>{post.readingMinutes} min read</span>
+                <span>·</span>
+                <span>By Yash Mehrotra</span>
               </div>
 
               <h2
@@ -259,26 +274,26 @@ const FeaturedSection = ({ post }: { post: BlogPostMeta }) => {
               style={{ background: "#FFFFFF", border: `1px solid rgba(20,20,20,0.08)` }}
             >
               <p className="text-[10px] uppercase tracking-[0.28em] mb-6" style={{ color: NAVY, opacity: 0.55 }}>
-                Market Context · Q2 2026
+                Agency at a glance
               </p>
 
               <div className="space-y-6">
                 {[
-                  { label: "Airport Demand", note: "T1 inventory tightening ahead of festive. Book Q3 slots now.", delta: "↑" },
-                  { label: "Metro Occupancy", note: "DMRC lines at 94% fill. Mumbai Metro expanding Q4.", delta: "↑" },
-                  { label: "Barter Opportunity", note: "FMCG brands offloading Q4 inventory — strong deal window.", delta: "●" },
+                  { label: "Brands Served", stat: "320+", note: "Across FMCG, real estate, F&B, fintech and retail." },
+                  { label: "Media Transacted", stat: "₹150Cr+", note: "Cash, barter and hybrid campaigns combined." },
+                  { label: "Cities Covered", stat: "40+", note: "Airport, metro, outdoor and cinema across India." },
                 ].map((item, i) => (
                   <div
                     key={i}
                     className="pb-6"
                     style={{ borderBottom: i < 2 ? "1px solid rgba(20,20,20,0.07)" : "none" }}
                   >
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center justify-between mb-1.5">
                       <span className="text-[12px] font-semibold uppercase tracking-[0.15em]" style={{ color: INK }}>
                         {item.label}
                       </span>
-                      <span className="text-[11px] font-semibold" style={{ color: NAVY }}>
-                        {item.delta}
+                      <span className="text-[14px] font-bold" style={{ color: NAVY, fontFamily: "Manrope, sans-serif" }}>
+                        {item.stat}
                       </span>
                     </div>
                     <p className="text-[13px] leading-[1.55]" style={{ color: "rgba(20,20,20,0.6)" }}>
@@ -367,13 +382,13 @@ const BenchmarksSection = () => {
                 letterSpacing: "-0.02em",
               }}
             >
-              What media actually<br />
-              <span style={{ fontStyle: "italic", fontWeight: 400, color: "rgba(20,20,20,0.45)" }}>costs in India.</span>
+              Only what we've<br />
+              <span style={{ fontStyle: "italic", fontWeight: 400, color: "rgba(20,20,20,0.45)" }}>actually transacted.</span>
             </h2>
           </div>
           <div className="desktop:col-span-6 desktop:flex desktop:items-end">
             <p className="text-[15px] leading-[1.65]" style={{ color: "rgba(20,20,20,0.6)" }}>
-              From live campaigns across 320+ brands. Updated quarterly. No estimates — only what we've actually transacted.
+              Based on FY25 campaigns across 320+ brands. Updated quarterly. No estimates, no benchmarking reports — only invoiced media.
             </p>
           </div>
         </div>
@@ -492,8 +507,11 @@ const RecentNotesSection = ({ posts }: { posts: BlogPostMeta[] }) => {
               >
                 {a.title}
               </h3>
-              <p className="text-[14px] leading-[1.6] mb-5" style={{ color: "rgba(20,20,20,0.6)" }}>
+              <p className="text-[14px] leading-[1.6] mb-4" style={{ color: "rgba(20,20,20,0.6)" }}>
                 {a.description}
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.2em] mb-5" style={{ color: NAVY, opacity: 0.5 }}>
+                {categoryTeaser(a.category)}
               </p>
               <span
                 className="mt-auto inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] border-b pb-0.5 self-start transition-all group-hover:gap-3"
@@ -530,7 +548,7 @@ const RecentNotesSection = ({ posts }: { posts: BlogPostMeta[] }) => {
                   {post!.category} · {post!.readingMinutes} min
                 </p>
                 <h4
-                  className="mb-3 transition-opacity group-hover:opacity-65"
+                  className="mb-2.5 transition-opacity group-hover:opacity-65"
                   style={{
                     color: INK,
                     fontFamily: "Manrope, sans-serif",
@@ -542,6 +560,9 @@ const RecentNotesSection = ({ posts }: { posts: BlogPostMeta[] }) => {
                 >
                   {post!.title}
                 </h4>
+                <p className="text-[11px] uppercase tracking-[0.18em] mb-3" style={{ color: NAVY, opacity: 0.5 }}>
+                  {categoryTeaser(post!.category)}
+                </p>
                 <span
                   className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] self-start border-b pb-0.5 transition-all group-hover:gap-2.5"
                   style={{ color: NAVY, borderColor: NAVY }}
@@ -565,24 +586,32 @@ const DOWNLOADS = [
     title: "Airport Advertising Media Kit",
     desc: "CPMs, format specs, booking timelines and T1–T3 reach data from live buys.",
     href: "/resources/airport-advertising-media-kit",
+    pages: "42 pages",
+    updated: "Updated Q2 2026",
   },
   {
     tag: "Metro",
     title: "Metro Branding Playbook",
     desc: "Station selection logic, format mix rationale and dwell-time conversion data.",
     href: "/resources/metro-branding-media-kit",
+    pages: "31 pages",
+    updated: "Updated Q2 2026",
   },
   {
     tag: "Barter",
     title: "Barter Advertising Handbook",
     desc: "How inventory-for-media structures work. Deal flow, valuation and execution.",
     href: "/resources/barter-advertising-playbook",
+    pages: "27 pages",
+    updated: "Updated Q1 2026",
   },
   {
     tag: "DOOH",
     title: "DOOH Advertising Toolkit",
     desc: "Programmatic OOH primer, CPM benchmarks, creative specifications.",
     href: "/resources/dooh-advertising-media-kit",
+    pages: "18 pages",
+    updated: "Updated Q2 2026",
   },
 ];
 
@@ -619,9 +648,9 @@ const DownloadsSection = () => {
                 letterSpacing: "-0.02em",
               }}
             >
-              Free planning guides<br />
+              Planning<br />
               <span style={{ fontStyle: "italic", fontWeight: 400, color: "rgba(20,20,20,0.4)" }}>
-                from active campaigns.
+                Intelligence.
               </span>
             </h2>
           </div>
@@ -651,12 +680,17 @@ const DownloadsSection = () => {
               onMouseLeave={(e) => (e.currentTarget.style.background = "#FFFFFF")}
               onClick={() => track("cta_click", { cta: `download_${dl.tag.toLowerCase()}` })}
             >
-              <span
-                className="self-start text-[10px] font-semibold uppercase tracking-[0.22em] px-2.5 py-1"
-                style={{ background: NAVY, color: "#FFFFFF" }}
-              >
-                {dl.tag}
-              </span>
+              <div className="flex items-start justify-between gap-2">
+                <span
+                  className="self-start text-[10px] font-semibold uppercase tracking-[0.22em] px-2.5 py-1"
+                  style={{ background: NAVY, color: "#FFFFFF" }}
+                >
+                  {dl.tag}
+                </span>
+                <span className="text-[11px] uppercase tracking-[0.15em] text-right" style={{ color: "rgba(20,20,20,0.35)" }}>
+                  {dl.pages}
+                </span>
+              </div>
               <h5
                 className="leading-tight"
                 style={{
@@ -672,12 +706,17 @@ const DownloadsSection = () => {
               <p className="text-[13px] leading-[1.6] flex-1" style={{ color: "rgba(20,20,20,0.6)" }}>
                 {dl.desc}
               </p>
-              <span
-                className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] self-start border-b pb-0.5 transition-all group-hover:gap-3"
-                style={{ color: NAVY, borderColor: NAVY }}
-              >
-                Download free <ArrowRight size={10} />
-              </span>
+              <div className="flex items-center justify-between gap-2">
+                <span
+                  className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] border-b pb-0.5 transition-all group-hover:gap-3"
+                  style={{ color: NAVY, borderColor: NAVY }}
+                >
+                  Download <ArrowRight size={10} />
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.12em]" style={{ color: "rgba(20,20,20,0.3)" }}>
+                  {dl.updated}
+                </span>
+              </div>
             </Link>
           ))}
         </div>
@@ -721,15 +760,19 @@ const NewsletterSection = () => {
                 letterSpacing: "-0.02em",
               }}
             >
-              Receive one media insight<br />
+              One insight.<br />
+              Every Friday.<br />
               <span style={{ fontStyle: "italic", fontWeight: 400, color: "rgba(255,255,255,0.5)" }}>
-                every Friday.
+                From ₹150Cr+ of live media.
               </span>
             </h2>
+            <p className="text-[13px] uppercase tracking-[0.18em] mt-2" style={{ color: "rgba(255,255,255,0.4)" }}>
+              Written by Yash Mehrotra · Founder, Bizex4U
+            </p>
           </div>
           <div className="desktop:col-span-6 flex flex-col gap-5">
             <p className="text-[15px] leading-[1.65]" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Airport CPMs, barter windows, OOH trends. No padding. One clear insight. Under 90 seconds to read.
+              Airport CPMs, barter windows, OOH inventory signals. No padding. One clear insight. Under 90 seconds to read.
             </p>
             <NewsletterInline light />
             <p className="text-[12px]" style={{ color: "rgba(255,255,255,0.35)" }}>
@@ -796,6 +839,26 @@ const MdxBlogIndex = () => {
   const start = (currentPage - 1) * PAGE_SIZE;
   const visible = allPosts.slice(start, start + PAGE_SIZE);
 
+  // Featured: pick highest commercial-value category, never welcome/about posts
+  const FEATURED_PRIORITY = [
+    "Airport Advertising",
+    "Metro Branding",
+    "Barter Advertising",
+    "Outdoor Advertising",
+    "DOOH Advertising",
+    "Strategy",
+  ];
+  const featuredPost =
+    FEATURED_PRIORITY.reduce<BlogPostMeta | null>((found, cat) => {
+      if (found) return found;
+      return allPosts.find((p) => p.category === cat) ?? null;
+    }, null) ?? allPosts[0] ?? null;
+
+  // Recent: next 3 posts excluding featured
+  const recentPosts = allPosts
+    .filter((p) => p.slug !== featuredPost?.slug)
+    .slice(0, 3);
+
   const canonical = isFirstPage ? `${SITE_URL}/blog` : `${SITE_URL}/blog/page/${currentPage}`;
   const title = isFirstPage
     ? "Campaign Intelligence | Bizex4U"
@@ -839,9 +902,9 @@ const MdxBlogIndex = () => {
       {isFirstPage ? (
         <>
           <HeroSection />
-          {allPosts[0] && <FeaturedSection post={allPosts[0]} />}
+          {featuredPost && <FeaturedSection post={featuredPost} />}
           <BenchmarksSection />
-          {allPosts.length > 1 && <RecentNotesSection posts={allPosts.slice(1, 4)} />}
+          {recentPosts.length > 0 && <RecentNotesSection posts={recentPosts} />}
           <DownloadsSection />
           <NewsletterSection />
         </>
