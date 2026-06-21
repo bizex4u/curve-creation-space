@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Download, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { track } from "@/lib/analytics";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/blog-mdx/Breadcrumbs";
 import Pagination from "@/components/blog-mdx/Pagination";
@@ -446,8 +450,143 @@ const MdxBlogIndex = () => {
         )}
       </main>
 
+      {/* ── DOWNLOAD CENTRE ─────────────────────────────────────────── */}
+      <DownloadCentre />
+
+      {/* ── NEWSLETTER ──────────────────────────────────────────────── */}
+      <NewsletterSection />
+
       <Footer />
     </>
+  );
+};
+
+const DOWNLOADS = [
+  { tag: "Airport", title: "Airport Advertising Media Kit", desc: "CPMs, formats, booking windows, T1–T3 reach data.", href: "/resources/airport-advertising-media-kit" },
+  { tag: "Metro", title: "Metro Branding Playbook", desc: "Station selection, format mix, dwell-time strategy.", href: "/resources/metro-branding-media-kit" },
+  { tag: "Barter", title: "Barter Advertising Handbook", desc: "How inventory-for-media deals work. Step-by-step.", href: "/resources/barter-advertising-playbook" },
+  { tag: "DOOH", title: "DOOH Advertising Toolkit", desc: "Programmatic OOH, CPM benchmarks, creative specs.", href: "/resources/dooh-advertising-media-kit" },
+];
+
+const DownloadCentre = () => (
+  <section className="py-16 desktop:py-24" style={{ background: IVORY }}>
+    <div className="container">
+      <div className="mb-10">
+        <p className="text-[11px] uppercase tracking-[0.32em] mb-3" style={{ color: NAVY }}>Download Centre</p>
+        <h2 className="font-semibold" style={{ color: CHARCOAL, fontFamily: "Manrope, sans-serif", fontSize: "clamp(28px,4vw,48px)", lineHeight: 1.08, letterSpacing: "-0.01em" }}>
+          Free media planning guides.
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-5">
+        {DOWNLOADS.map((dl, i) => (
+          <motion.div
+            key={dl.href}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.07 }}
+          >
+            <Link
+              to={dl.href}
+              className="group flex flex-col gap-4 p-5 h-full rounded-[20px] border transition-all duration-200 hover:shadow-[0_4px_20px_rgba(15,35,64,0.08)]"
+              style={{ background: "#FFFFFF", borderColor: "rgba(15,35,64,0.1)" }}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] px-2.5 py-1 rounded-full" style={{ background: "rgba(15,35,64,0.08)", color: NAVY }}>
+                  {dl.tag}
+                </span>
+                <div className="w-8 h-8 flex items-center justify-center rounded-full transition-colors" style={{ background: "rgba(15,35,64,0.05)" }}>
+                  <Download size={13} style={{ color: NAVY }} />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h6 className="text-[15px] font-semibold leading-snug mb-1.5" style={{ color: CHARCOAL, fontFamily: "Manrope, sans-serif" }}>{dl.title}</h6>
+                <p className="text-[13px] leading-relaxed" style={{ color: "rgba(30,30,30,0.65)" }}>{dl.desc}</p>
+              </div>
+              <div className="flex items-center gap-1 text-[12px] uppercase tracking-[0.16em] transition-colors" style={{ color: NAVY }}>
+                Download free <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+              </div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const NewsletterSection = () => {
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = email.trim();
+    if (!trimmed || !/^\S+@\S+\.\S+$/.test(trimmed)) {
+      toast({ title: "Enter a valid email" });
+      return;
+    }
+    setSubmitting(true);
+    track("lead_submit", { source: "blog_newsletter" });
+    const { error } = await supabase.from("leads").insert({
+      name: "Newsletter subscriber",
+      email: trimmed,
+      source: "blog_newsletter",
+      funding_model: "Not sure yet",
+      landing_page: typeof window !== "undefined" ? window.location.pathname : null,
+    });
+    setSubmitting(false);
+    if (error) { toast({ title: "Something went wrong. Try again." }); return; }
+    track("lead_success", { source: "blog_newsletter" });
+    toast({ title: "You're in. First brief lands Friday." });
+    setEmail("");
+  };
+
+  return (
+    <section className="py-16 desktop:py-24 border-t" style={{ background: NAVY, borderColor: "rgba(255,255,255,0.08)" }}>
+      <div className="container">
+        <div className="flex flex-col desktop:flex-row desktop:items-center desktop:justify-between gap-10">
+          <div className="max-w-[520px]">
+            <div className="flex items-center gap-2 w-fit px-3 py-1.5 rounded-xl mb-5" style={{ border: "1px solid rgba(255,255,255,0.2)" }}>
+              <Mail size={12} style={{ color: "rgba(255,255,255,0.7)" }} />
+              <span className="text-[11px] uppercase tracking-[0.22em]" style={{ color: "rgba(255,255,255,0.7)" }}>Weekly Media Brief</span>
+            </div>
+            <h2 className="font-semibold mb-4" style={{ color: "#FFFFFF", fontFamily: "Manrope, sans-serif", fontSize: "clamp(28px,4vw,48px)", lineHeight: 1.08, letterSpacing: "-0.01em" }}>
+              India's media intel,<br />
+              <span style={{ fontStyle: "italic", fontWeight: 400, color: "rgba(255,255,255,0.65)" }}>in your inbox.</span>
+            </h2>
+            <p className="text-[16px] leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+              CPMs, barter deals, OOH trends and campaign breakdowns — every Friday morning.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 desktop:w-[420px]">
+            <form onSubmit={handleSubmit} className="flex flex-col tablet:flex-row gap-3">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your work email"
+                className="flex-1 px-4 py-3 rounded-[10px] text-[15px] focus:outline-none"
+                style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#FFFFFF" }}
+              />
+              <button
+                type="submit"
+                disabled={submitting}
+                className="px-5 py-3 rounded-[10px] font-semibold text-[14px] whitespace-nowrap transition-opacity hover:opacity-90"
+                style={{ background: "#FFFFFF", color: NAVY }}
+              >
+                {submitting ? "Subscribing…" : "Get the brief"}
+              </button>
+            </form>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[12px]" style={{ color: "rgba(255,255,255,0.45)" }}>
+              <span>✓ 320+ brand marketers read this</span>
+              <span>✓ No spam, ever</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
