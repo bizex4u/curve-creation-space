@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -34,6 +35,16 @@ const SERIF = "'Cormorant Garamond', 'Times New Roman', serif";
 const DISPLAY = "'Bricolage Grotesque', 'Manrope', sans-serif";
 const SANS = "'Manrope', sans-serif";
 const MONO = "'Geist Mono', ui-monospace, monospace";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
+};
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
+};
 
 const fmtDate = (d: string) =>
   d ? new Date(d).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) : "";
@@ -263,106 +274,111 @@ const HeroSection = ({ featured }: { featured: BlogPostMeta | null }) => (
       }}
     />
 
-    <div className="container relative pt-16 pb-20 desktop:pt-24 desktop:pb-28">
-      <Eyebrow light>The Bizex4U Journal — Est. 2014</Eyebrow>
+    <div className="container relative page-header-top pb-20 desktop:pb-28">
+      <motion.div initial="hidden" animate="show" variants={stagger}>
+        <motion.div variants={fadeUp}><Eyebrow light>The Bizex4U Journal — Est. 2014</Eyebrow></motion.div>
 
-      <div className="mt-10 desktop:mt-14 grid grid-cols-1 desktop:grid-cols-12 gap-12 desktop:gap-16 items-end">
-        <div className="desktop:col-span-8">
-          <h1
-            style={{
-              fontFamily: SERIF,
-              fontWeight: 400,
-              fontSize: "clamp(56px, 9vw, 132px)",
-              lineHeight: 0.92,
-              letterSpacing: "-0.025em",
-              color: PAPER,
-            }}
-          >
-            Campaign
-            <br />
-            <span style={{ fontStyle: "italic", color: "rgba(244,239,230,0.7)" }}>intelligence,</span>
-            <br />
-            written from
-            <br />
-            the buy-side.
-          </h1>
+        <div className="mt-10 desktop:mt-14 grid grid-cols-1 desktop:grid-cols-12 gap-12 desktop:gap-16 items-end">
+          <motion.div variants={fadeUp} className="desktop:col-span-8">
+            <h1
+              style={{
+                fontFamily: SERIF,
+                fontWeight: 400,
+                fontSize: "clamp(56px, 9vw, 132px)",
+                lineHeight: 0.92,
+                letterSpacing: "-0.025em",
+                color: PAPER,
+              }}
+            >
+              Campaign
+              <br />
+              <span style={{ fontStyle: "italic", color: "rgba(244,239,230,0.7)" }}>intelligence,</span>
+              <br />
+              written from
+              <br />
+              the buy-side.
+            </h1>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="desktop:col-span-4 flex flex-col gap-8">
+            <p
+              style={{
+                fontFamily: SANS,
+                fontSize: 17,
+                lineHeight: 1.55,
+                color: "rgba(244,239,230,0.78)",
+                maxWidth: 360,
+              }}
+            >
+              A private-briefing journal for marketing leaders. Airport CPMs, metro benchmarks, barter
+              economics, DOOH signals — only from media we have invoiced.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <PillLink to="#newsletter" variant="solid" onClick={() => track("cta_click", { cta: "hero_subscribe" })}>
+                Get Friday brief
+              </PillLink>
+              <PillLink to="/resources/barter-advertising-playbook" variant="ghost" onClick={() => track("cta_click", { cta: "hero_download_playbook" })}>
+                Download playbook
+              </PillLink>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="desktop:col-span-4 flex flex-col gap-8">
-          <p
-            style={{
-              fontFamily: SANS,
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "rgba(244,239,230,0.78)",
-              maxWidth: 360,
-            }}
-          >
-            A private-briefing journal for marketing leaders. Airport CPMs, metro benchmarks, barter
-            economics, DOOH signals — only from media we have invoiced.
-          </p>
-
-          <div className="flex flex-wrap gap-3">
-            <PillLink to="#newsletter" variant="solid" onClick={() => track("cta_click", { cta: "hero_subscribe" })}>
-              Get Friday brief
-            </PillLink>
-            <PillLink to="/resources/barter-advertising-playbook" variant="ghost" onClick={() => track("cta_click", { cta: "hero_download_playbook" })}>
-              Download playbook
-            </PillLink>
-          </div>
-        </div>
-      </div>
-
-      {/* Ticker / proof rail */}
-      <div
-        className="mt-16 desktop:mt-20 pt-6 grid grid-cols-2 tablet:grid-cols-4 gap-y-6 gap-x-8"
-        style={{ borderTop: `1px solid ${RULE_LIGHT}` }}
-      >
-        {[
-          { k: "₹150Cr+", v: "Media transacted" },
-          { k: "320+", v: "Brands served" },
-          { k: "40+", v: "Cities covered" },
-          { k: "17", v: "Reports published" },
-        ].map((s) => (
-          <div key={s.v} className="flex flex-col gap-1.5">
-            <span style={{ fontFamily: SERIF, fontWeight: 500, fontSize: 38, lineHeight: 1, color: PAPER, letterSpacing: "-0.02em" }}>
-              {s.k}
-            </span>
-            <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(244,239,230,0.55)" }}>
-              {s.v}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      {/* Featured slip-tab */}
-      {featured && (
-        <Link
-          to={`/blog/${featured.slug}`}
-          className="group mt-14 flex flex-col tablet:flex-row tablet:items-center gap-5 tablet:gap-8 p-5 tablet:p-6 transition-colors"
-          style={{
-            background: "rgba(244,239,230,0.04)",
-            border: `1px solid ${RULE_LIGHT}`,
-          }}
+        {/* Ticker / proof rail */}
+        <motion.div
+          variants={fadeUp}
+          className="mt-16 desktop:mt-20 pt-6 grid grid-cols-2 tablet:grid-cols-4 gap-y-6 gap-x-8"
+          style={{ borderTop: `1px solid ${RULE_LIGHT}` }}
         >
-          <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.24em", textTransform: "uppercase", color: GOLD }}>
-            Currently reading
-          </span>
-          <span className="hidden tablet:block w-px self-stretch" style={{ background: RULE_LIGHT }} />
-          <span
-            style={{ fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, fontSize: "clamp(20px,2vw,26px)", lineHeight: 1.2, color: PAPER }}
-            className="flex-1"
-          >
-            “{featured.title}”
-          </span>
-          <span
-            style={{ fontFamily: DISPLAY, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: PAPER }}
-            className="inline-flex items-center gap-2 opacity-80 group-hover:opacity-100 group-hover:gap-3 transition-all whitespace-nowrap"
-          >
-            Open report <ArrowUpRight size={13} />
-          </span>
-        </Link>
-      )}
+          {[
+            { k: "₹150Cr+", v: "Media transacted" },
+            { k: "320+", v: "Brands served" },
+            { k: "40+", v: "Cities covered" },
+            { k: "17", v: "Reports published" },
+          ].map((s) => (
+            <div key={s.v} className="flex flex-col gap-1.5">
+              <span style={{ fontFamily: SERIF, fontWeight: 500, fontSize: 38, lineHeight: 1, color: PAPER, letterSpacing: "-0.02em" }}>
+                {s.k}
+              </span>
+              <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(244,239,230,0.55)" }}>
+                {s.v}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Featured slip-tab */}
+        {featured && (
+          <motion.div variants={fadeUp}>
+            <Link
+              to={`/blog/${featured.slug}`}
+              className="group mt-14 flex flex-col tablet:flex-row tablet:items-center gap-5 tablet:gap-8 p-5 tablet:p-6 transition-colors"
+              style={{
+                background: "rgba(244,239,230,0.04)",
+                border: `1px solid ${RULE_LIGHT}`,
+              }}
+            >
+              <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.24em", textTransform: "uppercase", color: GOLD }}>
+                Currently reading
+              </span>
+              <span className="hidden tablet:block w-px self-stretch" style={{ background: RULE_LIGHT }} />
+              <span
+                style={{ fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, fontSize: "clamp(20px,2vw,26px)", lineHeight: 1.2, color: PAPER }}
+                className="flex-1"
+              >
+                "{featured.title}"
+              </span>
+              <span
+                style={{ fontFamily: DISPLAY, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: PAPER }}
+                className="inline-flex items-center gap-2 opacity-80 group-hover:opacity-100 group-hover:gap-3 transition-all whitespace-nowrap"
+              >
+                Open report <ArrowUpRight size={13} />
+              </span>
+            </Link>
+          </motion.div>
+        )}
+      </motion.div>
     </div>
   </section>
 );
@@ -372,11 +388,16 @@ const HeroSection = ({ featured }: { featured: BlogPostMeta | null }) => (
 const FeaturedSection = ({ post }: { post: BlogPostMeta }) => (
   <section style={{ background: PAPER }} className="py-20 desktop:py-28">
     <div className="container">
-      <SectionLabel n="01" label="Featured Report" />
+      <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
+        <SectionLabel n="01" label="Featured Report" />
+      </motion.div>
 
-      <div className="mt-12 desktop:mt-16 grid grid-cols-1 desktop:grid-cols-12 gap-10 desktop:gap-16">
+      <motion.div
+        initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
+        className="mt-12 desktop:mt-16 grid grid-cols-1 desktop:grid-cols-12 gap-10 desktop:gap-16"
+      >
         {/* Left — image + meta */}
-        <div className="desktop:col-span-7">
+        <motion.div variants={fadeUp} className="desktop:col-span-7">
           <Link to={`/blog/${post.slug}`} className="group block">
             <div className="relative overflow-hidden aspect-[5/4] tablet:aspect-[16/11]" style={{ background: PAPER_DEEP }}>
               <img
@@ -436,10 +457,10 @@ const FeaturedSection = ({ post }: { post: BlogPostMeta }) => (
               Read the report <ArrowRight size={12} />
             </span>
           </Link>
-        </div>
+        </motion.div>
 
         {/* Right — desk note */}
-        <aside className="desktop:col-span-5">
+        <motion.aside variants={fadeUp} className="desktop:col-span-5">
           <div className="sticky top-28">
             <div style={{ background: NAVY, color: PAPER }} className="p-8 desktop:p-10">
               <Eyebrow light>From the editor's desk</Eyebrow>
@@ -454,8 +475,8 @@ const FeaturedSection = ({ post }: { post: BlogPostMeta }) => (
                   color: PAPER,
                 }}
               >
-                “We publish only what we have actually invoiced. No estimates, no industry-report
-                averages — just numbers from live buys.”
+                "We publish only what we have actually invoiced. No estimates, no industry-report
+                averages — just numbers from live buys."
               </p>
               <p
                 className="mt-6"
@@ -486,8 +507,8 @@ const FeaturedSection = ({ post }: { post: BlogPostMeta }) => (
               ))}
             </div>
           </div>
-        </aside>
-      </div>
+        </motion.aside>
+      </motion.div>
     </div>
   </section>
 );
